@@ -7,7 +7,7 @@
     <meta name="generator" content="Relearn 5.5.3+tip">
     <meta name="description" content="Documentation and tutorials for Captus">
     <meta name="author" content="Edgardo M. Ortiz">
-    <title>Parallelization :: Captus documentation</title>
+    <title>Advanced Tutorial :: Captus documentation</title>
     <link href="/captus.docs/images/favicon.ico?1668167344" rel="icon" type="image/x-icon">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
     <link href="/captus.docs/css/fontawesome-all.min.css?1668167344" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1668167344" rel="stylesheet"></noscript>
@@ -41,20 +41,20 @@
 
 
   </head>
-  <body class="mobile-support default disableInlineCopyToClipboard" data-url="/captus.docs/basics/parallelization/">
+  <body class="mobile-support default disableInlineCopyToClipboard" data-url="/captus.docs/tutorials/assembly/advanced/">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
       <nav id="topbar" class="highlightable" dir="ltr">
         <div>
           <div class="navigation">
-            <a class="nav nav-next" href="/captus.docs/assembly/index.html" title="Assembly (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+            <span class="nav nav-next"><i class="fa fa-chevron-right fa-fw"></i></span>
           </div>
           <div class="navigation">
-            <a class="nav nav-prev" href="/captus.docs/basics/installation/index.html" title="Installation (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+            <a class="nav nav-prev" href="/captus.docs/tutorials/assembly/basic/index.html" title="Basic Tutorial (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
           </div>
           <div id="top-github-link">
-            <a class="github-link" title='Edit (CTRL+ALT+w)' href="https://github.com/edgardomortiz/Captus/tree/master/docs/content/basics/parallelization.md" target="blank">
+            <a class="github-link" title='Edit (CTRL+ALT+w)' href="https://github.com/edgardomortiz/Captus/tree/master/docs/content/tutorials/assembly/advanced.md" target="blank">
               <i class="fas fa-pen fa-fw"></i>
             </a>
           </div>
@@ -62,29 +62,12 @@
             <span id="sidebar-toggle-span">
               <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
-            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
               <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/index.html"><span itemprop="name">Captus</span></a><meta itemprop="position" content="1"> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/basics/index.html"><span itemprop="name">Basics</span></a><meta itemprop="position" content="2"> > </li>
-              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Parallelization</span><meta itemprop="position" content="3"></li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/tutorials/index.html"><span itemprop="name">Tutorials</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/tutorials/assembly/index.html"><span itemprop="name">Assembly</span></a><meta itemprop="position" content="3"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Advanced Tutorial</span><meta itemprop="position" content="4"></li>
             </ol>
-          </div>
-          <div class="default-animation progress">
-            <div class="toc-wrapper" dir="ltr">
-<nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#--ram"><strong><code>--ram</code></strong></a></li>
-        <li><a href="#--threads"><strong><code>--threads</code></strong></a></li>
-        <li><a href="#--concurrent"><strong><code>--concurrent</code></strong></a></li>
-        <li><a href="#--debug"><strong><code>--debug</code></strong></a></li>
-        <li><a href="#--show_less"><strong><code>--show_less</code></strong></a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-            </div>
           </div>
         </div>
       </nav>
@@ -93,31 +76,126 @@
           <div id="head-tags">
           </div>
           <article class="default">
-<h1>Parallelization</h1>
+<h1>Advanced Tutorial</h1>
 
-<h1 id="and-other-common-options">(and other common options)</h1>
+<p>Under construction&hellip;</p>
+<ol>
+<li>Handling different data types</li>
+<li>Assembling reads cleaned outside Captus</li>
+<li>Combining all assembled data types</li>
+<li>Importing pre-assembled sample (e.g., GenBank ref genome)</li>
+<li>Extracting all marker types simultaneously</li>
+<li>Discovering new markers by clustering in capture data</li>
+<li>Adding new markers by clustering unused contigs (capture data)</li>
+<li>Phylogenetic tree reconstruction using palalogs - ASTRAL-Pro</li>
+</ol>
+<!--### Preparation
+
+---
+
+#### Installation
+
+Install `Captus` and dependencies on your system by following the [instruction](https://edgardomortiz.github.io/captus.docs/basics/installation/).
+
+#### Getting data
+
+Download the example data below, and place it in a directory where you want to run this tutorial.
+
+Run the following command to decompress the archive and then delete it.
+
+```shell
+cd {path/to/directory}
+tar -xf 00_raw_reads.tar.gz && rm 00_raw_reads.tar.gz
+```
+
+Now you have a directory named `00_raw_reads` containing 16 gzip-compressed FASTQ files:
+
+```console
+00_raw_reads
+├── GenusA_speciesA_CAP_R1.fq.gz
+├── GenusA_speciesA_CAP_R2.fq.gz
+├── GenusA_speciesA_RNA_R1.fq.gz
+├── GenusA_speciesA_RNA_R2.fq.gz
+├── GenusB_speciesB_CAP_R1.fq.gz
+├── GenusB_speciesB_CAP_R2.fq.gz
+├── GenusC_speciesC_CAP_R1.fq.gz
+├── GenusC_speciesC_CAP_R2.fq.gz
+├── GenusC_speciesC_RNA_R1.fq.gz
+├── GenusC_speciesC_RNA_R2.fq.gz
+├── GenusD_speciesD_CAP_R1.fq.gz
+├── GenusD_speciesD_CAP_R2.fq.gz
+├── GenusD_speciesD_RNA_R1.fq.gz
+├── GenusD_speciesD_RNA_R2.fq.gz
+├── GenusH_speciesH_RNA_R1.fq.gz
+└── GenusH_speciesH_RNA_R2.fq.gz
+```
+
+CAP: Illumina universal coding sequences for angiosperms are enriched using [Angiosperms353](https://github.com/mossmatters/Angiosperms353) probe set.
+RNA: mRNA library enriched with poly-T probe
+paired-end
+They are named following the [naming convention](https://edgardomortiz.github.io/captus.docs/assembly/clean/preparation/).
+
+### Clean
+
+---
+
+Run the following commands to clean.
+`--rna` flag enable to trim poly-A tails as well as Illumina adapters.
+
+```shell
+captus_assembly clean -r 00_raw_reads/*CAP_R?.fq.gz -o 01_clean_reads_CAP
+captus_assembly clean -r 00_raw_reads/*RNA_R?.fq.gz -o 01_clean_reads_RNA --rna
+```
+
+For descriptions of the other output files, see [here](https://edgardomortiz.github.io/captus.docs/assembly/clean/output/).
+
+### Assemble
+
+---
+you can easily integrate samples assembled with another tool.
+
+```shell
+captus_assembly assemble -r 01_clean_reads_CAP -o 02_assemblies_CAP
+captus_assembly assemble -r 01_clean_reads_RNA -o 02_assemblies_RNA --preset RNA
+captus_assembly assemble -r 01_clean_reads_WGS -o 02_assemblies_WGS --preset WGS
+```
+
+For descriptions of the other output files, see [here](https://edgardomortiz.github.io/captus.docs/assembly/assemble/output/).
+
+### Extract
+
+---
+Download the example data below, and place it in a directory where you want to run this tutorial.
+
+Run the following command to extract targets from the contigs.
+built-in reference dataset
+
+```shell
+captus_assembly extract -a 02_assemblies_CAP -f 02_assemblies_WGS -n Angiosperms353 -p SeedPlantsPTD -m SeedPlantsMIT -c
+```
+
+For descriptions of the other output files, see [here](https://edgardomortiz.github.io/captus.docs/assembly/extract/output/).
+
+### Align
+
+---
+
+```shell
+captus_assembly align
+```
+
+For descriptions of the other output files, see [here](https://edgardomortiz.github.io/captus.docs/assembly/align/output/).
+
+### Phylogenetic inference
+
+---
+
+```shell
+iqtree
+``` -->
 <hr>
-<p>Throughout Captus&rsquo; modules we provide common options that allow you limit the computer&rsquo;s resources available to <code>Captus</code>, change the way of running parallel tasks, and control the amount of text shown during a run:</p>
-<h3 id="--ram"><strong><code>--ram</code></strong></h3>
-<p>With this option you can specify the maximum RAM in GB that <code>Captus</code> is allowed to use. For example, if your system has 64 GB of RAM and you want to limit the use to 32.5 GB you would set the argument <code>--ram 32.5</code>.</p>
-<p>This argument is optional, the default is <strong>auto</strong> (= 99% of available RAM).</p>
-<hr>
-<h3 id="--threads"><strong><code>--threads</code></strong></h3>
-<p>Similarly, you can specify the maximum number of CPU cores that <code>Captus</code> is allowed to use. If your system has 16 CPU cores but you need some cores for other analyses you could reduce it to, for example, 8 cores with <code>--threads 8</code>.</p>
-<p>This argument is optional, the default is <strong>auto</strong> (= all CPU cores).</p>
-<hr>
-<h3 id="--concurrent"><strong><code>--concurrent</code></strong></h3>
-<p>This option sets the maximum number of tasks to run in parallel at any moment. For example, let&rsquo;s imagine you set <code>--threads 16</code> and <code>--concurrent 2</code>, this means that <code>Captus</code> will run only 2 tasks in parallel but each of those tasks can use up to 8 CPU cores.</p>
-<p>This argument is optional, the default is <strong>auto</strong> (the automatic adjustment varies between analysis steps).</p>
-<hr>
-<h3 id="--debug"><strong><code>--debug</code></strong></h3>
-<p>This flag enables the debugging mode, this <em><strong>disables parallelization</strong></em> so errors can be logged to screen. If you are seeing some samples failing steps or some other unexpected behavior you can enable <code>--debug</code> and submit the error shown to the <code>Issues</code> (<a href="https://github.com/edgardomortiz/Captus/issues">https://github.com/edgardomortiz/Captus/issues</a>) section in our GitHub repository.</p>
-<hr>
-<h3 id="--show_less"><strong><code>--show_less</code></strong></h3>
-<p>This flags produces less verbose screen printout. Essentially, information about each sample will not be shown (but still logged) during the run.</p>
-<hr>
-<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (06.08.2021)<br>
-Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (29.05.2022)</p>
+<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#gentaro-shigita">Gentaro Shigita</a> (01.10.2021)<br>
+Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#gentaro-shigita">Gentaro Shigita</a> (31.10.2022)</p>
 
             <footer class="footline">
             </footer>
@@ -157,10 +235,10 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
       </div>
       <div id="content-wrapper" class="highlightable">
         <ul class="topics collapsible-menu">
-          <li data-nav-id="/captus.docs/basics/" class="dd-item parent"><input type="checkbox" id="section-3494ad44d160b070fd31576fe4a3841e" aria-controls="subsections-3494ad44d160b070fd31576fe4a3841e" class="toggle" checked><label class="a11y-only toggle" for="section-3494ad44d160b070fd31576fe4a3841e" >Submenu Basics</label><a href="/captus.docs/basics/index.html">Basics<i class="fas fa-check read-icon"></i></a><ul id="subsections-3494ad44d160b070fd31576fe4a3841e">
+          <li data-nav-id="/captus.docs/basics/" class="dd-item"><input type="checkbox" id="section-3494ad44d160b070fd31576fe4a3841e" aria-controls="subsections-3494ad44d160b070fd31576fe4a3841e" class="toggle"><label class="a11y-only toggle" for="section-3494ad44d160b070fd31576fe4a3841e" >Submenu Basics</label><a href="/captus.docs/basics/index.html">Basics<i class="fas fa-check read-icon"></i></a><ul id="subsections-3494ad44d160b070fd31576fe4a3841e">
           <li data-nav-id="/captus.docs/basics/overview/" class="dd-item"><a href="/captus.docs/basics/overview/index.html">Overview<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/captus.docs/basics/installation/" class="dd-item"><a href="/captus.docs/basics/installation/index.html">Installation<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/basics/parallelization/" class="dd-item active"><a href="/captus.docs/basics/parallelization/index.html">Parallelization<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/basics/parallelization/" class="dd-item"><a href="/captus.docs/basics/parallelization/index.html">Parallelization<i class="fas fa-check read-icon"></i></a></li></ul></li>
           <li data-nav-id="/captus.docs/assembly/" class="dd-item"><input type="checkbox" id="section-d26437a3e42ff73277da14a17983cc4a" aria-controls="subsections-d26437a3e42ff73277da14a17983cc4a" class="toggle"><label class="a11y-only toggle" for="section-d26437a3e42ff73277da14a17983cc4a" >Submenu Assembly</label><a href="/captus.docs/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-d26437a3e42ff73277da14a17983cc4a">
           <li data-nav-id="/captus.docs/assembly/clean/" class="dd-item alwaysopen"><input type="checkbox" id="section-c872805a13ffe675b4d826b4bbe79398" aria-controls="subsections-c872805a13ffe675b4d826b4bbe79398" class="toggle" checked><label class="a11y-only toggle" for="section-c872805a13ffe675b4d826b4bbe79398" >Submenu Clean</label><a href="/captus.docs/assembly/clean/index.html"><b>1. </b>Clean<i class="fas fa-check read-icon"></i></a><ul id="subsections-c872805a13ffe675b4d826b4bbe79398">
           <li data-nav-id="/captus.docs/assembly/clean/preparation/" class="dd-item"><a href="/captus.docs/assembly/clean/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
@@ -182,10 +260,10 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
           <li data-nav-id="/captus.docs/assembly/align/output/" class="dd-item"><a href="/captus.docs/assembly/align/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/captus.docs/assembly/align/report/" class="dd-item"><a href="/captus.docs/assembly/align/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/captus.docs/design/" class="dd-item"><a href="/captus.docs/design/index.html">Design<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/tutorials/" class="dd-item"><input type="checkbox" id="section-90d1aeee0e96e115d1edea3b994d19fb" aria-controls="subsections-90d1aeee0e96e115d1edea3b994d19fb" class="toggle"><label class="a11y-only toggle" for="section-90d1aeee0e96e115d1edea3b994d19fb" >Submenu Tutorials</label><a href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a><ul id="subsections-90d1aeee0e96e115d1edea3b994d19fb">
-          <li data-nav-id="/captus.docs/tutorials/assembly/" class="dd-item alwaysopen"><input type="checkbox" id="section-740840fed0965cd53aaef708df5dc95d" aria-controls="subsections-740840fed0965cd53aaef708df5dc95d" class="toggle" checked><label class="a11y-only toggle" for="section-740840fed0965cd53aaef708df5dc95d" >Submenu Assembly</label><a href="/captus.docs/tutorials/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-740840fed0965cd53aaef708df5dc95d">
+          <li data-nav-id="/captus.docs/tutorials/" class="dd-item parent"><input type="checkbox" id="section-90d1aeee0e96e115d1edea3b994d19fb" aria-controls="subsections-90d1aeee0e96e115d1edea3b994d19fb" class="toggle" checked><label class="a11y-only toggle" for="section-90d1aeee0e96e115d1edea3b994d19fb" >Submenu Tutorials</label><a href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a><ul id="subsections-90d1aeee0e96e115d1edea3b994d19fb">
+          <li data-nav-id="/captus.docs/tutorials/assembly/" class="dd-item parent alwaysopen"><input type="checkbox" id="section-740840fed0965cd53aaef708df5dc95d" aria-controls="subsections-740840fed0965cd53aaef708df5dc95d" class="toggle" checked><label class="a11y-only toggle" for="section-740840fed0965cd53aaef708df5dc95d" >Submenu Assembly</label><a href="/captus.docs/tutorials/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-740840fed0965cd53aaef708df5dc95d">
           <li data-nav-id="/captus.docs/tutorials/assembly/basic/" class="dd-item"><a href="/captus.docs/tutorials/assembly/basic/index.html"><i class="fas fa-school"></i> Basic<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/tutorials/assembly/advanced/" class="dd-item"><a href="/captus.docs/tutorials/assembly/advanced/index.html"><i class="fas fa-graduation-cap"></i> Advanced<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/captus.docs/tutorials/assembly/advanced/" class="dd-item active"><a href="/captus.docs/tutorials/assembly/advanced/index.html"><i class="fas fa-graduation-cap"></i> Advanced<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
         </ul>
         <div id="shortcuts">
           <div class="nav-title">More</div>

@@ -8,20 +8,20 @@
     <meta name="description" content="Documentation and tutorials for Captus">
     <meta name="author" content="Edgardo M. Ortiz">
     <title>Output Files :: Captus documentation</title>
-    <link href="/captus.docs/images/favicon.ico?1668166586" rel="icon" type="image/x-icon">
+    <link href="/captus.docs/images/favicon.ico?1668167344" rel="icon" type="image/x-icon">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/captus.docs/css/fontawesome-all.min.css?1668166586" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1668166586" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/featherlight.min.css?1668166586" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1668166586" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/auto-complete.css?1668166586" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1668166586" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/perfect-scrollbar.min.css?1668166586" rel="stylesheet">
-    <link href="/captus.docs/css/nucleus.css?1668166586" rel="stylesheet">
-    <link href="/captus.docs/css/fonts.css?1668166586" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1668166586" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/theme.css?1668166586" rel="stylesheet">
-    <link href="/captus.docs/css/theme-green.css?1668166586" rel="stylesheet" id="variant-style">
-    <link href="/captus.docs/css/ie.css?1668166586" rel="stylesheet">
-    <link href="/captus.docs/css/variant.css?1668166586" rel="stylesheet">
-    <link href="/captus.docs/css/print.css?1668166586" rel="stylesheet" media="print">
-    <script src="/captus.docs/js/variant.js?1668166586"></script>
+    <link href="/captus.docs/css/fontawesome-all.min.css?1668167344" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1668167344" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1668167344" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1668167344" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1668167344" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1668167344" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1668167344" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1668167344" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1668167344" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1668167344" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1668167344" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1668167344" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1668167344" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1668167344" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1668167344" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1668167344"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -37,7 +37,7 @@
       var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
       window.variants && variants.init( [ 'green' ] );
     </script>
-    <script src="/captus.docs/js/jquery.min.js?1668166586" defer></script>
+    <script src="/captus.docs/js/jquery.min.js?1668167344" defer></script>
 
 
   </head>
@@ -102,16 +102,16 @@
 <p>Imagine we start with a directory called <code>00_raw_reads</code> with the following content:</p>
 <p>
 		
-<a href="/images/raw_reads.png?width=640&amp;classes=shadow" data-featherlight="image">
-<img src="/images/raw_reads.png?width=640&amp;classes=shadow" alt="Raw reads" class="shadow" style="height: auto; width: 640;" loading="lazy">
+<a href="/captus.docs/images/raw_reads.png?width=640&amp;classes=shadow" data-featherlight="image">
+<img src="/captus.docs/images/raw_reads.png?width=640&amp;classes=shadow" alt="Raw reads" class="shadow" style="height: auto; width: 640;" loading="lazy">
 </a></p>
 <p>We have a samples with different data types, to distinguish them we added <code>_CAP</code> to the samples where hybridization-capture was used, <code>_WGS</code> for high-coverage whole genome sequencing, <code>_RNA</code> for RNA-Seq reads, and <code>_GSK</code> for genome skimming data (notice also the difference in file sizes). For this example, we only want to clean the samples in red rectangles corresponding to capture data. We run the following <code>Captus</code> command:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>captus_assembly clean --reads ./00_raw_reads/*_CAP_R?.fq.gz
 </span></span></code></pre></div><p>Notice we are using default settings, the only required argument is the location of the raw reads. The output was written to a new directory called <code>01_clean_reads</code>. Let&rsquo;s take a look at the contents:</p>
 <p>
 		
-<a href="/images/clean_reads.png?width=640&amp;classes=shadow" data-featherlight="image">
-<img src="/images/clean_reads.png?width=640&amp;classes=shadow" alt="Clean reads" class="shadow" style="height: auto; width: 640;" loading="lazy">
+<a href="/captus.docs/images/clean_reads.png?width=640&amp;classes=shadow" data-featherlight="image">
+<img src="/captus.docs/images/clean_reads.png?width=640&amp;classes=shadow" alt="Clean reads" class="shadow" style="height: auto; width: 640;" loading="lazy">
 </a></p>
 <h3 id="1-sample_r1fqgz-sample_r2fqgz">1. <strong><code>[sample]_R1.fq.gz</code></strong>, <strong><code>[sample]_R2.fq.gz</code></strong></h3>
 <p>In case of paired-end input we will have a pair of files like in the image, the forward reads are indicated by <strong>_R1</strong> and the reverse reads by <strong>_R2</strong>. Single-end input will only return forward reads. <a href="https://en.wikipedia.org/wiki/FASTQ_format">Wikipedia</a>&rsquo;s entry for the format describes it in more detail.</p>
@@ -126,8 +126,8 @@
     <div class="expand-content" style="display: none;">
 <p>
 		
-<a href="/images/fastq_format.png?width=1000&amp;classes=shadow" data-featherlight="image">
-<img src="/images/fastq_format.png?width=1000&amp;classes=shadow" alt="FASTQ format" class="shadow" style="height: auto; width: 1000;" loading="lazy">
+<a href="/captus.docs/images/fastq_format.png?width=1000&amp;classes=shadow" data-featherlight="image">
+<img src="/captus.docs/images/fastq_format.png?width=1000&amp;classes=shadow" alt="FASTQ format" class="shadow" style="height: auto; width: 1000;" loading="lazy">
 </a></p>
 
     </div>
@@ -410,7 +410,7 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
       <div id="header-wrapper" class="default-animation">
         <div id="header" class="default-animation">
           <a id="logo" href="/captus.docs/">
-            <img src="/images/logo.svg" width="270">
+            <img src="/captus.docs/images/logo.svg" width="270">
           </a>
         </div>
         <div class="searchbox default-animation">
@@ -422,12 +422,12 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/captus.docs/js/auto-complete.js?1668166586" defer></script>
-        <script src="/captus.docs/js/lunr.min.js?1668166586" defer></script>
-        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1668166586" defer></script>
-        <script src="/captus.docs/js/lunr.multi.min.js?1668166586" defer></script>
-        <script src="/captus.docs/js/lunr.en.min.js?1668166586" defer></script>
-        <script src="/captus.docs/js/search.js?1668166586" defer></script>
+        <script src="/captus.docs/js/auto-complete.js?1668167344" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1668167344" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1668167344" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1668167344" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1668167344" defer></script>
+        <script src="/captus.docs/js/search.js?1668167344" defer></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -463,7 +463,10 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
           <li data-nav-id="/captus.docs/assembly/align/output/" class="dd-item"><a href="/captus.docs/assembly/align/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
           <li data-nav-id="/captus.docs/assembly/align/report/" class="dd-item"><a href="/captus.docs/assembly/align/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
           <li data-nav-id="/captus.docs/design/" class="dd-item"><a href="/captus.docs/design/index.html">Design<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/tutorials/" class="dd-item"><a href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/tutorials/" class="dd-item"><input type="checkbox" id="section-90d1aeee0e96e115d1edea3b994d19fb" aria-controls="subsections-90d1aeee0e96e115d1edea3b994d19fb" class="toggle"><label class="a11y-only toggle" for="section-90d1aeee0e96e115d1edea3b994d19fb" >Submenu Tutorials</label><a href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a><ul id="subsections-90d1aeee0e96e115d1edea3b994d19fb">
+          <li data-nav-id="/captus.docs/tutorials/assembly/" class="dd-item alwaysopen"><input type="checkbox" id="section-740840fed0965cd53aaef708df5dc95d" aria-controls="subsections-740840fed0965cd53aaef708df5dc95d" class="toggle" checked><label class="a11y-only toggle" for="section-740840fed0965cd53aaef708df5dc95d" >Submenu Assembly</label><a href="/captus.docs/tutorials/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-740840fed0965cd53aaef708df5dc95d">
+          <li data-nav-id="/captus.docs/tutorials/assembly/basic/" class="dd-item"><a href="/captus.docs/tutorials/assembly/basic/index.html"><i class="fas fa-school"></i> Basic<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/tutorials/assembly/advanced/" class="dd-item"><a href="/captus.docs/tutorials/assembly/advanced/index.html"><i class="fas fa-graduation-cap"></i> Advanced<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
         </ul>
         <div id="shortcuts">
           <div class="nav-title">More</div>
@@ -524,14 +527,14 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
   <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
   <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
   <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
-  <script async defer src="https://buttons.github.io/buttons.js?1668166586"></script>
+  <script async defer src="https://buttons.github.io/buttons.js?1668167344"></script>
 
         </div>
       </div>
     </aside>
-    <script src="/captus.docs/js/clipboard.min.js?1668166586" defer></script>
-    <script src="/captus.docs/js/perfect-scrollbar.min.js?1668166586" defer></script>
-    <script src="/captus.docs/js/featherlight.min.js?1668166586" defer></script>
-    <script src="/captus.docs/js/theme.js?1668166586" defer></script>
+    <script src="/captus.docs/js/clipboard.min.js?1668167344" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1668167344" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1668167344" defer></script>
+    <script src="/captus.docs/js/theme.js?1668167344" defer></script>
   </body>
 </html>
