@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.99.1">
+    <meta name="generator" content="Relearn 5.5.3+tip">
+    <meta name="description" content="Documentation and tutorials for Captus">
+    <meta name="author" content="Edgardo M. Ortiz">
+    <title>HTML Report :: Captus documentation</title>
+    <link href="/captus.docs/images/favicon.ico?1668165276" rel="icon" type="image/x-icon">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/captus.docs/css/fontawesome-all.min.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1668165276" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1668165276" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1668165276"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_json_url="/captus.docs/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
+      window.variants && variants.init( [ 'green' ] );
+    </script>
+    <script src="/captus.docs/js/jquery.min.js?1668165276" defer></script>
+
+   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+
+  </head>
+  <body class="mobile-support default disableInlineCopyToClipboard" data-url="/captus.docs/assembly/extract/report/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div class="navigation">
+            <a class="nav nav-next" href="/captus.docs/assembly/align/index.html" title="Align (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev" href="/captus.docs/assembly/extract/output/index.html" title="Output Files (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link" title='Edit (CTRL+ALT+w)' href="https://github.com/edgardomortiz/Captus/tree/master/docs/content/assembly/extract/report.md" target="blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/index.html"><span itemprop="name">Captus</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/assembly/index.html"><span itemprop="name">Assembly</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/assembly/extract/index.html"><span itemprop="name">Extract</span></a><meta itemprop="position" content="3"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">HTML Report</span><meta itemprop="position" content="4"></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#concept">Concept</a></li>
+    <li><a href="#example">Example</a></li>
+    <li><a href="#features">Features</a>
+      <ul>
+        <li><a href="#1-hover-information">1. Hover information</a></li>
+        <li><a href="#2-variable-dropdown">2. <code>Variable</code> dropdown</a></li>
+        <li><a href="#3-sort-by-value-dropdown">3. <code>Sort by Value</code> dropdown</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1>HTML Report</h1>
+
+<h2 id="concept">Concept</h2>
+<hr>
+<p>The output from this <code>extract</code> module, such as <strong>how many loci are recovered, in how many samples, and to what extent, would be the most direct indication of whether your analysis is successful or not</strong>, and thus would be of most interest to many users.
+However, collecting, summarizing, and visualizing such important information can be backbreaking, especially in a phylo&quot;genomic&quot; project which typically employs hundreds or even thousands of samples and loci.</p>
+<p>Don&rsquo;t worry, <code>Captus</code> automatically generates an informative report!
+Open <code>captus-assembly_extract.report.html</code> with your browser (internet connection required) to explore your extraction result at various scales, from the global level to the single sample or single locus level.
+
+<div class="box notices cstyle tip">
+    <div class="box-label"><i class="fa-fw fas fa-lightbulb"></i> Tip</div>
+    <div class="box-content">
+<ul>
+<li>
+<p>The entire report is based on data stored in <a href="/captus.docs/assembly/extract/output/#26-captus-assembly_extractstatstsv"><code>captus-assembly_extract.stats.tsv</code></a>.</p>
+</li>
+<li>
+<p>All tables and plots in the report are interactive powered by <a href="https://plotly.com/python"><code>Plotly</code></a>.<br>
+Visit the following sites once to take full advantage of its interactivity:</p>
+<ul>
+<li><a href="https://plotly.com/chart-studio-help/getting-to-know-the-plotly-modebar">https://plotly.com/chart-studio-help/getting-to-know-the-plotly-modebar</a></li>
+<li><a href="https://plotly.com/chart-studio-help/zoom-pan-hover-controls">https://plotly.com/chart-studio-help/zoom-pan-hover-controls</a></li>
+</ul>
+</li>
+</ul>
+    </div>
+</div></p>
+<h2 id="example">Example</h2>
+<hr>
+<p>Here is a small example of the report you can play with!<br>
+The heatmap shows a extraction result of the <code>Angiosperms353</code> (<a href="https://doi.org/10.1093/sysbio/syy086">Johnson <em>et al</em>., 2019</a>) loci from targeted-capture data of four plant species.
+The blue bars along with <em>x</em>- and <em>y</em>-axes indicate how many loci are recovered in each sample and how many samples each locus is recovered in, respectively.<br>
+
+
+<div id="/plotly/extraction_report.json" class="plotly" style="height:500px"></div>
+<script>
+Plotly.d3.json("/plotly/extraction_report.json", function(err, fig) {
+    Plotly.plot('\/plotly\/extraction_report.json', fig.data, fig.layout, {responsive: true});
+});
+</script>
+
+
+<div class="box notices cstyle note">
+    <div class="box-label"><i class="fa-fw fas fa-exclamation-circle"></i> Note</div>
+    <div class="box-content">
+<ul>
+<li>When your result contains more than one marker type, the report will include separate plots for each marker type.</li>
+<li>For loci with more than one copy found in a sample, information on best hit (hit with the highest <code>weighted score</code>) will be shown.</li>
+<li>Information on loci with no samples recovered and samples with no loci recovered will not be shown.</li>
+</ul>
+    </div>
+</div></p>
+<h2 id="features">Features</h2>
+<hr>
+<h3 id="1-hover-information">1. Hover information</h3>
+<p>Hover mouse cursor over the heatmap to see detailed information about each single data point.<br>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        List of the information to be shown
+    </a>
+    <div class="expand-content" style="display: none;">
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sample</strong></td>
+<td>Sample name</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Marker type</strong></td>
+<td>Marker type (<code>NUC</code> = Nuclear proteins; <code>PTD</code> = Plastidial proteins; <code>MIT</code> = Mitochondrial proteins; <code>DNA</code> = Miscellaneous DNA markers; <code>CLR</code> = Cluster-derived DNA markers)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Locus</strong></td>
+<td>Locus name</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Ref name</strong></td>
+<td>Reference sequence name selected</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Ref coords</strong></td>
+<td>Matched coordinates with respect to the reference sequence (Consecutive coordinates separated by <code>,</code> indicate partial hits on the same contig; coordinates separated by <code>;</code> indicate hits on different contigs)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Ref type</strong></td>
+<td>Reference sequence format (<code>nucl</code> = nucleotides; <code>prot</code> = amino acids)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Ref len matched</strong></td>
+<td>Total length of <code>Ref coords</code></td>
+<td>aa/bp</td>
+</tr>
+<tr>
+<td><strong>Total hits (copies)</strong></td>
+<td>Number of hits found (Values greater than 1 imply the presence of paralogs)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Recovered length</strong></td>
+<td>Percentage of reference sequence length recovered, calcurated as (<code>Ref len matched</code> / Reference sequence length) * 100</td>
+<td>%</td>
+</tr>
+<tr>
+<td><strong>Identity</strong></td>
+<td>Sequence identity of the recovered sequence to the reference sequence</td>
+<td>%</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td>Score inspired by <a href="https://www.webscipio.org/help/webscipio#setting"><code>Scipio</code></a>, calculated as (matches - mismatches) / reference sequence length</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Weighted score</strong></td>
+<td>Weighted <code>score</code> to address multiple reference sequences per locus<br>(for details, read <a href="/captus.docs/assembly/extract/output/#26-captus-assembly_extractstatstsv"><i class="fab fa-readme"></i> Information included in the table</a>)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Hit length</strong></td>
+<td>Length of sequence recovered</td>
+<td>bp</td>
+</tr>
+<tr>
+<td><strong>CDS length</strong></td>
+<td>Total length of coding sequences (CDS) recovered (always <code>NA</code> when the <code>ref_type</code> is <code>nucl</code>)</td>
+<td>bp</td>
+</tr>
+<tr>
+<td><strong>Intron length</strong></td>
+<td>Total length of introns recovered (always <code>NA</code> when the <code>ref_type</code> is <code>nucl</code>)</td>
+<td>bp</td>
+</tr>
+<tr>
+<td><strong>Flanking length</strong></td>
+<td>Total length of flanking sequences recovered</td>
+<td>bp</td>
+</tr>
+<tr>
+<td><strong>Number of frameshifts</strong></td>
+<td>Number of corrected frameshifts in the extracted sequence<br>(always <code>0</code> when <code>ref_type</code> is <code>nucl</code>)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Position of frameshifts</strong></td>
+<td>Positions of corrected frameshifts in the extracted sequence<br>(<code>NA</code> when no frameshift is detected or <code>ref_type</code> is <code>nucl</code>)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Contigs in best hit</strong></td>
+<td>Number of contigs used to assemble the best hit</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Best hit L50</strong></td>
+<td>Least number of contigs in best hit that contain 50% of the best hit&rsquo;s recovered length</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Best hit L90</strong></td>
+<td>Least number of contigs in best hit that contain 90% of the best hit&rsquo;s recovered length</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Best hit LG50</strong></td>
+<td>Least number of contigs in best hit that contain 50% of the reference locus length</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Best hit LG90</strong></td>
+<td>Least number of contigs in best hit that contain 90% of the reference locus length</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>* When your data is huge (number of samples * number of loci &gt; 500k), only <code>Sample</code>, <code>Locus</code>, and the variable selected in the <code>Variable</code> dropdown will be shown.</p>
+
+    </div>
+</div></p>
+<hr>
+<h3 id="2-variable-dropdown">2. <code>Variable</code> dropdown</h3>
+<p>Switch this dropdown to change the variable to be shown as a heatmap among the following options: </p>
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Description</th>
+<th>Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Recovered Length</strong></td>
+<td>Percentage of reference sequence length recovered</td>
+<td>%</td>
+</tr>
+<tr>
+<td><strong>Identity</strong></td>
+<td>Sequence identity of the recovered sequence to the reference sequence</td>
+<td>%</td>
+</tr>
+<tr>
+<td><strong>Total Hits (Copies)</strong></td>
+<td>Number of hits found (Values greater than 1 imply the presence of paralogs)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td>Score inspired by <a href="https://www.webscipio.org/help/webscipio#setting"><code>Scipio</code></a>, calculated as (matches - mismatches) / reference sequence length</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Weighted Score</strong></td>
+<td>Weighted <code>score</code> to address multiple reference sequences per locus<br>(for details, read <a href="/captus.docs/assembly/extract/output/#26-captus-assembly_extractstatstsv"><i class="fab fa-readme"></i> Information included in the table</a>)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Number of Frameshifts</strong></td>
+<td>Number of corrected frameshifts in the extracted sequence<br>(always <code>0</code> if the reference sequence is in nucleotide)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Contigs in Best Hit</strong></td>
+<td>Number of contigs used to assemble the best hit</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Best Hit L50</strong></td>
+<td>Least number of contigs in best hit that contain 50% of the best hit&rsquo;s recovered length</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Best Hit L90</strong></td>
+<td>Least number of contigs in best hit that contain 90% of the best hit&rsquo;s recovered length</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Best Hit LG50</strong></td>
+<td>Least number of contigs in best hit that contain 50% of the reference locus length</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Best Hit LG90</strong></td>
+<td>Least number of contigs in best hit that contain 90% of the reference locus length</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h3 id="3-sort-by-value-dropdown">3. <code>Sort by Value</code> dropdown</h3>
+<p>Switch this dropdown to change the sorting manner of each axis as follow:</p>
+<table>
+<thead>
+<tr>
+<th>Label</th>
+<th>Locus (<em>x</em>-axis)</th>
+<th>Sample (<em>y</em>-axis)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>None</strong></td>
+<td>Sort by name</td>
+<td>Sort by name</td>
+</tr>
+<tr>
+<td><strong>Mean X</strong></td>
+<td>Sort by <strong>mean</strong> value</td>
+<td>Sort by name</td>
+</tr>
+<tr>
+<td><strong>Mean Y</strong></td>
+<td>Sort by name</td>
+<td>Sort by <strong>mean</strong> value</td>
+</tr>
+<tr>
+<td><strong>Mean Both</strong></td>
+<td>Sort by <strong>mean</strong> value</td>
+<td>Sort by <strong>mean</strong> value</td>
+</tr>
+<tr>
+<td><strong>Total X</strong></td>
+<td>Sort by <strong>total</strong> value</td>
+<td>Sort by name</td>
+</tr>
+<tr>
+<td><strong>Total Y</strong></td>
+<td>Sort by name</td>
+<td>Sort by <strong>total</strong> value</td>
+</tr>
+<tr>
+<td><strong>Total Both</strong></td>
+<td>Sort by <strong>total</strong> value</td>
+<td>Sort by <strong>total</strong> value</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#gentaro-shigita">Gentaro Shigita</a> (11.08.2021)<br>
+Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#gentaro-shigita">Gentaro Shigita</a> (16.09.2022)</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <a id="logo" href="/captus.docs/">
+            <img src="/images/logo.svg" width="270">
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <label class="a11y-only" for="search-by">Search</label>
+          <i class="fas fa-search"></i>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/captus.docs/js/auto-complete.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/search.js?1668165276" defer></script>
+      </div>
+      <div id="homelinks" class="default-animation">
+        <ul>
+          <li>
+              <a class="padding" href="/captus.docs/index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+        </ul>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/captus.docs/basics/" class="dd-item"><input type="checkbox" id="section-3494ad44d160b070fd31576fe4a3841e" aria-controls="subsections-3494ad44d160b070fd31576fe4a3841e" class="toggle"><label class="a11y-only toggle" for="section-3494ad44d160b070fd31576fe4a3841e" >Submenu Basics</label><a href="/captus.docs/basics/index.html">Basics<i class="fas fa-check read-icon"></i></a><ul id="subsections-3494ad44d160b070fd31576fe4a3841e">
+          <li data-nav-id="/captus.docs/basics/overview/" class="dd-item"><a href="/captus.docs/basics/overview/index.html">Overview<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/installation/" class="dd-item"><a href="/captus.docs/basics/installation/index.html">Installation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/parallelization/" class="dd-item"><a href="/captus.docs/basics/parallelization/index.html">Parallelization<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/" class="dd-item parent"><input type="checkbox" id="section-d26437a3e42ff73277da14a17983cc4a" aria-controls="subsections-d26437a3e42ff73277da14a17983cc4a" class="toggle" checked><label class="a11y-only toggle" for="section-d26437a3e42ff73277da14a17983cc4a" >Submenu Assembly</label><a href="/captus.docs/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-d26437a3e42ff73277da14a17983cc4a">
+          <li data-nav-id="/captus.docs/assembly/clean/" class="dd-item alwaysopen"><input type="checkbox" id="section-c872805a13ffe675b4d826b4bbe79398" aria-controls="subsections-c872805a13ffe675b4d826b4bbe79398" class="toggle" checked><label class="a11y-only toggle" for="section-c872805a13ffe675b4d826b4bbe79398" >Submenu Clean</label><a href="/captus.docs/assembly/clean/index.html"><b>1. </b>Clean<i class="fas fa-check read-icon"></i></a><ul id="subsections-c872805a13ffe675b4d826b4bbe79398">
+          <li data-nav-id="/captus.docs/assembly/clean/preparation/" class="dd-item"><a href="/captus.docs/assembly/clean/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/options/" class="dd-item"><a href="/captus.docs/assembly/clean/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/output/" class="dd-item"><a href="/captus.docs/assembly/clean/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/report/" class="dd-item"><a href="/captus.docs/assembly/clean/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/" class="dd-item alwaysopen"><input type="checkbox" id="section-a84f65fc279cc2da70eab7b44ff6d8d2" aria-controls="subsections-a84f65fc279cc2da70eab7b44ff6d8d2" class="toggle" checked><label class="a11y-only toggle" for="section-a84f65fc279cc2da70eab7b44ff6d8d2" >Submenu Assemble</label><a href="/captus.docs/assembly/assemble/index.html"><b>2. </b>Assemble<i class="fas fa-check read-icon"></i></a><ul id="subsections-a84f65fc279cc2da70eab7b44ff6d8d2">
+          <li data-nav-id="/captus.docs/assembly/assemble/preparation/" class="dd-item"><a href="/captus.docs/assembly/assemble/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/options/" class="dd-item"><a href="/captus.docs/assembly/assemble/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/output/" class="dd-item"><a href="/captus.docs/assembly/assemble/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/report/" class="dd-item"><a href="/captus.docs/assembly/assemble/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/extract/" class="dd-item parent alwaysopen"><input type="checkbox" id="section-70e7375f0d352e293150a5450dcea703" aria-controls="subsections-70e7375f0d352e293150a5450dcea703" class="toggle" checked><label class="a11y-only toggle" for="section-70e7375f0d352e293150a5450dcea703" >Submenu Extract</label><a href="/captus.docs/assembly/extract/index.html"><b>3. </b>Extract<i class="fas fa-check read-icon"></i></a><ul id="subsections-70e7375f0d352e293150a5450dcea703">
+          <li data-nav-id="/captus.docs/assembly/extract/preparation/" class="dd-item"><a href="/captus.docs/assembly/extract/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/options/" class="dd-item"><a href="/captus.docs/assembly/extract/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/output/" class="dd-item"><a href="/captus.docs/assembly/extract/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/report/" class="dd-item active"><a href="/captus.docs/assembly/extract/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/align/" class="dd-item alwaysopen"><input type="checkbox" id="section-e75d36c61d53e0a5569727f2f076837e" aria-controls="subsections-e75d36c61d53e0a5569727f2f076837e" class="toggle" checked><label class="a11y-only toggle" for="section-e75d36c61d53e0a5569727f2f076837e" >Submenu Align</label><a href="/captus.docs/assembly/align/index.html"><b>4. </b>Align<i class="fas fa-check read-icon"></i></a><ul id="subsections-e75d36c61d53e0a5569727f2f076837e">
+          <li data-nav-id="/captus.docs/assembly/align/options/" class="dd-item"><a href="/captus.docs/assembly/align/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/output/" class="dd-item"><a href="/captus.docs/assembly/align/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/report/" class="dd-item"><a href="/captus.docs/assembly/align/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/captus.docs/design/" class="dd-item"><a href="/captus.docs/design/index.html">Design<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/tutorials/" class="dd-item"><a href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/edgardomortiz/Captus"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/captus.docs/more/credits/index.html"><i class='fas fa-fw fa-bullhorn'></i> Credits</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="green" value="green" selected>Green</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i> Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><style>
+	#footer {
+	  font-size: 13px;
+	  height: 100px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  padding: 2rem 1rem;
+	  text-align: center;
+	  min-width: 230px;
+	  max-width: 300px;
+	}
+	#footer p {
+	  margin: 0;
+	}
+  </style>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Captus on GitHub">Download</a>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
+  <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+  <script async defer src="https://buttons.github.io/buttons.js?1668165276"></script>
+
+        </div>
+      </div>
+    </aside>
+    <script src="/captus.docs/js/clipboard.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/theme.js?1668165276" defer></script>
+  </body>
+</html>

@@ -1,0 +1,5 @@
+# Mac filesystem hidden files
+.DS_Store
+._*
+.Rhistory
+.vscode/

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.99.1">
+    <meta name="generator" content="Relearn 5.5.3+tip">
+    <meta name="description" content="Documentation and tutorials for Captus">
+    <meta name="author" content="Edgardo M. Ortiz">
+    <title>Options :: Captus documentation</title>
+    <link href="/captus.docs/images/favicon.ico?1668165276" rel="icon" type="image/x-icon">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/captus.docs/css/fontawesome-all.min.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1668165276" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1668165276" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1668165276"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_json_url="/captus.docs/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
+      window.variants && variants.init( [ 'green' ] );
+    </script>
+    <script src="/captus.docs/js/jquery.min.js?1668165276" defer></script>
+
+
+  </head>
+  <body class="mobile-support default disableInlineCopyToClipboard" data-url="/captus.docs/assembly/extract/options/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div class="navigation">
+            <a class="nav nav-next" href="/captus.docs/assembly/extract/output/index.html" title="Output Files (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev" href="/captus.docs/assembly/extract/preparation/index.html" title="Input Preparation (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link" title='Edit (CTRL+ALT+w)' href="https://github.com/edgardomortiz/Captus/tree/master/docs/content/assembly/extract/options.md" target="blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/index.html"><span itemprop="name">Captus</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/assembly/index.html"><span itemprop="name">Assembly</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/assembly/extract/index.html"><span itemprop="name">Extract</span></a><meta itemprop="position" content="3"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Options</span><meta itemprop="position" content="4"></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#input"><em>Input</em></a>
+      <ul>
+        <li><a href="#-a---captus_assemblies_dir"><strong><code>-a, --captus_assemblies_dir</code></strong></a></li>
+        <li><a href="#-f---fastas"><strong><code>-f, --fastas</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#output"><em>Output</em></a>
+      <ul>
+        <li><a href="#-o---out"><strong><code>-o, --out</code></strong></a></li>
+        <li><a href="#--max_paralogs"><strong><code>--max_paralogs</code></strong></a></li>
+        <li><a href="#--keep_all"><strong><code>--keep_all</code></strong></a></li>
+        <li><a href="#--overwrite"><strong><code>--overwrite</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#proteins-extraction-global-options-scipio"><em>Proteins extraction global options (Scipio)</em></a>
+      <ul>
+        <li><a href="#--max_loci_scipio_x2"><strong><code>--max_loci_scipio_x2</code></strong></a></li>
+        <li><a href="#--predict"><strong><code>--predict</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#nuclear-proteins-scipio"><em>Nuclear proteins (Scipio)</em></a>
+      <ul>
+        <li><a href="#-n---nuc_refs"><strong><code>-n, --nuc_refs</code></strong></a></li>
+        <li><a href="#--nuc_transtable"><strong><code>--nuc_transtable</code></strong></a></li>
+        <li><a href="#--nuc_min_score"><strong><code>--nuc_min_score</code></strong></a></li>
+        <li><a href="#--nuc_min_identity"><strong><code>--nuc_min_identity</code></strong></a></li>
+        <li><a href="#--nuc_min_coverage"><strong><code>--nuc_min_coverage</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#plastidial-proteins-scipio"><em>Plastidial proteins (Scipio)</em></a>
+      <ul>
+        <li><a href="#-p---ptd_refs"><strong><code>-p, --ptd_refs</code></strong></a></li>
+        <li><a href="#--ptd_transtable"><strong><code>--ptd_transtable</code></strong></a></li>
+        <li><a href="#--ptd_min_score"><strong><code>--ptd_min_score</code></strong></a></li>
+        <li><a href="#--ptd_min_identity"><strong><code>--ptd_min_identity</code></strong></a></li>
+        <li><a href="#--ptd_min_coverage"><strong><code>--ptd_min_coverage</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#mitochondrial-proteins-scipio"><em>Mitochondrial proteins (Scipio)</em></a>
+      <ul>
+        <li><a href="#-m---mit_refs"><strong><code>-m, --mit_refs</code></strong></a></li>
+        <li><a href="#--mit_transtable"><strong><code>--mit_transtable</code></strong></a></li>
+        <li><a href="#--mit_min_score"><strong><code>--mit_min_score</code></strong></a></li>
+        <li><a href="#--mit_min_identity"><strong><code>--mit_min_identity</code></strong></a></li>
+        <li><a href="#--mit_min_coverage"><strong><code>--mit_min_coverage</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#miscellaneous-dna-markers-blat"><em>Miscellaneous DNA markers (BLAT)</em></a>
+      <ul>
+        <li><a href="#--dna_refs"><strong><code>--dna_refs</code></strong></a></li>
+        <li><a href="#--dna_min_identity"><strong><code>--dna_min_identity</code></strong></a></li>
+        <li><a href="#--dna_min_coverage"><strong><code>--dna_min_coverage</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#assemblies-clustering-mmseqs2"><em>Assemblies clustering (MMSeqs2)</em></a>
+      <ul>
+        <li><a href="#-c---cluster_leftovers"><strong><code>-c, --cluster_leftovers</code></strong></a></li>
+        <li><a href="#--mmseqs2_method"><strong><code>--mmseqs2_method</code></strong></a></li>
+        <li><a href="#--cluster_mode"><strong><code>--cluster_mode</code></strong></a></li>
+        <li><a href="#--cl_min_identity"><strong><code>--cl_min_identity</code></strong></a></li>
+        <li><a href="#--cl_seq_id_mode"><strong><code>--cl_seq_id_mode</code></strong></a></li>
+        <li><a href="#--cl_min_coverage"><strong><code>--cl_min_coverage</code></strong></a></li>
+        <li><a href="#--cl_cov_mode"><strong><code>--cl_cov_mode</code></strong></a></li>
+        <li><a href="#--cl_max_seq_len"><strong><code>--cl_max_seq_len</code></strong></a></li>
+        <li><a href="#--cl_rep_min_len"><strong><code>--cl_rep_min_len</code></strong></a></li>
+        <li><a href="#--cl_min_samples"><strong><code>--cl_min_samples</code></strong></a></li>
+        <li><a href="#--cl_tmp_dir"><strong><code>--cl_tmp_dir</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#other"><em>Other</em></a>
+      <ul>
+        <li><a href="#--scipio_path---blat_path"><strong><code>--scipio_path</code></strong>, <strong><code>--blat_path</code></strong></a></li>
+        <li><a href="#--mmseqs2_path"><strong><code>--mmseqs2_path</code></strong></a></li>
+        <li><a href="#--ram---threads---concurrent---debug---show_less"><strong><code>--ram</code></strong>, <strong><code>--threads</code></strong>, <strong><code>--concurrent</code></strong>, <strong><code>--debug</code></strong>, <strong><code>--show_less</code></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1>Options</h1>
+
+<h1 id="extract">extract</h1>
+<hr>
+<p>To show all available options and their default values you can type in your terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>captus_assembly extract --help
+</span></span></code></pre></div><hr>
+<h2 id="input"><em>Input</em></h2>
+<hr>
+<h3 id="-a---captus_assemblies_dir"><strong><code>-a, --captus_assemblies_dir</code></strong></h3>
+<p>Path to the output directory from the <code>assemble</code> command, (e.g. <code>02_assemblies</code> if you used the default name). If you didn&rsquo;t assemble any sample in <code>Captus</code> this directory will be created in order to import your contigs assembled elsewhere.</p>
+<p>This argument is <strong>required</strong> <i class="fas fa-exclamation-triangle"></i>, the default is <strong>./02_assemblies/</strong></p>
+<hr>
+<h3 id="-f---fastas"><strong><code>-f, --fastas</code></strong></h3>
+<p>With this option you can provide the location of your own FASTA assembly files, there are several ways to list them:</p>
+<ul>
+<li>
+<p><em><strong>Directory:</strong></em> the path to the directory containing your FASTA files assembled elsewhere. This will be the typical way to tell <code>Captus</code> which assemblies to import prior to marker extraction. All subdirectories will be searched for FASTA (<code>.fa</code>, <code>.fna</code>, <code>.fasta</code>, <code>.fa.gz</code>, <code>.fna.gz</code>, <code>.fasta.gz</code>) files in this case.</p>
+</li>
+<li>
+<p><em><strong>List of files:</strong></em> you can also provide the individual path to each of your FASTA file separated by a single space. This is useful if you only want to analyze only a couple of samples within a directory with many other samples. Another use for lists is when your FASTA assembly files are located in different directories.</p>
+</li>
+<li>
+<p><em><strong>UNIX pattern:</strong></em> another easy way to provide lists of files is using the wildcards <code>*</code> and <code>?</code> to match many or just one character respectively.</p>
+</li>
+</ul>
+<p>Remember, all the FASTA files provided with this option will be imported to the path set by <code>--captus_assemblies_dir</code></p>
+<p>This argument is optional and has no default.</p>
+<hr>
+<h2 id="output"><em>Output</em></h2>
+<hr>
+<h3 id="-o---out"><strong><code>-o, --out</code></strong></h3>
+<p>With this option you can redirect the output directory to a path of your choice, that path will be created if it doesn&rsquo;t already exist.</p>
+<p>Inside this directory, the extracted markers for each sample will be stored in a subdirectory with the ending <code>__captus-ext</code>.</p>
+<p>This argument is optinal, the default is <strong>./03_extractions/</strong></p>
+<hr>
+<h3 id="--max_paralogs"><strong><code>--max_paralogs</code></strong></h3>
+<p>Maximum number of secondary hits (copies) of any particular reference marker allowed in the output. We recommend disabling the removal of paralogs (secondary hits/copies) during the <code>extract</code> step because the <code>align</code> step uses a more sophisticated filter for paralogs. This can be useful for exploratory runs, for example: if after an initial run allowing all paralogs we found out that the average number of secondary hits across samples is 5, we could use this number to get rid of outliers.</p>
+<p>This argument is optional, the default is <strong>-1</strong> (include all paralogs in the output).</p>
+<hr>
+<h4 id="--max_loci_files"><strong><code>--max_loci_files</code></strong></h4>
+<p>When the number of loci in the reference exceeds this value, <code>Captus</code> will not write a separate FASTA file per sample per marker, otherwise the hard drive fills up with tons of small files. The file that includes all the extracted markers grouped per sample is still written (this is the only file needed by the final step <code>align</code> to produce the marker alignments across all samples).</p>
+<p>This argument is optional, the default is <strong>0</strong> (do not write separate loci files).</p>
+<hr>
+<h3 id="--keep_all"><strong><code>--keep_all</code></strong></h3>
+<p>Many intermediate files are created during the marker extraction, some are large (like <code>BLAT</code>&rsquo;s <code>.psl</code> files) while others small temporary logs of intermediate steps, <code>Captus</code> deletes all the unnecesary intermediate files unless you enable this flag.</p>
+<hr>
+<h3 id="--overwrite"><strong><code>--overwrite</code></strong></h3>
+<p>Use this flag with caution, this will replace any previous result within the output directory (for the sample names that match).</p>
+<hr>
+<h2 id="proteins-extraction-global-options-scipio"><em>Proteins extraction global options (Scipio)</em></h2>
+<hr>
+<h3 id="--max_loci_scipio_x2"><strong><code>--max_loci_scipio_x2</code></strong></h3>
+<p>When the number of loci in a protein reference file exceeds this number, <code>Captus</code> will not run a second, more exhaustive round of <code>Scipio</code>. Usually the results from the first round are extremely similar and sufficient, the second round can become extremely slow as the number of reference proteins grows.</p>
+<p>This argument is optional, the default is <strong>2000</strong>.</p>
+<hr>
+<h3 id="--predict"><strong><code>--predict</code></strong></h3>
+<p>Scipio flags introns as dubious when the splice signals are not found at the exon edges, this may indicate that there are additional aminoacids in the recovered protein that are not present in the reference protein. Enable this flag to attempt translation of these dubious introns, if the translation does not introduce premature stop codons they will be added to the recovered protein. Recommended if you are extracting from RNA assemblies (introns would have been removed in this type of data).</p>
+<hr>
+<h2 id="nuclear-proteins-scipio"><em>Nuclear proteins (Scipio)</em></h2>
+<hr>
+<h3 id="-n---nuc_refs"><strong><code>-n, --nuc_refs</code></strong></h3>
+<p>The reference set of nuclear proteins to search and extract from the assemblies. <code>Captus</code> includes two sets:</p>
+<ul>
+<li><code>Angiosperms353</code> = extract the original Angiosperms353.</li>
+<li><code>Mega353</code> = extract the later expanded version of Angiosperms353; because <code>Mega353</code> includes many more sequences, processing times become longer.</li>
+<li>Alternatively, you can provide the path to a FASTA file (e.g. <code>-n my_refs/my_nuclear_prots.fa</code>) that includes your own coding references either in nucleotide or aminoacid.</li>
+</ul>
+<p>If you provide a nucleotide file, please also specify the translation table to be used, otherwise <code>Captus</code> will translate it using <code>--nuc_transtable 1</code>, the &ldquo;Standard code&rdquo;. See the <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi">complete list of translation tables</a>.</p>
+<p>This argument is optional and has no default.</p>
+<hr>
+<h3 id="--nuc_transtable"><strong><code>--nuc_transtable</code></strong></h3>
+<p>If you provide a nucleotide file for extraction you can specify the genetic code to translate it.</p>
+<p>This argument is optional, the default is <strong>1</strong> (= the &ldquo;Standard code&rdquo;. See the <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi">complete list of translation tables</a>).</p>
+<hr>
+<h3 id="--nuc_min_score"><strong><code>--nuc_min_score</code></strong></h3>
+<p>Keep hits to the reference proteins that have at least this <code>Scipio</code> score. The default has been optimized to perform cross-species extraction in fragmented assemblies like the ones obtained from hybridization capture data. Accepted values are decimals from 0 to 1. For more details, read <a href="https://www.webscipio.org/help/webscipio#setting"><i class="fab fa-readme"></i> Scipio&rsquo;s settings</a>.</p>
+<p>This argument is optional, the default is <strong>0.13</strong>.</p>
+<hr>
+<h3 id="--nuc_min_identity"><strong><code>--nuc_min_identity</code></strong></h3>
+<p>Minimum percentage of identity to the reference protein for a hit to be retained. Accepted values are any number between 0 and 100. For more details, read <a href="https://www.webscipio.org/help/webscipio#setting"><i class="fab fa-readme"></i> Scipio&rsquo;s settings</a>.</p>
+<p>This argument is optional, the default is <strong>65</strong>.</p>
+<hr>
+<h3 id="--nuc_min_coverage"><strong><code>--nuc_min_coverage</code></strong></h3>
+<p>Minimum percentage of coverage of the reference protein for a hit to be retained. Accepted values are any number between 0 and 100. For more details, read <a href="https://www.webscipio.org/help/webscipio#setting"><i class="fab fa-readme"></i> Scipio&rsquo;s settings</a>.</p>
+<p>This argument is optional, the default is <strong>20</strong>.</p>
+<hr>
+<h2 id="plastidial-proteins-scipio"><em>Plastidial proteins (Scipio)</em></h2>
+<hr>
+<h3 id="-p---ptd_refs"><strong><code>-p, --ptd_refs</code></strong></h3>
+<p>The reference set of plastidial proteins to search and extract from the assemblies. The options available are:</p>
+<ul>
+<li><code>SeedPlantsPTD</code> = We curated a set of chloroplast proteins that spans all Seed Plants.</li>
+<li>Alternatively, you can provide the path to a FASTA file (e.g. <code>-p my_refs/my_plastome_prots.fa</code>) that includes your own coding references either in nucleotide or aminoacid.</li>
+</ul>
+<p>If you provide a nucleotide file, please also specify the translation table to be used, otherwise <code>Captus</code> will translate it using <code>--ptd_transtable 11</code>, the &ldquo;Bacterial, Archaeal and Plant Plastid code&rdquo;. See the <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi">complete list of translation tables</a>.</p>
+<p>This argument is optional and has no default.</p>
+<hr>
+<h3 id="--ptd_transtable"><strong><code>--ptd_transtable</code></strong></h3>
+<p>If you provide a nucleotide file for extraction you can specify the genetic code to translate it.</p>
+<p>This argument is optional, the default is <strong>11</strong> (= the &ldquo;Bacterial, Archaeal and Plant Plastid code&rdquo;. See the <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi">complete list of translation tables</a>).</p>
+<hr>
+<h3 id="--ptd_min_score"><strong><code>--ptd_min_score</code></strong></h3>
+<p>Keep hits to the reference proteins that have at least this <code>Scipio</code> score. The default has been optimized to perform cross-species extraction in fragmented assemblies like the ones obtained from hybridization capture data. Accepted values are decimals from 0 to 1. For more details, read <a href="https://www.webscipio.org/help/webscipio#setting"><i class="fab fa-readme"></i> Scipio&rsquo;s settings</a>.</p>
+<p>This argument is optional, the default is <strong>0.2</strong>.</p>
+<hr>
+<h3 id="--ptd_min_identity"><strong><code>--ptd_min_identity</code></strong></h3>
+<p>Minimum percentage of identity to the reference protein for a hit to be retained. Accepted values are any number between 0 and 100. For more details, read <a href="https://www.webscipio.org/help/webscipio#setting"><i class="fab fa-readme"></i> Scipio&rsquo;s settings</a>.</p>
+<p>This argument is optional, the default is <strong>65</strong>.</p>
+<hr>
+<h3 id="--ptd_min_coverage"><strong><code>--ptd_min_coverage</code></strong></h3>
+<p>Minimum percentage of coverage of the reference protein for a hit to be retained. Accepted values are any number between 0 and 100. For more details, read <a href="https://www.webscipio.org/help/webscipio#setting"><i class="fab fa-readme"></i> Scipio&rsquo;s settings</a>.</p>
+<p>This argument is optional, the default is <strong>20</strong>.</p>
+<hr>
+<h2 id="mitochondrial-proteins-scipio"><em>Mitochondrial proteins (Scipio)</em></h2>
+<hr>
+<h3 id="-m---mit_refs"><strong><code>-m, --mit_refs</code></strong></h3>
+<p>The reference set of mitochondrial proteins to search and extract from the assemblies. The options available are:</p>
+<ul>
+<li><code>SeedPlantsMIT</code> = We curated a set of mitochondrial proteins that spans all Seed Plants.</li>
+<li>Alternatively, you can provide the path to a FASTA file (e.g. <code>-p my_refs/my_mitome_prots.fa</code>) that includes your own coding references either in nucleotide or aminoacid.</li>
+</ul>
+<p>If you provide a nucleotide file, please also specify the translation table to be used, otherwise <code>Captus</code> will translate it using <code>--mit_transtable 1</code>, the &ldquo;Standard code&rdquo; which is the genetic code used by plant mitochondria. See the <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi">complete list of translation tables</a>.</p>
+<p>This argument is optional and has no default.</p>
+<hr>
+<h3 id="--mit_transtable"><strong><code>--mit_transtable</code></strong></h3>
+<p>If you provide a nucleotide file for extraction you can specify the genetic code to translate it.</p>
+<p>This argument is optional, the default is <strong>1</strong> (= the &ldquo;Standard code&rdquo;. See the <a href="https://www.ncbi.nlm.nih.gov/Taxonomy/Utils/wprintgc.cgi">complete list of translation tables</a>).</p>
+<hr>
+<h3 id="--mit_min_score"><strong><code>--mit_min_score</code></strong></h3>
+<p>Keep hits to the reference proteins that have at least this <code>Scipio</code> score. The default has been optimized to perform cross-species extraction in fragmented assemblies like the ones obtained from hybridization capture data. Accepted values are decimals from 0 to 1. For more details, read <a href="https://www.webscipio.org/help/webscipio#setting"><i class="fab fa-readme"></i> Scipio&rsquo;s settings</a>.</p>
+<p>This argument is optional, the default is <strong>0.2</strong>.</p>
+<hr>
+<h3 id="--mit_min_identity"><strong><code>--mit_min_identity</code></strong></h3>
+<p>Minimum percentage of identity to the reference protein for a hit to be retained. Accepted values are any number between 0 and 100. For more details, read <a href="https://www.webscipio.org/help/webscipio#setting"><i class="fab fa-readme"></i> Scipio&rsquo;s settings</a>.</p>
+<p>This argument is optional, the default is <strong>65</strong>.</p>
+<hr>
+<h3 id="--mit_min_coverage"><strong><code>--mit_min_coverage</code></strong></h3>
+<p>Minimum percentage of coverage of the reference protein for a hit to be retained. Accepted values are any number between 0 and 100. For more details, read <a href="https://www.webscipio.org/help/webscipio#setting"><i class="fab fa-readme"></i> Scipio&rsquo;s settings</a>.</p>
+<p>This argument is optional, the default is <strong>20</strong>.</p>
+<hr>
+<h2 id="miscellaneous-dna-markers-blat"><em>Miscellaneous DNA markers (BLAT)</em></h2>
+<hr>
+<h3 id="--dna_refs"><strong><code>--dna_refs</code></strong></h3>
+<p>Path to a FASTA nucleotide file of miscellaneous DNA references. You can include non-coding regions, complete genes (exons + introns), complete mRNAS (including UTRs), etc.</p>
+<p>This argument is optional and has no default.</p>
+<hr>
+<h3 id="--dna_min_identity"><strong><code>--dna_min_identity</code></strong></h3>
+<p>Minimum percentage of identity to the reference sequence for ahit to be retained. Accepted values are any number between 0 and 100.</p>
+<p>This argument is optional, the default is <strong>80</strong>.</p>
+<hr>
+<h3 id="--dna_min_coverage"><strong><code>--dna_min_coverage</code></strong></h3>
+<p>Minimum percetange of coverage of the reference sequence for a hit to be retained. Accepted values are any number between 0 and 100.</p>
+<p>This argument is optional, the default is <strong>20</strong>.</p>
+<hr>
+<h2 id="assemblies-clustering-mmseqs2"><em>Assemblies clustering (MMSeqs2)</em></h2>
+<p>Most contigs in your assemblies will not contain hits to your references, that means that many potentially useful markers usually remain unused and unexplored. With this feature you can cluster your unused contigs across samples to find new markers that can complement your phylogenomic dataset.</p>
+<hr>
+<h3 id="-c---cluster_leftovers"><strong><code>-c, --cluster_leftovers</code></strong></h3>
+<p>Enable <a href="https://github.com/soedinglab/MMseqs2"><code>MMseqs2</code></a> clustering across samples for the contigs that had no hits to the reference markers. A new miscellaneous DNA reference is built from the best representative of each cluster in order to perform a miscellaneous DNA marker extraction.</p>
+<hr>
+<h3 id="--mmseqs2_method"><strong><code>--mmseqs2_method</code></strong></h3>
+<p>Select <a href="https://github.com/soedinglab/mmseqs2/wiki#easy-workflows">MMseqs2&rsquo;s clustering algorithm</a>. Valid options are:</p>
+<ul>
+<li><code>easy-linclust</code> = Fast linear time (for huge datasets), less sensitive clustering</li>
+<li><code>easy-cluster</code> = Sensitive homology search (slower)</li>
+</ul>
+<p>This argument is optional, the default is <strong>easy-linclust</strong>.</p>
+<hr>
+<h3 id="--cluster_mode"><strong><code>--cluster_mode</code></strong></h3>
+<p>Select <a href="https://github.com/soedinglab/mmseqs2/wiki#clustering-modes">MMseqs2&rsquo;s clustering mode</a>. Valid options are:</p>
+<ul>
+<li><code>0</code> = Greedy set cover</li>
+<li><code>1</code> = Connected component</li>
+<li><code>2</code> = Greedy incremental (analogous to CD-HIT)</li>
+</ul>
+<p>This argument is optional, the default is <strong>2</strong>.</p>
+<hr>
+<h3 id="--cl_min_identity"><strong><code>--cl_min_identity</code></strong></h3>
+<p>Minimum percentage of similarity between sequences within a cluster. Accepted values are any number between 75 and 100. Since <code>Captus</code> will perform a <a href="#miscellaneous-dna-markers-blat">Miscellaneous DNA  marker extraction</a> using as reference the best representative of each cluster, it is convenient to set <code>--cl_min_identity</code> a little lower than <code>--dna_min_identity</code>.</p>
+<p>This identity threshold only affects the clustering used for the creation of the new reference of DNA markers, the actual marker extraction still depends of <code>dna_min_identity</code>.</p>
+<p>This argument is optional, the default is <strong>auto</strong> (= 99% of <code>dna_min_identity</code>).</p>
+<hr>
+<h3 id="--cl_seq_id_mode"><strong><code>--cl_seq_id_mode</code></strong></h3>
+<p>Select MMseqs2&rsquo;s sequence identity mode. Valid options are:</p>
+<ul>
+<li><code>0</code> = Alignment length</li>
+<li><code>1</code> = Shorter sequence</li>
+<li><code>2</code> = Longer sequence</li>
+</ul>
+<p>This argument is optional, the default is <strong>1</strong>.</p>
+<hr>
+<h3 id="--cl_min_coverage"><strong><code>--cl_min_coverage</code></strong></h3>
+<p>For a sequence to be included in a cluster, this percentage of its length has to be matched by the longest sequence in the cluster. Accepted values are number between 0 and 100.</p>
+<p>This only affects the clustering used for the creation of the new reference of DNA markers, the actual marker extraction still depends of <code>dna_min_coverage</code>.</p>
+<p>This argument is optional, the default is <strong>80</strong>.</p>
+<hr>
+<h3 id="--cl_cov_mode"><strong><code>--cl_cov_mode</code></strong></h3>
+<p>Select <a href="https://github.com/soedinglab/mmseqs2/wiki#how-to-set-the-right-alignment-coverage-to-cluster">MMseqs2&rsquo;s sequence coverage mode</a>. Valid options are:</p>
+<ul>
+<li><code>0</code> = Bidirectional (query and target)</li>
+<li><code>1</code> = Target</li>
+<li><code>2</code> = Query</li>
+<li><code>3</code> = Target-in-query</li>
+</ul>
+<p>This argument is optional, the default is <strong>1</strong>.</p>
+<hr>
+<h3 id="--cl_max_seq_len"><strong><code>--cl_max_seq_len</code></strong></h3>
+<p>Do not cluster sequences longer than this length in bp, the maximum allowed by MMseqs2 is 65535. Use the value <code>0</code> to disable this filter.</p>
+<p>This argument is optional, the default is <strong>20000</strong>.</p>
+<hr>
+<h3 id="--cl_rep_min_len"><strong><code>--cl_rep_min_len</code></strong></h3>
+<p>After clustering is finished, only accept cluster representatives of at least this length to be part of the new miscellaneous DNA reference. This avoids the creation of very short locus alignments. Use the value <code>0</code> to disable this filter.</p>
+<p>This argument is optional, the default is <strong>500</strong>.</p>
+<hr>
+<h3 id="--cl_min_samples"><strong><code>--cl_min_samples</code></strong></h3>
+<p>Minimum number of samples per cluster.</p>
+<p>This argument is optional, the default is <strong>auto</strong> (= 30% of the total number of samples or at least 4).</p>
+<hr>
+<h3 id="--cl_tmp_dir"><strong><code>--cl_tmp_dir</code></strong></h3>
+<p>Path where to create the temporary directory for <code>MMseqs2</code>. Clustering can become slow when done on external drives, set this location to an internal drive.</p>
+<p>This argument is optional, the default is <strong>$HOME</strong>.</p>
+<hr>
+<h2 id="other"><em>Other</em></h2>
+<hr>
+<h3 id="--scipio_path---blat_path"><strong><code>--scipio_path</code></strong>, <strong><code>--blat_path</code></strong></h3>
+<p>If you have installed your own copies of <code>Scipio</code>, <code>BLAT</code> you can provide the full path to those copies.</p>
+<p>These arguments are optional, the default is to use the <strong>bundled</strong> copies of these programs.</p>
+<h3 id="--mmseqs2_path"><strong><code>--mmseqs2_path</code></strong></h3>
+<p>If you have installed your own copy of <code>MMSeqs2</code> you can provide the full path to that copy.</p>
+<p>This argument is optional, the default is <strong>mmseqs</strong></p>
+<hr>
+<h3 id="--ram---threads---concurrent---debug---show_less"><strong><code>--ram</code></strong>, <strong><code>--threads</code></strong>, <strong><code>--concurrent</code></strong>, <strong><code>--debug</code></strong>, <strong><code>--show_less</code></strong></h3>
+<p>See <a href="https://edgardomortiz.github.io/captus.docs/basics/parallelization/">Parallelization (and other common options)</a></p>
+<hr>
+<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (06.08.2021)<br>
+Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (31.05.2022)</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <a id="logo" href="/captus.docs/">
+            <img src="/images/logo.svg" width="270">
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <label class="a11y-only" for="search-by">Search</label>
+          <i class="fas fa-search"></i>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/captus.docs/js/auto-complete.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/search.js?1668165276" defer></script>
+      </div>
+      <div id="homelinks" class="default-animation">
+        <ul>
+          <li>
+              <a class="padding" href="/captus.docs/index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+        </ul>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/captus.docs/basics/" class="dd-item"><input type="checkbox" id="section-3494ad44d160b070fd31576fe4a3841e" aria-controls="subsections-3494ad44d160b070fd31576fe4a3841e" class="toggle"><label class="a11y-only toggle" for="section-3494ad44d160b070fd31576fe4a3841e" >Submenu Basics</label><a href="/captus.docs/basics/index.html">Basics<i class="fas fa-check read-icon"></i></a><ul id="subsections-3494ad44d160b070fd31576fe4a3841e">
+          <li data-nav-id="/captus.docs/basics/overview/" class="dd-item"><a href="/captus.docs/basics/overview/index.html">Overview<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/installation/" class="dd-item"><a href="/captus.docs/basics/installation/index.html">Installation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/parallelization/" class="dd-item"><a href="/captus.docs/basics/parallelization/index.html">Parallelization<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/" class="dd-item parent"><input type="checkbox" id="section-d26437a3e42ff73277da14a17983cc4a" aria-controls="subsections-d26437a3e42ff73277da14a17983cc4a" class="toggle" checked><label class="a11y-only toggle" for="section-d26437a3e42ff73277da14a17983cc4a" >Submenu Assembly</label><a href="/captus.docs/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-d26437a3e42ff73277da14a17983cc4a">
+          <li data-nav-id="/captus.docs/assembly/clean/" class="dd-item alwaysopen"><input type="checkbox" id="section-c872805a13ffe675b4d826b4bbe79398" aria-controls="subsections-c872805a13ffe675b4d826b4bbe79398" class="toggle" checked><label class="a11y-only toggle" for="section-c872805a13ffe675b4d826b4bbe79398" >Submenu Clean</label><a href="/captus.docs/assembly/clean/index.html"><b>1. </b>Clean<i class="fas fa-check read-icon"></i></a><ul id="subsections-c872805a13ffe675b4d826b4bbe79398">
+          <li data-nav-id="/captus.docs/assembly/clean/preparation/" class="dd-item"><a href="/captus.docs/assembly/clean/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/options/" class="dd-item"><a href="/captus.docs/assembly/clean/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/output/" class="dd-item"><a href="/captus.docs/assembly/clean/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/report/" class="dd-item"><a href="/captus.docs/assembly/clean/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/" class="dd-item alwaysopen"><input type="checkbox" id="section-a84f65fc279cc2da70eab7b44ff6d8d2" aria-controls="subsections-a84f65fc279cc2da70eab7b44ff6d8d2" class="toggle" checked><label class="a11y-only toggle" for="section-a84f65fc279cc2da70eab7b44ff6d8d2" >Submenu Assemble</label><a href="/captus.docs/assembly/assemble/index.html"><b>2. </b>Assemble<i class="fas fa-check read-icon"></i></a><ul id="subsections-a84f65fc279cc2da70eab7b44ff6d8d2">
+          <li data-nav-id="/captus.docs/assembly/assemble/preparation/" class="dd-item"><a href="/captus.docs/assembly/assemble/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/options/" class="dd-item"><a href="/captus.docs/assembly/assemble/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/output/" class="dd-item"><a href="/captus.docs/assembly/assemble/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/report/" class="dd-item"><a href="/captus.docs/assembly/assemble/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/extract/" class="dd-item parent alwaysopen"><input type="checkbox" id="section-70e7375f0d352e293150a5450dcea703" aria-controls="subsections-70e7375f0d352e293150a5450dcea703" class="toggle" checked><label class="a11y-only toggle" for="section-70e7375f0d352e293150a5450dcea703" >Submenu Extract</label><a href="/captus.docs/assembly/extract/index.html"><b>3. </b>Extract<i class="fas fa-check read-icon"></i></a><ul id="subsections-70e7375f0d352e293150a5450dcea703">
+          <li data-nav-id="/captus.docs/assembly/extract/preparation/" class="dd-item"><a href="/captus.docs/assembly/extract/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/options/" class="dd-item active"><a href="/captus.docs/assembly/extract/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/output/" class="dd-item"><a href="/captus.docs/assembly/extract/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/report/" class="dd-item"><a href="/captus.docs/assembly/extract/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/align/" class="dd-item alwaysopen"><input type="checkbox" id="section-e75d36c61d53e0a5569727f2f076837e" aria-controls="subsections-e75d36c61d53e0a5569727f2f076837e" class="toggle" checked><label class="a11y-only toggle" for="section-e75d36c61d53e0a5569727f2f076837e" >Submenu Align</label><a href="/captus.docs/assembly/align/index.html"><b>4. </b>Align<i class="fas fa-check read-icon"></i></a><ul id="subsections-e75d36c61d53e0a5569727f2f076837e">
+          <li data-nav-id="/captus.docs/assembly/align/options/" class="dd-item"><a href="/captus.docs/assembly/align/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/output/" class="dd-item"><a href="/captus.docs/assembly/align/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/report/" class="dd-item"><a href="/captus.docs/assembly/align/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/captus.docs/design/" class="dd-item"><a href="/captus.docs/design/index.html">Design<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/tutorials/" class="dd-item"><a href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/edgardomortiz/Captus"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/captus.docs/more/credits/index.html"><i class='fas fa-fw fa-bullhorn'></i> Credits</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="green" value="green" selected>Green</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i> Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><style>
+	#footer {
+	  font-size: 13px;
+	  height: 100px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  padding: 2rem 1rem;
+	  text-align: center;
+	  min-width: 230px;
+	  max-width: 300px;
+	}
+	#footer p {
+	  margin: 0;
+	}
+  </style>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Captus on GitHub">Download</a>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
+  <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+  <script async defer src="https://buttons.github.io/buttons.js?1668165276"></script>
+
+        </div>
+      </div>
+    </aside>
+    <script src="/captus.docs/js/clipboard.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/theme.js?1668165276" defer></script>
+  </body>
+</html>

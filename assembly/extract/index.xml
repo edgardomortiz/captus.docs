@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Extract on Captus documentation</title>
+    <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/</link>
+    <description>Recent content in Extract on Captus documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="https://edgardomortiz.github.io/captus.docs/assembly/extract/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Input Preparation</title>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/preparation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/extract/preparation/</guid>
+      <description>At this point you should have de novo assemblies from your samples ready. However, Captus also gives you the flexibility of starting the analysis from this point by providing your own assemblies as FASTA files or complementing you newly aasembled samples with other assemblies (e.g. genomes or transcriptomes from GenBank). If you want to do so, please read the following note:
+   How to rename your FASTA assemblies for Captus   Note In order to add your own FASTA assembly files, a  VERY IMPORTANT step is to rename them so they are clearly identified throughout the rest of the analysis.</description>
+    </item>
+    <item>
+      <title>Options</title>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/extract/options/</guid>
+      <description>extract  To show all available options and their default values you can type in your terminal:
+captus_assembly extract --help  Input  -a, --captus_assemblies_dir Path to the output directory from the assemble command, (e.g. 02_assemblies if you used the default name). If you didn&amp;rsquo;t assemble any sample in Captus this directory will be created in order to import your contigs assembled elsewhere.
+This argument is required , the default is .</description>
+    </item>
+    <item>
+      <title>Output Files</title>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/output/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/extract/output/</guid>
+      <description>For this example we will use the directory 02_assemblies previously created with the assemble module. We run the following Captus command to search and extract our reference markers from the assemblies:
+captus_assembly extract -a 02_assemblies \ -n Angiosperms353 \ -p SeedPlantsPTD \ -m SeedPlantsMIT \ -d noncoding_DNA.fasta \ -c \ --max_loci_files 500   Warning Notice the addition of option --max_loci_files 500, which is used only for showing the output directories containing separate FASTA file per marker (3&amp;rsquo;, 4&amp;rsquo;, 5&amp;rsquo;, 6&amp;rsquo;, 13&amp;rsquo;, and 14&amp;rsquo; in the image below, not created by default), we don&amp;rsquo;t recommend using this option in your runs since it will unnecesarily create large numbers of small FASTA files which would have to be concatenated again anyways during the alignment step.</description>
+    </item>
+    <item>
+      <title>HTML Report</title>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/report/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/extract/report/</guid>
+      <description>Concept  The output from this extract module, such as how many loci are recovered, in how many samples, and to what extent, would be the most direct indication of whether your analysis is successful or not, and thus would be of most interest to many users. However, collecting, summarizing, and visualizing such important information can be backbreaking, especially in a phylo&amp;quot;genomic&amp;quot; project which typically employs hundreds or even thousands of samples and loci.</description>
+    </item>
+  </channel>
+</rss>

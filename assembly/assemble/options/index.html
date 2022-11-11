@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.99.1">
+    <meta name="generator" content="Relearn 5.5.3+tip">
+    <meta name="description" content="Documentation and tutorials for Captus">
+    <meta name="author" content="Edgardo M. Ortiz">
+    <title>Options :: Captus documentation</title>
+    <link href="/captus.docs/images/favicon.ico?1668165276" rel="icon" type="image/x-icon">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/captus.docs/css/fontawesome-all.min.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1668165276" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1668165276" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1668165276"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_json_url="/captus.docs/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
+      window.variants && variants.init( [ 'green' ] );
+    </script>
+    <script src="/captus.docs/js/jquery.min.js?1668165276" defer></script>
+
+
+  </head>
+  <body class="mobile-support default disableInlineCopyToClipboard" data-url="/captus.docs/assembly/assemble/options/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div class="navigation">
+            <a class="nav nav-next" href="/captus.docs/assembly/assemble/output/index.html" title="Output Files (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev" href="/captus.docs/assembly/assemble/preparation/index.html" title="Input Preparation (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link" title='Edit (CTRL+ALT+w)' href="https://github.com/edgardomortiz/Captus/tree/master/docs/content/assembly/assemble/options.md" target="blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/index.html"><span itemprop="name">Captus</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/assembly/index.html"><span itemprop="name">Assembly</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/assembly/assemble/index.html"><span itemprop="name">Assemble</span></a><meta itemprop="position" content="3"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Options</span><meta itemprop="position" content="4"></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#input"><em>Input</em></a>
+      <ul>
+        <li><a href="#-r---reads"><strong><code>-r, --reads</code></strong></a></li>
+        <li><a href="#--sample_reads_target"><strong><code>--sample_reads_target</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#output"><em>Output</em></a>
+      <ul>
+        <li><a href="#-o---out"><strong><code>-o, --out</code></strong></a></li>
+        <li><a href="#--keep_all"><strong><code>--keep_all</code></strong></a></li>
+        <li><a href="#--overwrite"><strong><code>--overwrite</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#de-novo-assembly-megahit"><em>de novo Assembly (MEGAHIT)</em></a>
+      <ul>
+        <li><a href="#--k_list"><strong><code>--k_list</code></strong></a></li>
+        <li><a href="#--min_count"><strong><code>--min_count</code></strong></a></li>
+        <li><a href="#--prune_level"><strong><code>--prune_level</code></strong></a></li>
+        <li><a href="#--merge_level"><strong><code>--merge_level</code></strong></a></li>
+        <li><a href="#--preset"><strong><code>--preset</code></strong></a></li>
+        <li><a href="#--min_contig_len"><strong><code>--min_contig_len</code></strong></a></li>
+        <li><a href="#--max_contig_gc"><strong><code>--max_contig_gc</code></strong></a></li>
+        <li><a href="#--tmp_dir"><strong><code>--tmp_dir</code></strong></a></li>
+      </ul>
+    </li>
+    <li><a href="#other"><em>Other</em></a>
+      <ul>
+        <li><a href="#--reformat_path---megahit_path---megahit_toolkit_path"><strong><code>--reformat_path</code></strong>, <strong><code>--megahit_path</code></strong>, <strong><code>--megahit_toolkit_path</code></strong></a></li>
+        <li><a href="#--ram---threads---concurrent---debug---show_less"><strong><code>--ram</code></strong>, <strong><code>--threads</code></strong>, <strong><code>--concurrent</code></strong>, <strong><code>--debug</code></strong>, <strong><code>--show_less</code></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1>Options</h1>
+
+<h1 id="assemble">assemble</h1>
+<hr>
+<p>To show all available options and their default values you can type in your terminal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>captus_assembly assemble --help
+</span></span></code></pre></div><hr>
+<h2 id="input"><em>Input</em></h2>
+<hr>
+<h3 id="-r---reads"><strong><code>-r, --reads</code></strong></h3>
+<p>With this option you provide the location of your clean FASTQ files, there are several ways to list them:</p>
+<ul>
+<li>
+<p><em><strong>Directory:</strong></em> providing the path to the directory containing your cleaned FASTQ files is the typical way to tell <code>Captus</code> which files to analyze. Subdirectories will not be searched in this case. If you cleaned your reads with <code>Captus</code> just use <code>-r 01_clean_reads</code> or the name you gave to the output directory.</p>
+</li>
+<li>
+<p><em><strong>List of files:</strong></em> you can also provide the individual path to each of your FASTQ files separated by a single space. This is useful if you only want to analyze only a couple of samples within a directory with many other samples. Another use for lists is when your FASTQ files are located in different directories.</p>
+</li>
+<li>
+<p><em><strong>UNIX pattern:</strong></em> another easy way to provide lists of files is using the wildcards <code>*</code> and <code>?</code> to match many or just one character respectively.</p>
+</li>
+</ul>
+<p>This argument is <strong>required</strong> <i class="fas fa-exclamation-triangle"></i>, the default is <strong>./01_clean_reads/</strong></p>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        Read this if you want to assemble FASTQ files cleaned elsewhere
+    </a>
+    <div class="expand-content" style="display: none;">
+<p>Imagine that you have a directory <code>clean_reads</code> with the following structure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>clean_reads
+</span></span><span style="display:flex;"><span>├── A_R1.fastq.gz
+</span></span><span style="display:flex;"><span>├── A_R2.fastq.gz
+</span></span><span style="display:flex;"><span>├── B_R1.fastq.gz
+</span></span><span style="display:flex;"><span>├── B_R2.fastq.gz
+</span></span><span style="display:flex;"><span>├── C_R1.fq
+</span></span><span style="display:flex;"><span>├── C_R2.fq
+</span></span><span style="display:flex;"><span>├── D_R1.fq
+</span></span><span style="display:flex;"><span>└── D_R2.fq
+</span></span></code></pre></div><ul>
+<li>If you want to analyze all the FASTQ files in <code>clean_reads</code> you can simply use <code>-r clean_reads</code></li>
+<li>To analyze only samples <code>A</code> and <code>D</code>: <code>-r cleaned_reads/A_R1.fastq.gz cleaned_reads/A_R2.fastq.gz cleaned_reads/D_R1.fq cleaned_reads/D_R2.fq</code> or more easily <code>-r cleaned_reads/A_R?.fastq.gz cleaned_reads/D_R?.fq</code></li>
+</ul>
+
+    </div>
+</div>
+<hr>
+<h3 id="--sample_reads_target"><strong><code>--sample_reads_target</code></strong></h3>
+<p>In case that you want to subsample a fixed amount of reads (e.g. if your FASTQ files have hundreds of millions of reads) you can indicate the number with this option. For example, <code>--sample_reads_target 10_000_000</code> will randomly sample 10 million reads (if single-end) or 10 million pairs (if paired-end).</p>
+<p>This argument is optional, the default is <strong>0</strong> (no subsampling).</p>
+<hr>
+<h2 id="output"><em>Output</em></h2>
+<hr>
+<h3 id="-o---out"><strong><code>-o, --out</code></strong></h3>
+<p>With this option you can redirect the output directory to a path of your choice, that path will be created if it doesn&rsquo;t already exist.
+Inside this directory, the assembly of each sample will be stored in a subdirectory with the ending <code>__captus-asm</code>.</p>
+<p>This argument is optional, the default is <strong>./02_assemblies/</strong></p>
+<hr>
+<h3 id="--keep_all"><strong><code>--keep_all</code></strong></h3>
+<p>Many intermediate files are created by <code>MEGAHIT</code> during assembly, some are large (like the individual FASTA files from each kmer size), <code>Captus</code> deletes all the unnecesary intermediate files unless you enable this flag.</p>
+<hr>
+<h3 id="--overwrite"><strong><code>--overwrite</code></strong></h3>
+<p>Use this flag with caution, this will replace any previous result within the output directory (for the sample names that match).</p>
+<hr>
+<h2 id="de-novo-assembly-megahit"><em>de novo Assembly (MEGAHIT)</em></h2>
+<hr>
+<h3 id="--k_list"><strong><code>--k_list</code></strong></h3>
+<p>Comma-separated list (no spaces) of kmer sizes, all must be odd values in the range 15-255, in increments of at most 28. The final kmer size will be adjusted automatically so it never exceeds the mean read length of the sample by more than 31 (so don&rsquo;t worry if the largest kmer size in the default list seems too big for your read length).</p>
+<p>This argument is optional, default is <code>--k_list</code> in the default <code>--preset</code>.</p>
+<hr>
+<h3 id="--min_count"><strong><code>--min_count</code></strong></h3>
+<p>Minimum contig depth (called multiplicity in MEGAHIT). Acceptable values are integers &gt;= 1. If your FASTQ files have many tens of million reads, it is recommended to use <code>--min_count 3</code> or higher to avoid low-coverage contigs resulting from erroneous reads (the higher the sequencing depth, the higher the number of reads with errors that will get assembled into spurious contigs).</p>
+<p>This argument is optional, defaults is <code>--min_count</code> in the default <code>--preset</code>.</p>
+<hr>
+<h3 id="--prune_level"><strong><code>--prune_level</code></strong></h3>
+<p>Prunning strength for low-coverage edges during graph cleaning. Increasing the value beyond 2 can speed up the assembly at the cost of losing low-depth contigs. Acceptable values are integers between 0 and 3.</p>
+<p>This argument is optional, defaults is <code>--prune_level</code> in the default <code>--preset</code>.</p>
+<hr>
+<h3 id="--merge_level"><strong><code>--merge_level</code></strong></h3>
+<p>Thresholds for merging complex bubbles, the first number multiplied by the kmer size represents the maximum bubble length to merge, the second number represents the minimum similarity required to merge bubbles. For example, <code>--merge_level 20,0.97</code> at kmer 175 will merge any two paths of at least 175 bp x 20 (3500 bp) with a similarity &gt;= 97%.</p>
+<p>This argument is optional, the default is <strong>20,0.95</strong>.</p>
+<hr>
+<h3 id="--preset"><strong><code>--preset</code></strong></h3>
+<p>The default preset &lsquo;CAPSKIM&rsquo; has optimized settings that work well with either hybridization capture or genome skimming data (or a combination of both). We have also optimized other MEGAHIT parameter combinations specific to high-coverage (&gt;= 30x depth) <code>WGS</code> data or <code>RNA</code>-Seq data. These modes will only work well with at least 8 GB of RAM. If, in addition to a <code>preset</code>, you provide your own <code>k_list</code>, <code>min_count</code>, or <code>prune_level</code>, your settings take priority over the preset&rsquo;s.</p>
+<ul>
+<li><code>CAPSKIM</code> = <code>--k-list 31,39,47,63,79,95,111,127,143,159,175 --min-count 2 --prune-level 2</code></li>
+<li><code>RNA</code> = <code>--k-list 27,47,67,87,107,127,147,167 --min-count 2 --prune-level 2</code></li>
+<li><code>WGS</code> = <code>--k-list 31,39,49,69,89,109,129,149,169 --min-count 3 --prune-level 2 --no-mercy</code></li>
+</ul>
+<p>This argument is optional, the default is <strong>CAPSKIM</strong>.</p>
+<hr>
+<h3 id="--min_contig_len"><strong><code>--min_contig_len</code></strong></h3>
+<p>Minimum contig length in bp in output assembly.</p>
+<p>This argument is optional, the default is <strong>auto</strong> (= mean read length + smallest kmer in <code>k_list</code>)</p>
+<hr>
+<h3 id="--max_contig_gc"><strong><code>--max_contig_gc</code></strong></h3>
+<p>Maximum GC percentage allowed per contig. Useful to filter contamination. For example, bacteria usually exceed 60% GC content while eukaryotes rarely exceed that limit. 100.0 disables the GC filter.</p>
+<p>This argument is optional, the default is <strong>100.0</strong> (filter disabled)</p>
+<hr>
+<h3 id="--tmp_dir"><strong><code>--tmp_dir</code></strong></h3>
+<p>MEGAHIT needs a temporary directory in an internal hard drive, otherwise it refuses to run.</p>
+<p>This argument is optional, the default is <strong>$HOME</strong></p>
+<hr>
+<h2 id="other"><em>Other</em></h2>
+<hr>
+<h3 id="--reformat_path---megahit_path---megahit_toolkit_path"><strong><code>--reformat_path</code></strong>, <strong><code>--megahit_path</code></strong>, <strong><code>--megahit_toolkit_path</code></strong></h3>
+<p>If you have installed your own copies of <code>reformat.sh</code> (from <code>BBTools</code>) or <code>MEGAHIT</code> (and its <code>megahit_toolkit</code>) you can provide the full path to those copies.</p>
+<p>These arguments are optional, the defaults are <strong>reformat.sh</strong>, <strong>megahit</strong>, and <strong>megahit_toolkit</strong> respectively.</p>
+<hr>
+<h3 id="--ram---threads---concurrent---debug---show_less"><strong><code>--ram</code></strong>, <strong><code>--threads</code></strong>, <strong><code>--concurrent</code></strong>, <strong><code>--debug</code></strong>, <strong><code>--show_less</code></strong></h3>
+<p>See <a href="https://edgardomortiz.github.io/captus.docs/basics/parallelization/">Parallelization (and other common options)</a></p>
+<hr>
+<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (06.08.2021)<br>
+Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (30.05.2022)</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <a id="logo" href="/captus.docs/">
+            <img src="/images/logo.svg" width="270">
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <label class="a11y-only" for="search-by">Search</label>
+          <i class="fas fa-search"></i>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/captus.docs/js/auto-complete.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/search.js?1668165276" defer></script>
+      </div>
+      <div id="homelinks" class="default-animation">
+        <ul>
+          <li>
+              <a class="padding" href="/captus.docs/index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+        </ul>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/captus.docs/basics/" class="dd-item"><input type="checkbox" id="section-3494ad44d160b070fd31576fe4a3841e" aria-controls="subsections-3494ad44d160b070fd31576fe4a3841e" class="toggle"><label class="a11y-only toggle" for="section-3494ad44d160b070fd31576fe4a3841e" >Submenu Basics</label><a href="/captus.docs/basics/index.html">Basics<i class="fas fa-check read-icon"></i></a><ul id="subsections-3494ad44d160b070fd31576fe4a3841e">
+          <li data-nav-id="/captus.docs/basics/overview/" class="dd-item"><a href="/captus.docs/basics/overview/index.html">Overview<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/installation/" class="dd-item"><a href="/captus.docs/basics/installation/index.html">Installation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/parallelization/" class="dd-item"><a href="/captus.docs/basics/parallelization/index.html">Parallelization<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/" class="dd-item parent"><input type="checkbox" id="section-d26437a3e42ff73277da14a17983cc4a" aria-controls="subsections-d26437a3e42ff73277da14a17983cc4a" class="toggle" checked><label class="a11y-only toggle" for="section-d26437a3e42ff73277da14a17983cc4a" >Submenu Assembly</label><a href="/captus.docs/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-d26437a3e42ff73277da14a17983cc4a">
+          <li data-nav-id="/captus.docs/assembly/clean/" class="dd-item alwaysopen"><input type="checkbox" id="section-c872805a13ffe675b4d826b4bbe79398" aria-controls="subsections-c872805a13ffe675b4d826b4bbe79398" class="toggle" checked><label class="a11y-only toggle" for="section-c872805a13ffe675b4d826b4bbe79398" >Submenu Clean</label><a href="/captus.docs/assembly/clean/index.html"><b>1. </b>Clean<i class="fas fa-check read-icon"></i></a><ul id="subsections-c872805a13ffe675b4d826b4bbe79398">
+          <li data-nav-id="/captus.docs/assembly/clean/preparation/" class="dd-item"><a href="/captus.docs/assembly/clean/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/options/" class="dd-item"><a href="/captus.docs/assembly/clean/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/output/" class="dd-item"><a href="/captus.docs/assembly/clean/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/report/" class="dd-item"><a href="/captus.docs/assembly/clean/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/" class="dd-item parent alwaysopen"><input type="checkbox" id="section-a84f65fc279cc2da70eab7b44ff6d8d2" aria-controls="subsections-a84f65fc279cc2da70eab7b44ff6d8d2" class="toggle" checked><label class="a11y-only toggle" for="section-a84f65fc279cc2da70eab7b44ff6d8d2" >Submenu Assemble</label><a href="/captus.docs/assembly/assemble/index.html"><b>2. </b>Assemble<i class="fas fa-check read-icon"></i></a><ul id="subsections-a84f65fc279cc2da70eab7b44ff6d8d2">
+          <li data-nav-id="/captus.docs/assembly/assemble/preparation/" class="dd-item"><a href="/captus.docs/assembly/assemble/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/options/" class="dd-item active"><a href="/captus.docs/assembly/assemble/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/output/" class="dd-item"><a href="/captus.docs/assembly/assemble/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/report/" class="dd-item"><a href="/captus.docs/assembly/assemble/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/extract/" class="dd-item alwaysopen"><input type="checkbox" id="section-70e7375f0d352e293150a5450dcea703" aria-controls="subsections-70e7375f0d352e293150a5450dcea703" class="toggle" checked><label class="a11y-only toggle" for="section-70e7375f0d352e293150a5450dcea703" >Submenu Extract</label><a href="/captus.docs/assembly/extract/index.html"><b>3. </b>Extract<i class="fas fa-check read-icon"></i></a><ul id="subsections-70e7375f0d352e293150a5450dcea703">
+          <li data-nav-id="/captus.docs/assembly/extract/preparation/" class="dd-item"><a href="/captus.docs/assembly/extract/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/options/" class="dd-item"><a href="/captus.docs/assembly/extract/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/output/" class="dd-item"><a href="/captus.docs/assembly/extract/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/report/" class="dd-item"><a href="/captus.docs/assembly/extract/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/align/" class="dd-item alwaysopen"><input type="checkbox" id="section-e75d36c61d53e0a5569727f2f076837e" aria-controls="subsections-e75d36c61d53e0a5569727f2f076837e" class="toggle" checked><label class="a11y-only toggle" for="section-e75d36c61d53e0a5569727f2f076837e" >Submenu Align</label><a href="/captus.docs/assembly/align/index.html"><b>4. </b>Align<i class="fas fa-check read-icon"></i></a><ul id="subsections-e75d36c61d53e0a5569727f2f076837e">
+          <li data-nav-id="/captus.docs/assembly/align/options/" class="dd-item"><a href="/captus.docs/assembly/align/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/output/" class="dd-item"><a href="/captus.docs/assembly/align/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/report/" class="dd-item"><a href="/captus.docs/assembly/align/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/captus.docs/design/" class="dd-item"><a href="/captus.docs/design/index.html">Design<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/tutorials/" class="dd-item"><a href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/edgardomortiz/Captus"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/captus.docs/more/credits/index.html"><i class='fas fa-fw fa-bullhorn'></i> Credits</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="green" value="green" selected>Green</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i> Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><style>
+	#footer {
+	  font-size: 13px;
+	  height: 100px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  padding: 2rem 1rem;
+	  text-align: center;
+	  min-width: 230px;
+	  max-width: 300px;
+	}
+	#footer p {
+	  margin: 0;
+	}
+  </style>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Captus on GitHub">Download</a>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
+  <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+  <script async defer src="https://buttons.github.io/buttons.js?1668165276"></script>
+
+        </div>
+      </div>
+    </aside>
+    <script src="/captus.docs/js/clipboard.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/theme.js?1668165276" defer></script>
+  </body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.99.1">
+    <meta name="generator" content="Relearn 5.5.3+tip">
+    <meta name="description" content="Documentation and tutorials for Captus">
+    <meta name="author" content="Edgardo M. Ortiz">
+    <title>Output Files :: Captus documentation</title>
+    <link href="/captus.docs/images/favicon.ico?1668165276" rel="icon" type="image/x-icon">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/captus.docs/css/fontawesome-all.min.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1668165276" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1668165276" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1668165276"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_json_url="/captus.docs/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
+      window.variants && variants.init( [ 'green' ] );
+    </script>
+    <script src="/captus.docs/js/jquery.min.js?1668165276" defer></script>
+
+
+  </head>
+  <body class="mobile-support default disableInlineCopyToClipboard" data-url="/captus.docs/assembly/clean/output/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div class="navigation">
+            <a class="nav nav-next" href="/captus.docs/assembly/clean/report/index.html" title="HTML Report (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev" href="/captus.docs/assembly/clean/options/index.html" title="Options (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link" title='Edit (CTRL+ALT+w)' href="https://github.com/edgardomortiz/Captus/tree/master/docs/content/assembly/clean/output.md" target="blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/index.html"><span itemprop="name">Captus</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/assembly/index.html"><span itemprop="name">Assembly</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/assembly/clean/index.html"><span itemprop="name">Clean</span></a><meta itemprop="position" content="3"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Output Files</span><meta itemprop="position" content="4"></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-sample_r1fqgz-sample_r2fqgz">1. <strong><code>[sample]_R1.fq.gz</code></strong>, <strong><code>[sample]_R2.fq.gz</code></strong></a></li>
+        <li><a href="#2-samplecleaninglog">2. <strong><code>[sample].cleaning.log</code></strong></a></li>
+        <li><a href="#3-samplecleaningstatstxt">3. <strong><code>[sample].cleaning.stats.txt</code></strong></a></li>
+        <li><a href="#4-captus-assembly_cleanreporthtml">4. <strong><code>captus-assembly_clean.report.html</code></strong></a></li>
+        <li><a href="#5-captus-assembly_cleanlog">5. <strong><code>captus-assembly_clean.log</code></strong></a></li>
+        <li><a href="#6-00_adaptors_trimmed">6. <strong><code>00_adaptors_trimmed</code></strong></a></li>
+        <li><a href="#7-01_qc_stats_before-02_qc_stats_after">7. <strong><code>01_qc_stats_before</code></strong>, <strong><code>02_qc_stats_after</code></strong></a></li>
+        <li><a href="#8-03_qc_extras">8. <strong><code>03_qc_extras</code></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1>Output Files</h1>
+
+<p>Imagine we start with a directory called <code>00_raw_reads</code> with the following content:</p>
+<p>
+		
+<a href="/images/raw_reads.png?width=640&amp;classes=shadow" data-featherlight="image">
+<img src="/images/raw_reads.png?width=640&amp;classes=shadow" alt="Raw reads" class="shadow" style="height: auto; width: 640;" loading="lazy">
+</a></p>
+<p>We have a samples with different data types, to distinguish them we added <code>_CAP</code> to the samples where hybridization-capture was used, <code>_WGS</code> for high-coverage whole genome sequencing, <code>_RNA</code> for RNA-Seq reads, and <code>_GSK</code> for genome skimming data (notice also the difference in file sizes). For this example, we only want to clean the samples in red rectangles corresponding to capture data. We run the following <code>Captus</code> command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>captus_assembly clean --reads ./00_raw_reads/*_CAP_R?.fq.gz
+</span></span></code></pre></div><p>Notice we are using default settings, the only required argument is the location of the raw reads. The output was written to a new directory called <code>01_clean_reads</code>. Let&rsquo;s take a look at the contents:</p>
+<p>
+		
+<a href="/images/clean_reads.png?width=640&amp;classes=shadow" data-featherlight="image">
+<img src="/images/clean_reads.png?width=640&amp;classes=shadow" alt="Clean reads" class="shadow" style="height: auto; width: 640;" loading="lazy">
+</a></p>
+<h3 id="1-sample_r1fqgz-sample_r2fqgz">1. <strong><code>[sample]_R1.fq.gz</code></strong>, <strong><code>[sample]_R2.fq.gz</code></strong></h3>
+<p>In case of paired-end input we will have a pair of files like in the image, the forward reads are indicated by <strong>_R1</strong> and the reverse reads by <strong>_R2</strong>. Single-end input will only return forward reads. <a href="https://en.wikipedia.org/wiki/FASTQ_format">Wikipedia</a>&rsquo;s entry for the format describes it in more detail.</p>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        Example
+    </a>
+    <div class="expand-content" style="display: none;">
+<p>
+		
+<a href="/images/fastq_format.png?width=1000&amp;classes=shadow" data-featherlight="image">
+<img src="/images/fastq_format.png?width=1000&amp;classes=shadow" alt="FASTQ format" class="shadow" style="height: auto; width: 1000;" loading="lazy">
+</a></p>
+
+    </div>
+</div>
+<hr>
+<h3 id="2-samplecleaninglog">2. <strong><code>[sample].cleaning.log</code></strong></h3>
+<p>This file contains the cleaning command used for <code>bbduk.sh</code> as well the data shown as screen output, this and other information is compiled in the <a href="https://edgardomortiz.github.io/captus.docs/assembly/clean/report/">Cleaning report</a>.
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        Example
+    </a>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Captus&#39; BBDuk Command:
+</span></span><span style="display:flex;"><span>  bbduk.sh -Xmx16220m threads=8 in=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP_R#.fq.gz out=/tutorial/01_clean_reads/GenusA_speciesA_CAP_R#.fq.gz ref=/software/GitHub/Captus/data/phix174_ill.ref.fa.gz,/software/GitHub/Captus/data/sequencing_artifacts.fasta k=31 hdist=1 qtrim=lr trimq=13 maq=16 ftl=0 ftr=0 minlength=21 maxns=5 ziplevel=5 overwrite=t stats=/tutorial/01_clean_reads/GenusA_speciesA_CAP.cleaning.stats.txt 2&gt;/tutorial/01_clean_reads/GenusA_speciesA_CAP.stdout.log
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Executing jgi.BBDuk [-Xmx16220m, threads=8, in=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP_R#.fq.gz, out=/tutorial/01_clean_reads/GenusA_speciesA_CAP_R#.fq.gz, ref=/software/GitHub/Captus/data/phix174_ill.ref.fa.gz,/software/GitHub/Captus/data/sequencing_artifacts.fasta, k=31, hdist=1, qtrim=lr, trimq=13, maq=16, ftl=0, ftr=0, minlength=21, maxns=5, ziplevel=5, overwrite=t, stats=/tutorial/01_clean_reads/GenusA_speciesA_CAP.cleaning.stats.txt]
+</span></span><span style="display:flex;"><span>Version 38.95
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Set threads to 8
+</span></span><span style="display:flex;"><span>0.018 seconds.
+</span></span><span style="display:flex;"><span>Initial:
+</span></span><span style="display:flex;"><span>Memory: max=17007m, total=17007m, free=16987m, used=20m
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Added 8403228 kmers; time: 	1.021 seconds.
+</span></span><span style="display:flex;"><span>Memory: max=17007m, total=17007m, free=16612m, used=395m
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input is being processed as paired
+</span></span><span style="display:flex;"><span>Started output streams:	0.062 seconds.
+</span></span><span style="display:flex;"><span>Processing time:   		3.655 seconds.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input:                  	733430 reads 		110292758 bases.
+</span></span><span style="display:flex;"><span>Contaminants:           	0 reads (0.00%) 	0 bases (0.00%)
+</span></span><span style="display:flex;"><span>QTrimmed:               	127322 reads (17.36%) 	515529 bases (0.47%)
+</span></span><span style="display:flex;"><span>Low quality discards:   	13310 reads (1.81%) 	1903218 bases (1.73%)
+</span></span><span style="display:flex;"><span>Total Removed:          	13340 reads (1.82%) 	2418747 bases (2.19%)
+</span></span><span style="display:flex;"><span>Result:                 	720090 reads (98.18%) 	107874011 bases (97.81%)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Time:                         	4.753 seconds.
+</span></span><span style="display:flex;"><span>Reads Processed:        733k 	154.32k reads/sec
+</span></span><span style="display:flex;"><span>Bases Processed:        110m 	23.21m bases/sec
+</span></span></code></pre></div>
+    </div>
+</div></p>
+<hr>
+<h3 id="3-samplecleaningstatstxt">3. <strong><code>[sample].cleaning.stats.txt</code></strong></h3>
+<p>List of contaminants found by <code>bbduk.sh</code> in the input reads, sorted by abundance.
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        Example
+    </a>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>#File	/tutorial/01_clean_reads/00_adaptors_trimmed/GenusX_speciesX_CAP_R1.fq.gz	/tutorial/01_clean_reads/00_adaptors_trimmed/GenusX_speciesX_CAP_R2.fq.gz
+</span></span><span style="display:flex;"><span>#Total	60621406
+</span></span><span style="display:flex;"><span>#Matched	25	0.00004%
+</span></span><span style="display:flex;"><span>#Name	Reads	ReadsPct
+</span></span><span style="display:flex;"><span>gi|9626372|ref|NC_001422.1| Coliphage phiX174, complete genome	14	0.00002%
+</span></span><span style="display:flex;"><span>contam_111	8	0.00001%
+</span></span><span style="display:flex;"><span>contam_32	1	0.00000%
+</span></span><span style="display:flex;"><span>contam_76	1	0.00000%
+</span></span><span style="display:flex;"><span>contam_87	1	0.00000%
+</span></span></code></pre></div>
+    </div>
+</div></p>
+<hr>
+<h3 id="4-captus-assembly_cleanreporthtml">4. <strong><code>captus-assembly_clean.report.html</code></strong></h3>
+<p>This is the final <a href="https://edgardomortiz.github.io/captus.docs/assembly/clean/report/">Cleaning report</a>, summarizing statistics across all samples analyzed.</p>
+<hr>
+<h3 id="5-captus-assembly_cleanlog">5. <strong><code>captus-assembly_clean.log</code></strong></h3>
+<p>This is the log from <code>Captus</code>, it contains the command used and all the information shown during the run. If the option <code>--show_less</code> was enabled, the log will also contain all the extra detailed information that was hidden during the run.</p>
+<hr>
+<h3 id="6-00_adaptors_trimmed">6. <strong><code>00_adaptors_trimmed</code></strong></h3>
+<p>This is an intermediate directory that contains the FASTQ files without adaptors, prior to quality-trimming and filtering. The directory also stores <code>bbduk.sh</code> commands and logs for the adaptor trimming stage. If the option <code>--keep_all</code> was enabled the FASTQs from this intermediate are kept after the run, otherwise they are deleted.
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        Example
+    </a>
+    <div class="expand-content" style="display: none;">
+<p><strong><code>[sample].round1.log</code></strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Captus&#39; BBDuk Command for BOTH rounds:
+</span></span><span style="display:flex;"><span>  bbduk.sh -Xmx8110m threads=8 ktrim=r minlength=21 interleaved=f trimpairsevenly=t trimbyoverlap=t overwrite=t ref=/software/GitHub/Captus/data/adaptors_combined.fasta in=/tutorial/00_raw_reads/GenusA_speciesA_CAP_R#.fq.gz out=stdout.fq ftr=0 k=21 mink=11 hdist=2 stats=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP.round1.stats.txt 2&gt;/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP.stdout1.log | bbduk.sh -Xmx8110m threads=8 ktrim=r minlength=21 interleaved=f trimpairsevenly=t trimbyoverlap=t overwrite=t ref=/software/GitHub/Captus/data/adaptors_combined.fasta in=stdin.fq out=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP_R#.fq.gz k=19 mink=9 hdist=1 stats=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP.round2.stats.txt 2&gt;/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP.stdout2.log
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ROUND 1 LOG:
+</span></span><span style="display:flex;"><span>Executing jgi.BBDuk [-Xmx8110m, threads=8, ktrim=r, minlength=21, interleaved=f, trimpairsevenly=t, trimbyoverlap=t, overwrite=t, ref=/software/GitHub/Captus/data/adaptors_combined.fasta, in=/tutorial/00_raw_reads/GenusA_speciesA_CAP_R#.fq.gz, out=stdout.fq, ftr=0, k=21, mink=11, hdist=2, stats=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP.round1.stats.txt]
+</span></span><span style="display:flex;"><span>Version 38.95
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Set threads to 8
+</span></span><span style="display:flex;"><span>Set INTERLEAVED to false
+</span></span><span style="display:flex;"><span>maskMiddle was disabled because useShortKmers=true
+</span></span><span style="display:flex;"><span>0.030 seconds.
+</span></span><span style="display:flex;"><span>Initial:
+</span></span><span style="display:flex;"><span>Memory: max=8503m, total=8503m, free=8478m, used=25m
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Added 11201253 kmers; time: 	3.185 seconds.
+</span></span><span style="display:flex;"><span>Memory: max=8503m, total=8503m, free=7967m, used=536m
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input is being processed as paired
+</span></span><span style="display:flex;"><span>Started output streams:	0.044 seconds.
+</span></span><span style="display:flex;"><span>Processing time:   		8.051 seconds.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input:                  	733778 reads 		110800478 bases.
+</span></span><span style="display:flex;"><span>KTrimmed:               	20580 reads (2.80%) 	393486 bases (0.36%)
+</span></span><span style="display:flex;"><span>Trimmed by overlap:     	1870 reads (0.25%) 	10642 bases (0.01%)
+</span></span><span style="display:flex;"><span>Total Removed:          	330 reads (0.04%) 	404128 bases (0.36%)
+</span></span><span style="display:flex;"><span>Result:                 	733448 reads (99.96%) 	110396350 bases (99.64%)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Time:                         	11.312 seconds.
+</span></span><span style="display:flex;"><span>Reads Processed:        733k 	64.87k reads/sec
+</span></span><span style="display:flex;"><span>Bases Processed:        110m 	9.79m bases/sec
+</span></span></code></pre></div><p><strong><code>[sample].round1.stats.txt</code></strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>#File	/tutorial/00_raw_reads/GenusA_speciesA_CAP_R1.fq.gz	/tutorial/00_raw_reads/GenusA_speciesA_CAP_R2.fq.gz
+</span></span><span style="display:flex;"><span>#Total	733778
+</span></span><span style="display:flex;"><span>#Matched	11733	1.59898%
+</span></span><span style="display:flex;"><span>#Name	Reads	ReadsPct
+</span></span><span style="display:flex;"><span>Reverse_adaptor	1899	0.25880%
+</span></span><span style="display:flex;"><span>PhiX_read2_adaptor	1109	0.15114%
+</span></span><span style="display:flex;"><span>TruSeq_Adaptor_Index_1_6	1018	0.13873%
+</span></span><span style="display:flex;"><span>pcr_dimer	675	0.09199%
+</span></span><span style="display:flex;"><span>Forward_filter	608	0.08286%
+</span></span><span style="display:flex;"><span>Illumina 3p RNA Adaptor	595	0.08109%
+</span></span><span style="display:flex;"><span>I5_Nextera_Transposase_1	475	0.06473%
+</span></span><span style="display:flex;"><span>PhiX_read1_adaptor	468	0.06378%
+</span></span><span style="display:flex;"><span>Nextera_LMP_Read2_External_Adaptor	446	0.06078%
+</span></span><span style="display:flex;"><span>Reverse_filter	419	0.05710%
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>TruSeq_Adaptor_Index_9	1	0.00014%
+</span></span></code></pre></div><p><strong><code>[sample].round2.log</code></strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Captus&#39; BBDuk Command for BOTH rounds:
+</span></span><span style="display:flex;"><span>  bbduk.sh -Xmx8110m threads=8 ktrim=r minlength=21 interleaved=f trimpairsevenly=t trimbyoverlap=t overwrite=t ref=/software/GitHub/Captus/data/adaptors_combined.fasta in=/tutorial/00_raw_reads/GenusA_speciesA_CAP_R#.fq.gz out=stdout.fq ftr=0 k=21 mink=11 hdist=2 stats=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP.round1.stats.txt 2&gt;/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP.stdout1.log | bbduk.sh -Xmx8110m threads=8 ktrim=r minlength=21 interleaved=f trimpairsevenly=t trimbyoverlap=t overwrite=t ref=/software/GitHub/Captus/data/adaptors_combined.fasta in=stdin.fq out=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP_R#.fq.gz k=19 mink=9 hdist=1 stats=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP.round2.stats.txt 2&gt;/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP.stdout2.log
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ROUND 2 LOG:
+</span></span><span style="display:flex;"><span>Executing jgi.BBDuk [-Xmx8110m, threads=8, ktrim=r, minlength=21, interleaved=f, trimpairsevenly=t, trimbyoverlap=t, overwrite=t, ref=/software/GitHub/Captus/data/adaptors_combined.fasta, in=stdin.fq, out=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP_R#.fq.gz, k=19, mink=9, hdist=1, stats=/tutorial/01_clean_reads/00_adaptors_trimmed/GenusA_speciesA_CAP.round2.stats.txt]
+</span></span><span style="display:flex;"><span>Version 38.95
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Set threads to 8
+</span></span><span style="display:flex;"><span>Set INTERLEAVED to false
+</span></span><span style="display:flex;"><span>maskMiddle was disabled because useShortKmers=true
+</span></span><span style="display:flex;"><span>Forcing interleaved input because paired output was specified for a single input file.
+</span></span><span style="display:flex;"><span>0.028 seconds.
+</span></span><span style="display:flex;"><span>Initial:
+</span></span><span style="display:flex;"><span>Memory: max=8503m, total=8503m, free=8478m, used=25m
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Added 322384 kmers; time: 	0.239 seconds.
+</span></span><span style="display:flex;"><span>Memory: max=8503m, total=8503m, free=8469m, used=34m
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input is being processed as paired
+</span></span><span style="display:flex;"><span>Started output streams:	0.056 seconds.
+</span></span><span style="display:flex;"><span>Processing time:   		11.134 seconds.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Input:                  	733448 reads 		110396350 bases.
+</span></span><span style="display:flex;"><span>KTrimmed:               	10720 reads (1.46%) 	103592 bases (0.09%)
+</span></span><span style="display:flex;"><span>Trimmed by overlap:     	0 reads (0.00%) 	0 bases (0.00%)
+</span></span><span style="display:flex;"><span>Total Removed:          	18 reads (0.00%) 	103592 bases (0.09%)
+</span></span><span style="display:flex;"><span>Result:                 	733430 reads (100.00%) 	110292758 bases (99.91%)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Time:                         	11.447 seconds.
+</span></span><span style="display:flex;"><span>Reads Processed:        733k 	64.07k reads/sec
+</span></span><span style="display:flex;"><span>Bases Processed:        110m 	9.64m bases/sec
+</span></span></code></pre></div><p><strong><code>[sample].round2.stats.txt</code></strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>#File	stdin.fq
+</span></span><span style="display:flex;"><span>#Total	733448
+</span></span><span style="display:flex;"><span>#Matched	5386	0.73434%
+</span></span><span style="display:flex;"><span>#Name	Reads	ReadsPct
+</span></span><span style="display:flex;"><span>PhiX_read2_adaptor	781	0.10648%
+</span></span><span style="display:flex;"><span>Forward_filter	374	0.05099%
+</span></span><span style="display:flex;"><span>I5_Nextera_Transposase_1	373	0.05086%
+</span></span><span style="display:flex;"><span>Reverse_adaptor	367	0.05004%
+</span></span><span style="display:flex;"><span>RNA_Adaptor_(RA3)_part_#_15013207	361	0.04922%
+</span></span><span style="display:flex;"><span>Reverse_filter	327	0.04458%
+</span></span><span style="display:flex;"><span>PhiX_read1_adaptor	267	0.03640%
+</span></span><span style="display:flex;"><span>Stop_Oligo_(STP)_8	249	0.03395%
+</span></span><span style="display:flex;"><span>Nextera_LMP_Read2_External_Adaptor	215	0.02931%
+</span></span><span style="display:flex;"><span>Illumina 3p RNA Adaptor	190	0.02591%
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>I5_Primer_Nextera_XT_Index_Kit_v2_S520	1	0.00014%
+</span></span></code></pre></div>
+    </div>
+</div></p>
+<hr>
+<h3 id="7-01_qc_stats_before-02_qc_stats_after">7. <strong><code>01_qc_stats_before</code></strong>, <strong><code>02_qc_stats_after</code></strong></h3>
+<p>These directories contain the results from either <code>Falco</code> or <code>FastQC</code>, organized in a subdirectory per FASTQ file analyzed.</p>
+<hr>
+<h3 id="8-03_qc_extras">8. <strong><code>03_qc_extras</code></strong></h3>
+<p>This directory contains all the tab-separated-values tables needed to build the <a href="https://edgardomortiz.github.io/captus.docs/assembly/clean/report/">Cleaning report</a>. We provide them separately to allow the user more detailed analyses.
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        List of tables produced
+    </a>
+    <div class="expand-content" style="display: none;">
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>adaptor_content.tsv</strong></td>
+<td>Adaptor content percentages, parsed from <code>Falco</code>&rsquo;s or<code>FastQC</code>&rsquo;s output</td>
+</tr>
+<tr>
+<td><strong>adaptors_round1.tsv</strong></td>
+<td>Reads/bases after first round of adaptor removal, parsed from <code>bbduk.sh</code>&rsquo;s logs</td>
+</tr>
+<tr>
+<td><strong>adaptors_round2.tsv</strong></td>
+<td>Reads/bases after second round of adaptor removal, parsed from <code>bbduk.sh</code>&rsquo;s logs</td>
+</tr>
+<tr>
+<td><strong>contaminants.tsv</strong></td>
+<td>Contaminant content, compiled from <code>bbduk.sh</code>&rsquo;s logs</td>
+</tr>
+<tr>
+<td><strong>per_base_seq_content.tsv</strong></td>
+<td>Per base sequence content, parsed from <code>Falco</code>&rsquo;s or<code>FastQC</code>&rsquo;s output</td>
+</tr>
+<tr>
+<td><strong>per_base_seq_qual.tsv</strong></td>
+<td>Per base sequence quality, parsed from <code>Falco</code>&rsquo;s or<code>FastQC</code>&rsquo;s output</td>
+</tr>
+<tr>
+<td><strong>per_seq_gc_content.tsv</strong></td>
+<td>GC content per sequence, parsed from <code>Falco</code>&rsquo;s or<code>FastQC</code>&rsquo;s output</td>
+</tr>
+<tr>
+<td><strong>per_seq_qual_scores.tsv</strong></td>
+<td>Per sequence quality scores, parsed from <code>Falco</code>&rsquo;s or<code>FastQC</code>&rsquo;s output</td>
+</tr>
+<tr>
+<td><strong>reads_bases.tsv</strong></td>
+<td>Reads/bases after quality filtering and contaminant removal, parsed from <code>bbduk.sh</code>&rsquo;s logs</td>
+</tr>
+<tr>
+<td><strong>seq_dup_levels.tsv</strong></td>
+<td>Sequence duplication levels, parsed from <code>Falco</code>&rsquo;s or<code>FastQC</code>&rsquo;s output</td>
+</tr>
+<tr>
+<td><strong>seq_len_dist.tsv</strong></td>
+<td>Sequence length distribution, parsed from <code>Falco</code>&rsquo;s or<code>FastQC</code>&rsquo;s output</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div></p>
+<hr>
+<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (06.08.2021)<br>
+Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (30.05.2022)</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <a id="logo" href="/captus.docs/">
+            <img src="/images/logo.svg" width="270">
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <label class="a11y-only" for="search-by">Search</label>
+          <i class="fas fa-search"></i>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/captus.docs/js/auto-complete.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/search.js?1668165276" defer></script>
+      </div>
+      <div id="homelinks" class="default-animation">
+        <ul>
+          <li>
+              <a class="padding" href="/captus.docs/index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+        </ul>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/captus.docs/basics/" class="dd-item"><input type="checkbox" id="section-3494ad44d160b070fd31576fe4a3841e" aria-controls="subsections-3494ad44d160b070fd31576fe4a3841e" class="toggle"><label class="a11y-only toggle" for="section-3494ad44d160b070fd31576fe4a3841e" >Submenu Basics</label><a href="/captus.docs/basics/index.html">Basics<i class="fas fa-check read-icon"></i></a><ul id="subsections-3494ad44d160b070fd31576fe4a3841e">
+          <li data-nav-id="/captus.docs/basics/overview/" class="dd-item"><a href="/captus.docs/basics/overview/index.html">Overview<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/installation/" class="dd-item"><a href="/captus.docs/basics/installation/index.html">Installation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/parallelization/" class="dd-item"><a href="/captus.docs/basics/parallelization/index.html">Parallelization<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/" class="dd-item parent"><input type="checkbox" id="section-d26437a3e42ff73277da14a17983cc4a" aria-controls="subsections-d26437a3e42ff73277da14a17983cc4a" class="toggle" checked><label class="a11y-only toggle" for="section-d26437a3e42ff73277da14a17983cc4a" >Submenu Assembly</label><a href="/captus.docs/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-d26437a3e42ff73277da14a17983cc4a">
+          <li data-nav-id="/captus.docs/assembly/clean/" class="dd-item parent alwaysopen"><input type="checkbox" id="section-c872805a13ffe675b4d826b4bbe79398" aria-controls="subsections-c872805a13ffe675b4d826b4bbe79398" class="toggle" checked><label class="a11y-only toggle" for="section-c872805a13ffe675b4d826b4bbe79398" >Submenu Clean</label><a href="/captus.docs/assembly/clean/index.html"><b>1. </b>Clean<i class="fas fa-check read-icon"></i></a><ul id="subsections-c872805a13ffe675b4d826b4bbe79398">
+          <li data-nav-id="/captus.docs/assembly/clean/preparation/" class="dd-item"><a href="/captus.docs/assembly/clean/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/options/" class="dd-item"><a href="/captus.docs/assembly/clean/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/output/" class="dd-item active"><a href="/captus.docs/assembly/clean/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/report/" class="dd-item"><a href="/captus.docs/assembly/clean/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/" class="dd-item alwaysopen"><input type="checkbox" id="section-a84f65fc279cc2da70eab7b44ff6d8d2" aria-controls="subsections-a84f65fc279cc2da70eab7b44ff6d8d2" class="toggle" checked><label class="a11y-only toggle" for="section-a84f65fc279cc2da70eab7b44ff6d8d2" >Submenu Assemble</label><a href="/captus.docs/assembly/assemble/index.html"><b>2. </b>Assemble<i class="fas fa-check read-icon"></i></a><ul id="subsections-a84f65fc279cc2da70eab7b44ff6d8d2">
+          <li data-nav-id="/captus.docs/assembly/assemble/preparation/" class="dd-item"><a href="/captus.docs/assembly/assemble/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/options/" class="dd-item"><a href="/captus.docs/assembly/assemble/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/output/" class="dd-item"><a href="/captus.docs/assembly/assemble/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/report/" class="dd-item"><a href="/captus.docs/assembly/assemble/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/extract/" class="dd-item alwaysopen"><input type="checkbox" id="section-70e7375f0d352e293150a5450dcea703" aria-controls="subsections-70e7375f0d352e293150a5450dcea703" class="toggle" checked><label class="a11y-only toggle" for="section-70e7375f0d352e293150a5450dcea703" >Submenu Extract</label><a href="/captus.docs/assembly/extract/index.html"><b>3. </b>Extract<i class="fas fa-check read-icon"></i></a><ul id="subsections-70e7375f0d352e293150a5450dcea703">
+          <li data-nav-id="/captus.docs/assembly/extract/preparation/" class="dd-item"><a href="/captus.docs/assembly/extract/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/options/" class="dd-item"><a href="/captus.docs/assembly/extract/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/output/" class="dd-item"><a href="/captus.docs/assembly/extract/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/report/" class="dd-item"><a href="/captus.docs/assembly/extract/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/align/" class="dd-item alwaysopen"><input type="checkbox" id="section-e75d36c61d53e0a5569727f2f076837e" aria-controls="subsections-e75d36c61d53e0a5569727f2f076837e" class="toggle" checked><label class="a11y-only toggle" for="section-e75d36c61d53e0a5569727f2f076837e" >Submenu Align</label><a href="/captus.docs/assembly/align/index.html"><b>4. </b>Align<i class="fas fa-check read-icon"></i></a><ul id="subsections-e75d36c61d53e0a5569727f2f076837e">
+          <li data-nav-id="/captus.docs/assembly/align/options/" class="dd-item"><a href="/captus.docs/assembly/align/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/output/" class="dd-item"><a href="/captus.docs/assembly/align/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/report/" class="dd-item"><a href="/captus.docs/assembly/align/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/captus.docs/design/" class="dd-item"><a href="/captus.docs/design/index.html">Design<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/tutorials/" class="dd-item"><a href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/edgardomortiz/Captus"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/captus.docs/more/credits/index.html"><i class='fas fa-fw fa-bullhorn'></i> Credits</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="green" value="green" selected>Green</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i> Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><style>
+	#footer {
+	  font-size: 13px;
+	  height: 100px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  padding: 2rem 1rem;
+	  text-align: center;
+	  min-width: 230px;
+	  max-width: 300px;
+	}
+	#footer p {
+	  margin: 0;
+	}
+  </style>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Captus on GitHub">Download</a>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
+  <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+  <script async defer src="https://buttons.github.io/buttons.js?1668165276"></script>
+
+        </div>
+      </div>
+    </aside>
+    <script src="/captus.docs/js/clipboard.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/theme.js?1668165276" defer></script>
+  </body>
+</html>

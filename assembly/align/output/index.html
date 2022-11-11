@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.99.1">
+    <meta name="generator" content="Relearn 5.5.3+tip">
+    <meta name="description" content="Documentation and tutorials for Captus">
+    <meta name="author" content="Edgardo M. Ortiz">
+    <title>Output Files :: Captus documentation</title>
+    <link href="/captus.docs/images/favicon.ico?1668165276" rel="icon" type="image/x-icon">
+    <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
+    <link href="/captus.docs/css/fontawesome-all.min.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1668165276" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1668165276" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1668165276" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1668165276" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1668165276" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1668165276"></script>
+    <script>
+      // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
+      // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
+      window.index_json_url="/captus.docs/index.json";
+      var root_url="/";
+      var baseUri=root_url.replace(/\/$/, '');
+      // translations
+      window.T_Copy_to_clipboard = 'Copy to clipboard';
+      window.T_Copied_to_clipboard = 'Copied to clipboard!';
+      window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
+      window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      // some further base stuff
+      var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
+      window.variants && variants.init( [ 'green' ] );
+    </script>
+    <script src="/captus.docs/js/jquery.min.js?1668165276" defer></script>
+
+
+  </head>
+  <body class="mobile-support default disableInlineCopyToClipboard" data-url="/captus.docs/assembly/align/output/">
+    <div id="body" class="default-animation">
+      <div id="sidebar-overlay"></div>
+      <div id="toc-overlay"></div>
+      <nav id="topbar" class="highlightable" dir="ltr">
+        <div>
+          <div class="navigation">
+            <a class="nav nav-next" href="/captus.docs/assembly/align/report/index.html" title="HTML Report (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+          </div>
+          <div class="navigation">
+            <a class="nav nav-prev" href="/captus.docs/assembly/align/options/index.html" title="Options (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+          </div>
+          <div id="top-github-link">
+            <a class="github-link" title='Edit (CTRL+ALT+w)' href="https://github.com/edgardomortiz/Captus/tree/master/docs/content/assembly/align/output.md" target="blank">
+              <i class="fas fa-pen fa-fw"></i>
+            </a>
+          </div>
+          <div id="breadcrumbs">
+            <span id="sidebar-toggle-span">
+              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+            </span>
+            <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
+            <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/index.html"><span itemprop="name">Captus</span></a><meta itemprop="position" content="1"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/assembly/index.html"><span itemprop="name">Assembly</span></a><meta itemprop="position" content="2"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><a itemprop="item" href="/captus.docs/assembly/align/index.html"><span itemprop="name">Align</span></a><meta itemprop="position" content="3"> > </li>
+              <li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"><span itemprop="name">Output Files</span><meta itemprop="position" content="4"></li>
+            </ol>
+          </div>
+          <div class="default-animation progress">
+            <div class="toc-wrapper" dir="ltr">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-01_unaligned">1. <strong><code>01_unaligned</code></strong></a></li>
+        <li><a href="#2-02_untrimmed">2. <strong><code>02_untrimmed</code></strong></a></li>
+        <li><a href="#3-03_trimmed">3. <strong><code>03_trimmed</code></strong></a></li>
+        <li><a href="#4-01_unfiltered_w_refs">4. <strong><code>01_unfiltered_w_refs</code></strong></a></li>
+        <li><a href="#5-02_naive_w_refs">5. <strong><code>02_naive_w_refs</code></strong></a></li>
+        <li><a href="#6-03_informed_w_refs">6. <strong><code>03_informed_w_refs</code></strong></a></li>
+        <li><a href="#7-04_unfiltered-05_naive-06_informed">7. <strong><code>04_unfiltered</code></strong>, <strong><code>05_naive</code></strong>, <strong><code>06_informed</code></strong></a></li>
+        <li><a href="#8-01_coding_nuc-02_coding_ptd-03_coding_mit">8. <strong><code>01_coding_NUC</code></strong>, <strong><code>02_coding_PTD</code></strong>, <strong><code>03_coding_MIT</code></strong></a></li>
+        <li><a href="#9-01_aa">9. <strong><code>01_AA</code></strong></a></li>
+        <li><a href="#10-02_nt">10. <strong><code>02_NT</code></strong></a></li>
+        <li><a href="#11-03_genes">11. <strong><code>03_genes</code></strong></a></li>
+        <li><a href="#12-04_genes_flanked">12. <strong><code>04_genes_flanked</code></strong></a></li>
+        <li><a href="#13-04_misc_dna-05_clusters">13. <strong><code>04_misc_DNA</code></strong>, <strong><code>05_clusters</code></strong></a></li>
+        <li><a href="#14-01_matches">14. <strong><code>01_matches</code></strong></a></li>
+        <li><a href="#15-02_matches_flanked">15. <strong><code>02_matches_flanked</code></strong></a></li>
+        <li><a href="#16-captus-assembly_alignparalogstsv">16. <strong><code>captus-assembly_align.paralogs.tsv</code></strong></a></li>
+        <li><a href="#17-captus-assembly_alignalignmentstsv">17. <strong><code>captus-assembly_align.alignments.tsv</code></strong></a></li>
+        <li><a href="#18-captus-assembly_alignsamplestsv">18. <strong><code>captus-assembly_align.samples.tsv</code></strong></a></li>
+        <li><a href="#19-captus-assembly_alignastral-protsv">19. <strong><code>captus-assembly_align.astral-pro.tsv</code></strong></a></li>
+        <li><a href="#20-captus-assembly_alignreporthtml">20. <strong><code>captus-assembly_align.report.html</code></strong></a></li>
+        <li><a href="#21-captus-assembly_alignlog">21. <strong><code>captus-assembly_align.log</code></strong></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <main id="body-inner" class="highlightable default" tabindex="-1">
+        <div class="flex-block-wrapper">
+          <div id="head-tags">
+          </div>
+          <article class="default">
+<h1>Output Files</h1>
+
+<p>For this example we will use the directory <code>03_extractions</code> previously created with the <a href="https://edgardomortiz.github.io/captus.docs/assembly/extract/output/"><code>extract</code> module</a>. We run the following <code>Captus</code> command to collect markers across samples and align them:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>captus_assembly align align -e 03_extractions_CAP/ -o 04_alignments_CAP -k ALL -f ALL
+</span></span></code></pre></div><p>After the run is finished we should see a new directory called <code>04_alignments</code> with the following structure and files:</p>
+<p>
+		
+<a href="/images/alignments.png?width=640&amp;classes=shadow" data-featherlight="image">
+<img src="/images/alignments.png?width=640&amp;classes=shadow" alt="Alignments" class="shadow" style="height: auto; width: 640;" loading="lazy">
+</a></p>
+<hr>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        Complete structure of the alignment output directory
+    </a>
+    <div class="expand-content" style="display: none;">
+<p>
+		
+<a href="/images/alignment_stages.png?width=1200&amp;classes=shadow" data-featherlight="image">
+<img src="/images/alignment_stages.png?width=1200&amp;classes=shadow" alt="Alignment directory" class="shadow" style="height: auto; width: 1200;" loading="lazy">
+</a></p>
+
+    </div>
+</div>
+<hr>
+<h3 id="1-01_unaligned">1. <strong><code>01_unaligned</code></strong></h3>
+<p>This directory contains the unaligned FASTA files corresponding to each marker that were gathered from the extractions directory. The files are organized in subdirectories, first by <a href="/captus.docs/assembly/align/options/#-m---markers">marker type</a> and then by <a href="/captus.docs/assembly/align/options/#-f---formats">format</a>.</p>
+<hr>
+<h3 id="2-02_untrimmed">2. <strong><code>02_untrimmed</code></strong></h3>
+<p>This directory contains the aligned FASTA files corresponding to each file in the <code>01_unaligned</code> directory. The files are organized in subdirectories, first by filtering strategy, then by <a href="/captus.docs/assembly/align/options/#-m---markers">marker type</a>, and finally by <a href="/captus.docs/assembly/align/options/#-f---formats">format</a>. The subdirectory structure is identical to the one inside the <code>03_trimmed</code> directory (see <strong>4</strong> to <strong>15</strong> below).
+
+		
+<a href="/images/alignment_untrimmed_stages.png?width=1200&amp;classes=shadow" data-featherlight="image">
+<img src="/images/alignment_untrimmed_stages.png?width=1200&amp;classes=shadow" alt="Untrimmed alignments" class="shadow" style="height: auto; width: 1200;" loading="lazy">
+</a></p>
+<hr>
+<h3 id="3-03_trimmed">3. <strong><code>03_trimmed</code></strong></h3>
+<p>All the files present in the <code>02_untrimmed</code> directory are trimmed using <code>ClipKIT</code> which removes columns that are mostly empty (see options <a href="/captus.docs/assembly/align/options/#--clipkit_algorithm"><code>--clipkit_algorithm</code></a>, <a href="/captus.docs/assembly/align/options/#--clipkit_gaps"><code>--clipkit_gaps</code></a>), then <code>Captus</code> removes sequences that are too short after trimming (<a href="/captus.docs/assembly/align/options/#--min_coverage"><code>--min_coverage</code></a>). The files are organized in subdirectories, first by filtering strategy, then by <a href="/captus.docs/assembly/align/options/#-m---markers">marker type</a>, and finally by <a href="/captus.docs/assembly/align/options/#-f---formats">format</a>. The subdirectory structure is identical to the one inside the <code>02_untrimmed</code> directory (see <strong>4</strong> to <strong>15</strong> below).
+
+		
+<a href="/images/alignment_trimmed_stages.png?width=1200&amp;classes=shadow" data-featherlight="image">
+<img src="/images/alignment_trimmed_stages.png?width=1200&amp;classes=shadow" alt="Trimmed alignments" class="shadow" style="height: auto; width: 1200;" loading="lazy">
+</a></p>
+<hr>
+<h3 id="4-01_unfiltered_w_refs">4. <strong><code>01_unfiltered_w_refs</code></strong></h3>
+<p>This directory contains the alignments before performing any filtering. All the reference sequences selected by at least a sample will be present as well as all the paralogs per sample. The files are organized in subdirectories, first by <a href="/captus.docs/assembly/align/options/#-m---markers">marker type</a> and then by <a href="/captus.docs/assembly/align/options/#-f---formats">format</a>.</p>
+<hr>
+<h3 id="5-02_naive_w_refs">5. <strong><code>02_naive_w_refs</code></strong></h3>
+<p>This directory contains the alignments where paralogs have been filtered by the <code>naive</code> method, which consists in simply keeping the best hit per sample (hit ranked as <code>00</code>). All the reference sequences selected by at least a sample will still be present. The files are organized in subdirectories, first by <a href="/captus.docs/assembly/align/options/#-m---markers">marker type</a> and then by <a href="/captus.docs/assembly/align/options/#-f---formats">format</a>.
+
+		
+<a href="/images/paralog_filter_naive.png?width=1200&amp;classes=shadow" data-featherlight="image">
+<img src="/images/paralog_filter_naive.png?width=1200&amp;classes=shadow" alt="Naive paralog filter" class="shadow" style="height: auto; width: 1200;" loading="lazy">
+</a></p>
+<hr>
+<h3 id="6-03_informed_w_refs">6. <strong><code>03_informed_w_refs</code></strong></h3>
+<p>This directory contains the alignments where paralogs have been filtered by the <code>informed</code> method. Under this strategy, <code>Captus</code> compares every copy to the most commonly used reference sequence (sequence <code>ABCD-3400</code> in the figure) and retains the copy with the highest similarity to that reference, regardless of its paralog ranking (in the figure, <code>Sample1</code> and <code>Sample4</code> whose selected copies had paralog rankings of <code>01</code> and <code>02</code> respectively). All the reference sequences selected by at least a sample will still be present. The files are organized in subdirectories, first by <a href="/captus.docs/assembly/align/options/#-m---markers">marker type</a> and then by <a href="/captus.docs/assembly/align/options/#-f---formats">format</a>.
+
+		
+<a href="/images/paralog_filter_informed.png?width=1200&amp;classes=shadow" data-featherlight="image">
+<img src="/images/paralog_filter_informed.png?width=1200&amp;classes=shadow" alt="Informed paralog filter" class="shadow" style="height: auto; width: 1200;" loading="lazy">
+</a></p>
+<hr>
+<h3 id="7-04_unfiltered-05_naive-06_informed">7. <strong><code>04_unfiltered</code></strong>, <strong><code>05_naive</code></strong>, <strong><code>06_informed</code></strong></h3>
+<p>These contain equivalent alignments to directories <code>01_unfiltered_w_refs</code>, <code>02_naive_w_refs</code>, and <code>03_informed_w_refs</code> respectively, but excluding the reference sequences. <em>In most cases you will estimate phylogenies from the trimmed versions of these alignments.</em></p>
+<hr>
+<h3 id="8-01_coding_nuc-02_coding_ptd-03_coding_mit">8. <strong><code>01_coding_NUC</code></strong>, <strong><code>02_coding_PTD</code></strong>, <strong><code>03_coding_MIT</code></strong></h3>
+<p>These directories contain the aligned <strong>coding</strong> markers from the <strong>NUC</strong>lear, <strong>P</strong>las<strong>T</strong>i<strong>D</strong>ial, and <strong>MIT</strong>ochondrial genomes respectively.<br>
+The alignments are presented in four formats: protein sequence (<strong>coding_AA</strong>), coding sequence in nucleotide (<strong>coding_NT</strong>), exons and introns concatenated (<strong>genes</strong>), and the concatenation of exons and introns flanked by a fixed length of sequence (<strong>genes_flanked</strong>):</p>
+<p>
+		
+<a href="/images/protein_extraction.png?width=600&amp;classes=shadow" data-featherlight="image">
+<img src="/images/protein_extraction.png?width=600&amp;classes=shadow" alt="Protein extraction formats" class="shadow" style="height: auto; width: 600;" loading="lazy">
+</a></p>
+<hr>
+<h3 id="9-01_aa">9. <strong><code>01_AA</code></strong></h3>
+<p>This directory contains the protein alignments (<code>AA</code> in the figure above) of the extracted markers gathered across samples. One FASTA file per marker, with extension <code>.faa</code>.</p>
+<hr>
+<h3 id="10-02_nt">10. <strong><code>02_NT</code></strong></h3>
+<p>This directory contains the alignments of coding sequence in nucleotides (<code>NT</code> in the figure above) of the extracted markers gathered across samples. One FASTA file per marker, with extension <code>.fna</code>.</p>
+<hr>
+<h3 id="11-03_genes">11. <strong><code>03_genes</code></strong></h3>
+<p>This directory contains the alignments of gene sequence (exons + introns) in nucleotides (<code>GE</code> in the figure above) of the extracted markers gathered across samples. One FASTA file per marker, with extension <code>.fna</code>.</p>
+<hr>
+<h3 id="12-04_genes_flanked">12. <strong><code>04_genes_flanked</code></strong></h3>
+<p>This directory contains the alignments of flanked gene sequence in nucleotides (<code>GF</code> in the figure above) of the extracted markers gathered across samples. One FASTA file per marker, with extension <code>.fna</code>.</p>
+<hr>
+<h3 id="13-04_misc_dna-05_clusters">13. <strong><code>04_misc_DNA</code></strong>, <strong><code>05_clusters</code></strong></h3>
+<p>These directories contain the aligned <strong>miscellaneous DNA</strong> markers, either from a <strong>DNA</strong> custom set of references or from the <strong>CL</strong>uste<strong>R</strong>ing resulting from using the option <code>--cluster_leftovers</code> during the extraction step.<br>
+The alignments are presented in two formats: matching DNA segments (<strong>matches</strong>), and the matched segments including flanks and other intervening segments not present in the reference (<strong>matches_flanked</strong>).</p>
+<p>
+		
+<a href="/images/misc_dna_extraction.png?width=600&amp;classes=shadow" data-featherlight="image">
+<img src="/images/misc_dna_extraction.png?width=600&amp;classes=shadow" alt="Miscellaneous DNA extraction formats" class="shadow" style="height: auto; width: 600;" loading="lazy">
+</a></p>
+<hr>
+<h3 id="14-01_matches">14. <strong><code>01_matches</code></strong></h3>
+<p>This directory contains the alignments of DNA sequence matches (<code>MA</code> in the figure above) for the extracted markers gathered across samples. One FASTA file per marker, with extension <code>.fna</code>.</p>
+<hr>
+<h3 id="15-02_matches_flanked">15. <strong><code>02_matches_flanked</code></strong></h3>
+<p>This directory contains the alignments of DNA sequence matches (<code>MF</code> in the figure above) including flanks and intervening segments not present in the references for the extracted markers gathered across samples. One FASTA file per marker, with extension <code>.fna</code>.</p>
+<hr>
+<h3 id="16-captus-assembly_alignparalogstsv">16. <strong><code>captus-assembly_align.paralogs.tsv</code></strong></h3>
+<p>A tab-separated-values table recording which copy was selected during the <code>informed</code> filtering of paralogs.</p>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        Information included in the table
+    </a>
+    <div class="expand-content" style="display: none;">
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>marker_type</strong></td>
+<td>Type of marker. Possible values are <code>NUC</code>, <code>PTD</code>, <code>MIT</code>, <code>DNA</code>, or <code>CLR</code>.</td>
+</tr>
+<tr>
+<td><strong>format_filtered</strong></td>
+<td>Alignment format used for identity comparison and filtering. For protein references, if the reference is provided both in aminoacids and nucleotides, the nucleotide format is used.</td>
+</tr>
+<tr>
+<td><strong>locus</strong></td>
+<td>Name of the locus.</td>
+</tr>
+<tr>
+<td><strong>ref</strong></td>
+<td>Name of most common the reference observed in the alignment.</td>
+</tr>
+<tr>
+<td><strong>sample</strong></td>
+<td>Name of the sample.</td>
+</tr>
+<tr>
+<td><strong>hit</strong></td>
+<td>Paralog ranking.</td>
+</tr>
+<tr>
+<td><strong>sequence</strong></td>
+<td>Name of the sequence as it appears in the alignments.</td>
+</tr>
+<tr>
+<td><strong>length</strong></td>
+<td>Lenght of the sequence in aminoacids if <code>format_filtered</code> is <code>AA</code>, or in nucleotides if <code>format_filtered</code> is <code>NT</code></td>
+</tr>
+<tr>
+<td><strong>identity</strong></td>
+<td>Identity of the sequence to the <code>ref</code> sequence, over the overlapping segment, ignoring internal gaps.</td>
+</tr>
+<tr>
+<td><strong>paralog_score</strong></td>
+<td>(<code>length</code> / length of <code>ref</code>) * (<code>identity</code> / 100), the highest score decides the selected copy.</td>
+</tr>
+<tr>
+<td><strong>accepted</strong></td>
+<td>Whether the copy is accepted (<code>TRUE</code>) or not (<code>FALSE</code>).</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
+<hr>
+<h3 id="17-captus-assembly_alignalignmentstsv">17. <strong><code>captus-assembly_align.alignments.tsv</code></strong></h3>
+<p>A tab-separated-values table recording alignment statistics for each of the alignments produced.</p>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        Information included in the table
+    </a>
+    <div class="expand-content" style="display: none;">
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>path</strong></td>
+<td>Absolute path to the alignment file.</td>
+</tr>
+<tr>
+<td><strong>trimmed</strong></td>
+<td>Whether the alignment has been trimmed (<code>TRUE</code>) or not (<code>FALSE</code>).</td>
+</tr>
+<tr>
+<td><strong>paralog_filter</strong></td>
+<td>Filtering strategy applied to the file. Possible values are <code>unfiltered</code>, <code>naive</code>, or <code>informed</code>.</td>
+</tr>
+<tr>
+<td><strong>with_refs</strong></td>
+<td>Whether the file still contains the reference sequences (<code>TRUE</code>) or they have been removed (<code>FALSE</code>).</td>
+</tr>
+<tr>
+<td><strong>marker_type</strong></td>
+<td>Type of marker. Possible values are <code>NUC</code>, <code>PTD</code>, <code>MIT</code>, <code>DNA</code>, or <code>CLR</code>.</td>
+</tr>
+<tr>
+<td><strong>format</strong></td>
+<td>Alignment format. Possible values are <code>AA</code>,<code>NT</code>,<code>GE</code>,<code>GF</code>,<code>MA</code>,<code>MF</code>.</td>
+</tr>
+<tr>
+<td><strong>locus</strong></td>
+<td>Name of the locus.</td>
+</tr>
+<tr>
+<td><strong>seqs</strong></td>
+<td>Number of sequences in the alignment.</td>
+</tr>
+<tr>
+<td><strong>samples</strong></td>
+<td>Number of samples represented in the alignment. The number can be smaller than <code>seqs</code> if the alignment has paralogs.</td>
+</tr>
+<tr>
+<td><strong>avg_copies</strong></td>
+<td><code>seqs</code> / <code>samples</code></td>
+</tr>
+<tr>
+<td><strong>sites</strong></td>
+<td>Alignment length.</td>
+</tr>
+<tr>
+<td><strong>informative</strong></td>
+<td>Number of parsimony-informative-sites in the alignment.</td>
+</tr>
+<tr>
+<td><strong>informativeness</strong></td>
+<td>(<code>informative</code> / <code>sites</code>) * 100</td>
+</tr>
+<tr>
+<td><strong>uninformative</strong></td>
+<td><code>constant</code> + <code>singleton</code></td>
+</tr>
+<tr>
+<td><strong>constant</strong></td>
+<td>Number of invariant sites in the alignment.</td>
+</tr>
+<tr>
+<td><strong>singleton</strong></td>
+<td>Number of sites with variaton in a single sequence.</td>
+</tr>
+<tr>
+<td><strong>paterns</strong></td>
+<td>Number of unique columns, for a detailed explanation see IQ-TREE&rsquo;s F.A.Q.: <a href="http://www.iqtree.org/doc/Frequently-Asked-Questions">What are the differences between alignment columns/sites and patterns?</a>.</td>
+</tr>
+<tr>
+<td><strong>avg_pid</strong></td>
+<td>Average pairwise identity between sequences in the alignment.</td>
+</tr>
+<tr>
+<td><strong>missingness</strong></td>
+<td>Proportion of missing data (<code>-</code>, <code>N</code>, <code>X</code>, <code>?</code>, <code>.</code>, <code>~</code>) in the alignment.</td>
+</tr>
+<tr>
+<td><strong>gc</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>gc_codon_p1</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>gc_codon_p2</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>gc_codon_p3</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
+<hr>
+<h3 id="18-captus-assembly_alignsamplestsv">18. <strong><code>captus-assembly_align.samples.tsv</code></strong></h3>
+<p>A tab-separated-values table recording sample statistics across the different filtering and trimming stages, as well as marker types and formats.</p>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        Information included in the table
+    </a>
+    <div class="expand-content" style="display: none;">
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>sample</strong></td>
+<td>Sample name.</td>
+</tr>
+<tr>
+<td><strong>stage_marker_format</strong></td>
+<td>Trimming stage / Filtering strategy / Marker type / Format.</td>
+</tr>
+<tr>
+<td><strong>locus</strong></td>
+<td>Name of the locus.</td>
+</tr>
+<tr>
+<td><strong>len_total</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>len_gapped</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>len_ungapped</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>cov_gapped</strong></td>
+<td>Coverage of the sequence relative to alignment length, including internal gaps.</td>
+</tr>
+<tr>
+<td><strong>cov_ungapped</strong></td>
+<td>Coverage of the sequence relative to alignment length, excluding internal gaps.</td>
+</tr>
+<tr>
+<td><strong>ambigs</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>pct_ambig</strong></td>
+<td>Percentage of ambiguities in the sequence, excluding gaps.</td>
+</tr>
+<tr>
+<td><strong>gc</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>gc_codon_p1</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>gc_codon_p2</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>gc_codon_p3</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>num_copies</strong></td>
+<td>Number of copies in the alignment.</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+</div>
+<hr>
+<h3 id="19-captus-assembly_alignastral-protsv">19. <strong><code>captus-assembly_align.astral-pro.tsv</code></strong></h3>
+<p>ASTRAL-Pro requires a tab-separated-values file for mapping the names of the paralog sequence names (first column) to the name of the sample (second column). <code>Captus</code> produces this file automatically.</p>
+
+<div class="expand">
+    <a class="expand-label" onclick="$t=$(this); if($t.parent('.expand-expanded.expand-marked').length){ $t.next().css('display','none') }else if($t.parent('.expand-marked').length){ $t.next().css('display','block') }else{ $t.next('.expand-content').slideToggle(100); } $t.parent().toggleClass('expand-expanded');">
+        <i class="fas fa-chevron-down"></i>
+        <i class="fas fa-chevron-left expand-rtl direction-ltr"></i>
+        <i class="fas fa-chevron-right expand-ltr direction-ltr"></i>
+        Example
+    </a>
+    <div class="expand-content" style="display: none;">
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>GenusA_speciesA_CAP	GenusA_speciesA_CAP
+</span></span><span style="display:flex;"><span>GenusA_speciesA_CAP__00	GenusA_speciesA_CAP
+</span></span><span style="display:flex;"><span>GenusA_speciesA_CAP__01	GenusA_speciesA_CAP
+</span></span><span style="display:flex;"><span>GenusA_speciesA_CAP__02	GenusA_speciesA_CAP
+</span></span><span style="display:flex;"><span>GenusA_speciesA_CAP__03	GenusA_speciesA_CAP
+</span></span><span style="display:flex;"><span>GenusA_speciesA_CAP__04	GenusA_speciesA_CAP
+</span></span><span style="display:flex;"><span>GenusA_speciesA_CAP__05	GenusA_speciesA_CAP
+</span></span><span style="display:flex;"><span>GenusB_speciesB_CAP	GenusB_speciesB_CAP
+</span></span><span style="display:flex;"><span>GenusB_speciesB_CAP__00	GenusB_speciesB_CAP
+</span></span><span style="display:flex;"><span>GenusB_speciesB_CAP__01	GenusB_speciesB_CAP
+</span></span><span style="display:flex;"><span>GenusB_speciesB_CAP__02	GenusB_speciesB_CAP
+</span></span><span style="display:flex;"><span>GenusC_speciesC_CAP	GenusC_speciesC_CAP
+</span></span><span style="display:flex;"><span>GenusC_speciesC_CAP__00	GenusC_speciesC_CAP
+</span></span><span style="display:flex;"><span>GenusC_speciesC_CAP__01	GenusC_speciesC_CAP
+</span></span><span style="display:flex;"><span>GenusC_speciesC_CAP__02	GenusC_speciesC_CAP
+</span></span><span style="display:flex;"><span>GenusC_speciesC_CAP__03	GenusC_speciesC_CAP
+</span></span><span style="display:flex;"><span>GenusC_speciesC_CAP__04	GenusC_speciesC_CAP
+</span></span><span style="display:flex;"><span>GenusC_speciesC_CAP__05	GenusC_speciesC_CAP
+</span></span><span style="display:flex;"><span>GenusD_speciesD_CAP	GenusD_speciesD_CAP
+</span></span><span style="display:flex;"><span>GenusD_speciesD_CAP__00	GenusD_speciesD_CAP
+</span></span><span style="display:flex;"><span>GenusD_speciesD_CAP__01	GenusD_speciesD_CAP
+</span></span><span style="display:flex;"><span>GenusD_speciesD_CAP__02	GenusD_speciesD_CAP
+</span></span><span style="display:flex;"><span>GenusD_speciesD_CAP__03	GenusD_speciesD_CAP
+</span></span><span style="display:flex;"><span>GenusD_speciesD_CAP__04	GenusD_speciesD_CAP
+</span></span><span style="display:flex;"><span>GenusD_speciesD_CAP__05	GenusD_speciesD_CAP
+</span></span></code></pre></div>
+    </div>
+</div>
+<hr>
+<h3 id="20-captus-assembly_alignreporthtml">20. <strong><code>captus-assembly_align.report.html</code></strong></h3>
+<p>This is the final <a href="https://edgardomortiz.github.io/captus.docs/assembly/align/report/">Aligment report</a>, summarizing alignment statistics across all processing stages, marker types, and formats.</p>
+<hr>
+<h3 id="21-captus-assembly_alignlog">21. <strong><code>captus-assembly_align.log</code></strong></h3>
+<p>This is the log from <code>Captus</code>, it contains the command used and all the information shown during the run. Even if the option <code>--show_more</code> was disabled, the log will contain all the extra detailed information that was hidden during the run.</p>
+<hr>
+<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (06.08.2021)<br>
+Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (31.05.2022)</p>
+
+            <footer class="footline">
+            </footer>
+          </article>
+        </div>
+      </main>
+    </div>
+    <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
+      <div id="header-wrapper" class="default-animation">
+        <div id="header" class="default-animation">
+          <a id="logo" href="/captus.docs/">
+            <img src="/images/logo.svg" width="270">
+          </a>
+        </div>
+        <div class="searchbox default-animation">
+          <label class="a11y-only" for="search-by">Search</label>
+          <i class="fas fa-search"></i>
+          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <span data-search-clear=""><i class="fas fa-times"></i></span>
+        </div>
+        <script>
+          var contentLangs=['en'];
+        </script>
+        <script src="/captus.docs/js/auto-complete.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1668165276" defer></script>
+        <script src="/captus.docs/js/search.js?1668165276" defer></script>
+      </div>
+      <div id="homelinks" class="default-animation">
+        <ul>
+          <li>
+              <a class="padding" href="/captus.docs/index.html"><i class="fas fa-home"></i> Home</a>
+          </li>
+        </ul>
+      </div>
+      <div id="content-wrapper" class="highlightable">
+        <ul class="topics collapsible-menu">
+          <li data-nav-id="/captus.docs/basics/" class="dd-item"><input type="checkbox" id="section-3494ad44d160b070fd31576fe4a3841e" aria-controls="subsections-3494ad44d160b070fd31576fe4a3841e" class="toggle"><label class="a11y-only toggle" for="section-3494ad44d160b070fd31576fe4a3841e" >Submenu Basics</label><a href="/captus.docs/basics/index.html">Basics<i class="fas fa-check read-icon"></i></a><ul id="subsections-3494ad44d160b070fd31576fe4a3841e">
+          <li data-nav-id="/captus.docs/basics/overview/" class="dd-item"><a href="/captus.docs/basics/overview/index.html">Overview<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/installation/" class="dd-item"><a href="/captus.docs/basics/installation/index.html">Installation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/parallelization/" class="dd-item"><a href="/captus.docs/basics/parallelization/index.html">Parallelization<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/" class="dd-item parent"><input type="checkbox" id="section-d26437a3e42ff73277da14a17983cc4a" aria-controls="subsections-d26437a3e42ff73277da14a17983cc4a" class="toggle" checked><label class="a11y-only toggle" for="section-d26437a3e42ff73277da14a17983cc4a" >Submenu Assembly</label><a href="/captus.docs/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-d26437a3e42ff73277da14a17983cc4a">
+          <li data-nav-id="/captus.docs/assembly/clean/" class="dd-item alwaysopen"><input type="checkbox" id="section-c872805a13ffe675b4d826b4bbe79398" aria-controls="subsections-c872805a13ffe675b4d826b4bbe79398" class="toggle" checked><label class="a11y-only toggle" for="section-c872805a13ffe675b4d826b4bbe79398" >Submenu Clean</label><a href="/captus.docs/assembly/clean/index.html"><b>1. </b>Clean<i class="fas fa-check read-icon"></i></a><ul id="subsections-c872805a13ffe675b4d826b4bbe79398">
+          <li data-nav-id="/captus.docs/assembly/clean/preparation/" class="dd-item"><a href="/captus.docs/assembly/clean/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/options/" class="dd-item"><a href="/captus.docs/assembly/clean/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/output/" class="dd-item"><a href="/captus.docs/assembly/clean/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/report/" class="dd-item"><a href="/captus.docs/assembly/clean/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/" class="dd-item alwaysopen"><input type="checkbox" id="section-a84f65fc279cc2da70eab7b44ff6d8d2" aria-controls="subsections-a84f65fc279cc2da70eab7b44ff6d8d2" class="toggle" checked><label class="a11y-only toggle" for="section-a84f65fc279cc2da70eab7b44ff6d8d2" >Submenu Assemble</label><a href="/captus.docs/assembly/assemble/index.html"><b>2. </b>Assemble<i class="fas fa-check read-icon"></i></a><ul id="subsections-a84f65fc279cc2da70eab7b44ff6d8d2">
+          <li data-nav-id="/captus.docs/assembly/assemble/preparation/" class="dd-item"><a href="/captus.docs/assembly/assemble/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/options/" class="dd-item"><a href="/captus.docs/assembly/assemble/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/output/" class="dd-item"><a href="/captus.docs/assembly/assemble/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/report/" class="dd-item"><a href="/captus.docs/assembly/assemble/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/extract/" class="dd-item alwaysopen"><input type="checkbox" id="section-70e7375f0d352e293150a5450dcea703" aria-controls="subsections-70e7375f0d352e293150a5450dcea703" class="toggle" checked><label class="a11y-only toggle" for="section-70e7375f0d352e293150a5450dcea703" >Submenu Extract</label><a href="/captus.docs/assembly/extract/index.html"><b>3. </b>Extract<i class="fas fa-check read-icon"></i></a><ul id="subsections-70e7375f0d352e293150a5450dcea703">
+          <li data-nav-id="/captus.docs/assembly/extract/preparation/" class="dd-item"><a href="/captus.docs/assembly/extract/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/options/" class="dd-item"><a href="/captus.docs/assembly/extract/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/output/" class="dd-item"><a href="/captus.docs/assembly/extract/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/report/" class="dd-item"><a href="/captus.docs/assembly/extract/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/align/" class="dd-item parent alwaysopen"><input type="checkbox" id="section-e75d36c61d53e0a5569727f2f076837e" aria-controls="subsections-e75d36c61d53e0a5569727f2f076837e" class="toggle" checked><label class="a11y-only toggle" for="section-e75d36c61d53e0a5569727f2f076837e" >Submenu Align</label><a href="/captus.docs/assembly/align/index.html"><b>4. </b>Align<i class="fas fa-check read-icon"></i></a><ul id="subsections-e75d36c61d53e0a5569727f2f076837e">
+          <li data-nav-id="/captus.docs/assembly/align/options/" class="dd-item"><a href="/captus.docs/assembly/align/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/output/" class="dd-item active"><a href="/captus.docs/assembly/align/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/report/" class="dd-item"><a href="/captus.docs/assembly/align/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/captus.docs/design/" class="dd-item"><a href="/captus.docs/design/index.html">Design<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/tutorials/" class="dd-item"><a href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a></li>
+        </ul>
+        <div id="shortcuts">
+          <div class="nav-title">More</div>
+          <ul>
+            <li><a class="padding" href="https://github.com/edgardomortiz/Captus"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+            <li><a class="padding" href="/captus.docs/more/credits/index.html"><i class='fas fa-fw fa-bullhorn'></i> Credits</a></li>
+          </ul>
+        </div>
+        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
+          <ul>
+            <li id="select-language-container" class="footerLangSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-language fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-language">Language</label>
+                  <select id="select-language" onchange="location = baseUri + this.value;">
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+            </li>
+            <li id="select-variant-container" class="footerVariantSwitch">
+              <div class="padding select-container">
+                <i class="fas fa-paint-brush fa-fw"></i>
+                <span>&nbsp;</span>
+                <div class="select-style">
+                  <label class="a11y-only" for="select-variant">Theme</label>
+                  <select id="select-variant" onchange="window.variants && variants.changeVariant( this.value );">
+                    <option id="green" value="green" selected>Green</option>
+                  </select>
+                </div>
+                <div class="select-clear"></div>
+              </div>
+              <script>window.variants && variants.markSelectedVariant();</script>
+            </li>
+            <li class="footerVisitedLinks showVisitedLinks"><button class="padding" onclick="clearHistory();"><i class="fas fa-history fa-fw"></i> Clear History</button></li>
+          </ul>
+        </div>
+        <div id="footer" class="footerFooter showFooter"><style>
+	#footer {
+	  font-size: 13px;
+	  height: 100px;
+	  margin-left: auto;
+	  margin-right: auto;
+	  padding: 2rem 1rem;
+	  text-align: center;
+	  min-width: 230px;
+	  max-width: 300px;
+	}
+	#footer p {
+	  margin: 0;
+	}
+  </style>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download Captus on GitHub">Download</a>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
+  <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
+  <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
+  <script async defer src="https://buttons.github.io/buttons.js?1668165276"></script>
+
+        </div>
+      </div>
+    </aside>
+    <script src="/captus.docs/js/clipboard.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1668165276" defer></script>
+    <script src="/captus.docs/js/theme.js?1668165276" defer></script>
+  </body>
+</html>
