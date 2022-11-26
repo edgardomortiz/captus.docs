@@ -35,7 +35,7 @@ MEGAHIT is an extremely fast and robust de novo assembler that is very memory-ef
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/align/</guid>
       <description>The last step in the Captus workflow is to align the extracted markers so you can estimate phylogenetic trees with your favorite tool (e.g., IQ-TREE, RAxML, MrBayes, SVDQuartets, etc.).
-Captus starts this step by gathering all the markers across your extracted samples and building a FASTA file per marker. Then, it will add the references used during extraction, these are useful to improve alignment since they serve as guides. Then Captus aligns the files using MAFFT, however, if you choose to align coding sequence in aminoacid (AA) and nucleotide (NT) in the same run, Captus will first align the AA version with MAFFT and then use that alignment as template to align the NT version, thus producing an codon-aware alignment of the coding sequence in nucleotides.</description>
+Captus starts this step by gathering all the markers across your extracted samples and building a FASTA file per marker. Then, it will add the references used during extraction, these are useful to improve alignment since they serve as guides. Then Captus aligns the files using MAFFT or MUSCLE, however, if you choose to align coding sequence in aminoacid (AA) and nucleotide (NT) in the same run, Captus will first align the AA version with MAFFT or MUSCLE and then use that alignment as template to align the NT version, thus producing an codon-aware alignment of the coding sequence in nucleotides.</description>
     </item>
   </channel>
 </rss>

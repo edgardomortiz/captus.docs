@@ -8,20 +8,20 @@
     <meta name="description" content="Documentation and tutorials for Captus">
     <meta name="author" content="Edgardo M. Ortiz">
     <title>Options :: Captus documentation</title>
-    <link href="/captus.docs/images/favicon.ico?1668181934" rel="icon" type="image/x-icon">
+    <link href="/captus.docs/images/favicon.ico?1669501619" rel="icon" type="image/x-icon">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/captus.docs/css/fontawesome-all.min.css?1668181934" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1668181934" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/featherlight.min.css?1668181934" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1668181934" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/auto-complete.css?1668181934" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1668181934" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/perfect-scrollbar.min.css?1668181934" rel="stylesheet">
-    <link href="/captus.docs/css/nucleus.css?1668181934" rel="stylesheet">
-    <link href="/captus.docs/css/fonts.css?1668181934" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1668181934" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/theme.css?1668181934" rel="stylesheet">
-    <link href="/captus.docs/css/theme-green.css?1668181934" rel="stylesheet" id="variant-style">
-    <link href="/captus.docs/css/ie.css?1668181934" rel="stylesheet">
-    <link href="/captus.docs/css/variant.css?1668181934" rel="stylesheet">
-    <link href="/captus.docs/css/print.css?1668181934" rel="stylesheet" media="print">
-    <script src="/captus.docs/js/variant.js?1668181934"></script>
+    <link href="/captus.docs/css/fontawesome-all.min.css?1669501619" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1669501619" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1669501619" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1669501619" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1669501619" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1669501619" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1669501619" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1669501619" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1669501619" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1669501619" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1669501619" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1669501619" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1669501619" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1669501619" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1669501619" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1669501619"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -37,7 +37,7 @@
       var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
       window.variants && variants.init( [ 'green' ] );
     </script>
-    <script src="/captus.docs/js/jquery.min.js?1668181934" defer></script>
+    <script src="/captus.docs/js/jquery.min.js?1669501619" defer></script>
 
 
   </head>
@@ -90,10 +90,10 @@
         <li><a href="#--overwrite"><strong><code>--overwrite</code></strong></a></li>
       </ul>
     </li>
-    <li><a href="#alignment-mafft"><em>Alignment (MAFFT)</em></a>
+    <li><a href="#alignment"><em>Alignment</em></a>
       <ul>
-        <li><a href="#--mafft_method"><strong><code>--mafft_method</code></strong></a></li>
-        <li><a href="#--mafft_timeout"><strong><code>--mafft_timeout</code></strong></a></li>
+        <li><a href="#--align_method"><strong><code>--align_method</code></strong></a></li>
+        <li><a href="#--timeout"><strong><code>--timeout</code></strong></a></li>
         <li><a href="#--disable_codon_align"><strong><code>--disable_codon_align</code></strong></a></li>
         <li><a href="#--outgroup"><strong><code>--outgroup</code></strong></a></li>
       </ul>
@@ -114,7 +114,7 @@
     <li><a href="#other"><em>Other</em></a>
       <ul>
         <li><a href="#--redo_from"><strong><code>--redo_from</code></strong></a></li>
-        <li><a href="#--mafft_path---clipkit_path"><strong><code>--mafft_path</code></strong>, <strong><code>--clipkit_path</code></strong></a></li>
+        <li><a href="#--mafft_path---muscle_path---clipkit_path"><strong><code>--mafft_path</code></strong>, <strong><code>--muscle_path</code></strong>, <strong><code>--clipkit_path</code></strong></a></li>
         <li><a href="#--show_less"><strong><code>--show_less</code></strong></a></li>
         <li><a href="#--ram---threads---concurrent---debug"><strong><code>--ram</code></strong>, <strong><code>--threads</code></strong>, <strong><code>--concurrent</code></strong>, <strong><code>--debug</code></strong>,</a></li>
       </ul>
@@ -218,31 +218,33 @@
 <p>This argument is optional, the default is <strong>./04_alignments/</strong></p>
 <hr>
 <h3 id="--keep_all"><strong><code>--keep_all</code></strong></h3>
-<p>Many intermediate log files are created by <code>MAFFT</code> and <code>ClipKIT</code> during assembly, <code>Captus</code> deletes all the unnecesary intermediate files unless you enable this flag.</p>
+<p>Many intermediate log files are created by <code>MAFFT</code>/<code>MUSCLE</code> and <code>ClipKIT</code> during assembly, <code>Captus</code> deletes all the unnecesary intermediate files unless you enable this flag.</p>
 <hr>
 <h3 id="--overwrite"><strong><code>--overwrite</code></strong></h3>
 <p>Use this flag with caution, this will replace any previous result within the output directory (for the sample names that match).</p>
 <hr>
-<h2 id="alignment-mafft"><em>Alignment (MAFFT)</em></h2>
+<h2 id="alignment"><em>Alignment</em></h2>
 <hr>
-<h3 id="--mafft_method"><strong><code>--mafft_method</code></strong></h3>
-<p>Select <a href="https://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html">MAFFT&rsquo;s alignment algorithm</a>. Valid algorithm names are:</p>
+<h3 id="--align_method"><strong><code>--align_method</code></strong></h3>
+<p>Select the alignment algorithm for <a href="https://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html">MAFFT</a> or <a href="https://drive5.com/muscle5/manual/commands.html">MUSCLE 5</a>. Valid algorithm names are:</p>
 <ul>
-<li><code>auto</code> = Automatic selection by <code>MAFFT</code> based on amount of data</li>
-<li><code>genafpair</code> = E-INS-i</li>
-<li><code>localpair</code> = L-INS-i</li>
-<li><code>globalpair</code> = G-INS-i</li>
-<li><code>retree1</code> = FFT-NS-1</li>
-<li><code>retree2</code> = FFT-NS-2</li>
+<li><code>mafft_auto</code> = MAFFT&rsquo;s automatic selection based on amount of data</li>
+<li><code>mafft_genafpair</code> = MAFFT&rsquo;s E-INS-i (very slow, multiple conserved domains and long gaps)</li>
+<li><code>mafft_localpair</code> = MAFFT&rsquo;s L-INS-i (very slow, one conserved domain and long gaps)</li>
+<li><code>mafft_globalpair</code> = MAFFT&rsquo;s G-INS-i (very slow, global homology)</li>
+<li><code>mafft_retree1</code> = MAFFT&rsquo;s FFT-NS-1 (fast, progressive method)</li>
+<li><code>mafft_retree2</code> = MAFFT&rsquo;s FFT-NS-2 (very fast, progressive method)</li>
+<li><code>muscle_align</code> = MUSCLE 5&rsquo;s default PPP algorithm (very slow)</li>
+<li><code>muscle_super5</code> = MUSCLE 5&rsquo;s Super 5 algorithm (slow)</li>
 </ul>
-<p>This argument is optional, the default is <strong>auto</strong>.</p>
+<p>This argument is optional, the default is <strong>mafft_auto</strong>.</p>
 <hr>
-<h3 id="--mafft_timeout"><strong><code>--mafft_timeout</code></strong></h3>
-<p>Modify the waiting time in seconds for an individual alignment to complete. When using more exhaustive MAFFT algorithm (e.g., <code>genafpair</code>), alignment can take very long (up to hours depending on sample number an length of the sequences).</p>
+<h3 id="--timeout"><strong><code>--timeout</code></strong></h3>
+<p>Modify the waiting time in seconds for an individual alignment to complete. When using more exhaustive MAFFT algorithm (e.g., <code>genafpair</code>) or especially MUSCLE (considerably slower than MAFFT in general), alignment can take very long (up to hours depending on sample number an length of the sequences).</p>
 <p>This argument is optional, the default is <strong>21600</strong> (= 6 hours).</p>
 <hr>
 <h3 id="--disable_codon_align"><strong><code>--disable_codon_align</code></strong></h3>
-<p>When <code>AA</code>s and their corresponding <code>NT</code>s are aligned in the same run, <code>Captus</code> uses the <code>AA</code> alignment as template for aligning the <code>NT</code> format, thus obtaining a codon-aware alignment for the coding sequences in nucleotides. Use this flag to disable this method and use the regular <code>MAFFT</code> nucleotide alignment.</p>
+<p>When <code>AA</code>s and their corresponding <code>NT</code>s are aligned in the same run, <code>Captus</code> uses the <code>AA</code> alignment as template for aligning the <code>NT</code> format, thus obtaining a codon-aware alignment for the coding sequences in nucleotides. Use this flag to disable this method and use the regular <code>MAFFT</code>/<code>MUSCLE</code> nucleotide alignment.</p>
 <hr>
 <h3 id="--outgroup"><strong><code>--outgroup</code></strong></h3>
 <p>Outgroup sample names, separated by commas, no spaces. <code>Captus</code> will place these samples whenever possible at the beginning of the alignments, since many phylogenetic programs root the resulting phylogeny at the first sample in the alignment your trees will be automatically rooted.<br>
@@ -302,8 +304,8 @@ chosen most frequently among all other samples in the alignment. This method was
 </ul>
 <p>This argument is optional and has no default.</p>
 <hr>
-<h3 id="--mafft_path---clipkit_path"><strong><code>--mafft_path</code></strong>, <strong><code>--clipkit_path</code></strong></h3>
-<p>If you have installed your own copies of <code>MAFFT</code> or <code>ClipKIT</code> you can provide the full path to those copies.</p>
+<h3 id="--mafft_path---muscle_path---clipkit_path"><strong><code>--mafft_path</code></strong>, <strong><code>--muscle_path</code></strong>, <strong><code>--clipkit_path</code></strong></h3>
+<p>If you have installed your own copies of <code>MAFFT</code>, <code>MUSCLE</code> or <code>ClipKIT</code> you can provide the full path to those copies.</p>
 <p>These arguments are optional, the defaults are <strong>mafft</strong> and <strong>clipkit</strong> respectively.</p>
 <hr>
 <h3 id="--show_less"><strong><code>--show_less</code></strong></h3>
@@ -313,7 +315,7 @@ chosen most frequently among all other samples in the alignment. This method was
 <p>See <a href="https://edgardomortiz.github.io/captus.docs/basics/parallelization/">Parallelization (and other common options)</a></p>
 <hr>
 <p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (06.08.2021)<br>
-Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (31.05.2022)</p>
+Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (23.11.2022)</p>
 
             <footer class="footline">
             </footer>
@@ -337,12 +339,12 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/captus.docs/js/auto-complete.js?1668181934" defer></script>
-        <script src="/captus.docs/js/lunr.min.js?1668181934" defer></script>
-        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1668181934" defer></script>
-        <script src="/captus.docs/js/lunr.multi.min.js?1668181934" defer></script>
-        <script src="/captus.docs/js/lunr.en.min.js?1668181934" defer></script>
-        <script src="/captus.docs/js/search.js?1668181934" defer></script>
+        <script src="/captus.docs/js/auto-complete.js?1669501619" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1669501619" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1669501619" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1669501619" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1669501619" defer></script>
+        <script src="/captus.docs/js/search.js?1669501619" defer></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -442,14 +444,14 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
   <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
   <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
   <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
-  <script async defer src="https://buttons.github.io/buttons.js?1668181934"></script>
+  <script async defer src="https://buttons.github.io/buttons.js?1669501619"></script>
 
         </div>
       </div>
     </aside>
-    <script src="/captus.docs/js/clipboard.min.js?1668181934" defer></script>
-    <script src="/captus.docs/js/perfect-scrollbar.min.js?1668181934" defer></script>
-    <script src="/captus.docs/js/featherlight.min.js?1668181934" defer></script>
-    <script src="/captus.docs/js/theme.js?1668181934" defer></script>
+    <script src="/captus.docs/js/clipboard.min.js?1669501619" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1669501619" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1669501619" defer></script>
+    <script src="/captus.docs/js/theme.js?1669501619" defer></script>
   </body>
 </html>

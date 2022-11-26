@@ -9,20 +9,20 @@
     <meta name="author" content="Edgardo M. Ortiz">
     <title>Assembly :: Captus documentation</title>
     <link href="/captus.docs/assembly/index.xml" rel="alternate" type="application/rss+xml" title="Assembly :: Captus documentation">
-    <link href="/captus.docs/images/favicon.ico?1668181935" rel="icon" type="image/x-icon">
+    <link href="/captus.docs/images/favicon.ico?1669501619" rel="icon" type="image/x-icon">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/captus.docs/css/fontawesome-all.min.css?1668181935" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1668181935" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/featherlight.min.css?1668181935" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1668181935" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/auto-complete.css?1668181935" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1668181935" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/perfect-scrollbar.min.css?1668181935" rel="stylesheet">
-    <link href="/captus.docs/css/nucleus.css?1668181935" rel="stylesheet">
-    <link href="/captus.docs/css/fonts.css?1668181935" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1668181935" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/theme.css?1668181935" rel="stylesheet">
-    <link href="/captus.docs/css/theme-green.css?1668181935" rel="stylesheet" id="variant-style">
-    <link href="/captus.docs/css/ie.css?1668181935" rel="stylesheet">
-    <link href="/captus.docs/css/variant.css?1668181935" rel="stylesheet">
-    <link href="/captus.docs/css/print.css?1668181935" rel="stylesheet" media="print">
-    <script src="/captus.docs/js/variant.js?1668181935"></script>
+    <link href="/captus.docs/css/fontawesome-all.min.css?1669501619" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1669501619" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1669501619" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1669501619" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1669501619" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1669501619" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1669501619" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1669501619" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1669501619" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1669501619" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1669501619" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1669501619" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1669501619" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1669501619" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1669501619" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1669501619"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -38,7 +38,7 @@
       var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
       window.variants && variants.init( [ 'green' ] );
     </script>
-    <script src="/captus.docs/js/jquery.min.js?1668181935" defer></script>
+    <script src="/captus.docs/js/jquery.min.js?1669501619" defer></script>
 
 
   </head>
@@ -103,30 +103,29 @@
 <p>During this step <code>Captus</code> will search the assemblies produced by the previous step for the loci contained in the provided reference sequence datasetsets (aminoacids or nucleotides) and then extract them. Proteins can be provided in either aminoacid or nucleotide, these are searched and extracted using <a href="https://www.webscipio.org/"><code>Scipio</code></a>. Additionally, you can provide as references any other DNA sequences (e.g., ribosomal genes, individual exons, entire genes with introns, non-coding regions, RAD loci, etc.), in this case <code>Captus</code> uses <a href="http://hgdownload.soe.ucsc.edu/admin/exe/"><code>BLAT</code></a> for searching and our own code for extracting and stitching partial hits if needed. Finally, since most of the assembly is tipically not used because the references will not be found in most contigs, we provide the option of clustering those unused contigs across samples using <a href="https://github.com/soedinglab/MMseqs2"><code>MMseqs2</code></a> in order to discover new homologous regions that can be used for phylogenomics. If you have your own assemblies in FASTA format you can use them instead of the assemblies produced by the <code>assemble</code> command (e.g., downloaded genomes from NCBI). Like in the previous steps, <code>Captus</code> will produce an HTML report summarizing the marker recovery statistics across all samples and extracted markers.</p>
 <hr>
 <h2 id="4-align">4. <em>align</em></h2>
-<p>In this step <code>Captus</code> will process the results from the <code>extract</code> command. First, it will collect all the markers across samples and create a separate FASTA file per marker. Then, the reference sequences used for extraction will be added to their corresponding FASTA marker file to aid as an alignment guide. This is followed by alignment using <a href="https://mafft.cbrc.jp/alignment/software/"><code>MAFFT</code></a>. If you are aligning coding sequences, <code>Captus</code> will codon-align the nucleotide version using as template the aminoacid alignment of the locus. <code>Captus</code> extracts all the copies (hits) of a marker that are found in the assembly and ranks them by their similarity to the reference sequence, once the sequences are aligned, the program filters the paralogs using either the <code>naive</code> method which retains the best hit as the ortholog or the <code>informed</code> method which takes into account the references and the frequency with which they were selected across all samples to decide which of the copies most likely represents the ortholog (which is not necessarily the best hit). After paralogs have been filtered, the references used for guiding the alignment are removed. Finally, the alignments are trimmed using the recently published package <a href="https://github.com/JLSteenwyk/ClipKIT"><code>ClipKIT</code></a>. As in previous steps, <code>Captus</code> will summarize the alignment statistics of all the markers (e.g. length, mean pairwise identity, missingness, number of informative sites, etc.) and produce an HTML report.</p>
+<p>In this step <code>Captus</code> will process the results from the <code>extract</code> command. First, it will collect all the markers across samples and create a separate FASTA file per marker. Then, the reference sequences used for extraction will be added to their corresponding FASTA marker file to aid as an alignment guide. This is followed by alignment using <a href="https://mafft.cbrc.jp/alignment/software/"><code>MAFFT</code></a> or <a href="https://www.drive5.com/muscle/"><code>MUSCLE</code></a>. If you are aligning coding sequences, <code>Captus</code> will codon-align the nucleotide version using as template the aminoacid alignment of the locus. <code>Captus</code> extracts all the copies (hits) of a marker that are found in the assembly and ranks them by their similarity to the reference sequence, once the sequences are aligned, the program filters the paralogs using either the <code>naive</code> method which retains the best hit as the ortholog or the <code>informed</code> method which takes into account the references and the frequency with which they were selected across all samples to decide which of the copies most likely represents the ortholog (which is not necessarily the best hit). After paralogs have been filtered, the references used for guiding the alignment are removed. Finally, the alignments are trimmed using the recently published package <a href="https://github.com/JLSteenwyk/ClipKIT"><code>ClipKIT</code></a>. As in previous steps, <code>Captus</code> will summarize the alignment statistics of all the markers (e.g. length, mean pairwise identity, missingness, number of informative sites, etc.) and produce an HTML report.</p>
 <hr>
 <p>To show the main help of the <code>captus_assembly</code> module just type <code>captus_assembly --help</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>(captus)$ captus_assembly --help
 </span></span><span style="display:flex;"><span>usage: captus_assembly command [options]
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Captus&#39; pipeline for targeted sequence capture assembly
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Captus 0.9.89: Assembly of Phylogenomic Datasets from High-Throughput Sequencing data
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
 </span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Captus-assembly commands:
-</span></span><span style="display:flex;"><span>  command     Pipeline commands (in typical order of execution)
-</span></span><span style="display:flex;"><span>                clean = Trim adaptors and quality filter reads with BBTools,
-</span></span><span style="display:flex;"><span>                        run FastQC on the raw and cleaned reads
-</span></span><span style="display:flex;"><span>                assemble = Perform de novo assembly with MEGAHIT: Assembling
-</span></span><span style="display:flex;"><span>                           reads that were cleaned with the &#39;clean&#39; command is
-</span></span><span style="display:flex;"><span>                           recommended, but any other reads are also allowed
-</span></span><span style="display:flex;"><span>                extract = Recover targeted markers with BLAT and Scipio:
-</span></span><span style="display:flex;"><span>                          Extracting markers from the assembly obtained with
-</span></span><span style="display:flex;"><span>                          the &#39;assemble&#39; command is recommended, but any other
-</span></span><span style="display:flex;"><span>                          assemblies in FASTA format are also allowed.
-</span></span><span style="display:flex;"><span>                align = Align extracted markers across samples with MAFFT:
-</span></span><span style="display:flex;"><span>                        Marker alignment depends on the directory structure
-</span></span><span style="display:flex;"><span>                        created by the &#39;extract&#39; command. This step also
-</span></span><span style="display:flex;"><span>                        performs paralog filtering and alignment trimming
-</span></span><span style="display:flex;"><span>                        using ClipKIT
+</span></span><span style="display:flex;"><span>  command     Program commands (in typical order of execution)
+</span></span><span style="display:flex;"><span>                clean = Trim adaptors and quality filter reads with BBTools, run
+</span></span><span style="display:flex;"><span>                        FastQC on the raw and cleaned reads
+</span></span><span style="display:flex;"><span>                assemble = Perform de novo assembly with MEGAHIT: Assembling reads
+</span></span><span style="display:flex;"><span>                           that were cleaned with the &#39;clean&#39; command is
+</span></span><span style="display:flex;"><span>                           recommended, but reads cleaned elsewhere are also allowed
+</span></span><span style="display:flex;"><span>                extract = Recover targeted markers with BLAT and Scipio: Extracting
+</span></span><span style="display:flex;"><span>                          markers from the assembly obtained with the &#39;assemble&#39;
+</span></span><span style="display:flex;"><span>                          command is recommended, but any other assemblies in FASTA
+</span></span><span style="display:flex;"><span>                          format are also allowed.
+</span></span><span style="display:flex;"><span>                align = Align extracted markers across samples with MAFFT or MUSCLE:
+</span></span><span style="display:flex;"><span>                        Marker alignment depends on the directory structure created
+</span></span><span style="display:flex;"><span>                        by the &#39;extract&#39; command. This step also performs paralog
+</span></span><span style="display:flex;"><span>                        filtering and alignment trimming using ClipKIT
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
 </span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Help:
 </span></span><span style="display:flex;"><span>  -h, --help  Show this help message and exit
@@ -161,12 +160,12 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/captus.docs/js/auto-complete.js?1668181935" defer></script>
-        <script src="/captus.docs/js/lunr.min.js?1668181935" defer></script>
-        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1668181935" defer></script>
-        <script src="/captus.docs/js/lunr.multi.min.js?1668181935" defer></script>
-        <script src="/captus.docs/js/lunr.en.min.js?1668181935" defer></script>
-        <script src="/captus.docs/js/search.js?1668181935" defer></script>
+        <script src="/captus.docs/js/auto-complete.js?1669501619" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1669501619" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1669501619" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1669501619" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1669501619" defer></script>
+        <script src="/captus.docs/js/search.js?1669501619" defer></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -266,14 +265,14 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
   <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
   <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
   <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
-  <script async defer src="https://buttons.github.io/buttons.js?1668181935"></script>
+  <script async defer src="https://buttons.github.io/buttons.js?1669501619"></script>
 
         </div>
       </div>
     </aside>
-    <script src="/captus.docs/js/clipboard.min.js?1668181935" defer></script>
-    <script src="/captus.docs/js/perfect-scrollbar.min.js?1668181935" defer></script>
-    <script src="/captus.docs/js/featherlight.min.js?1668181935" defer></script>
-    <script src="/captus.docs/js/theme.js?1668181935" defer></script>
+    <script src="/captus.docs/js/clipboard.min.js?1669501619" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1669501619" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1669501619" defer></script>
+    <script src="/captus.docs/js/theme.js?1669501619" defer></script>
   </body>
 </html>
