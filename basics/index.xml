@@ -18,10 +18,8 @@
       <link>https://edgardomortiz.github.io/captus.docs/basics/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/basics/installation/</guid>
-      <description>The easy way (recommended) The easiest way is to install Captus through Bioconda. We recommend creating a separate environment for Captus in miniconda:
-conda create -n captus -c bioconda -c conda-forge captus Once Captus is installed in its own environment, let&amp;rsquo;s activate it:
-conda activate captus And that is all! Notice that the beginning of your prompt should have changed from(base)$ to (captus)$ as we activate the environment.
-Just to verify it is correctly installed try typing captus_assembly --help, if everything went OK you should see the following output in the terminal:</description>
+      <description>The easy way (recommended) The simplest way to install Captus is to create an isolated software environment using conda, if you don&amp;rsquo;t have conda we recommend to install miniconda from https://docs.conda.io/en/latest/miniconda.html. Once you have conda installed in your system you need to configure your channels:
+conda config --prepend channels bioconda conda config --prepend channels conda-forge conda config --show channels The last command should show your current channels, the order matters:</description>
     </item>
     <item>
       <title>Parallelization</title>
