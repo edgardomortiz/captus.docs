@@ -8,20 +8,20 @@
     <meta name="description" content="Documentation and tutorials for Captus">
     <meta name="author" content="Edgardo M. Ortiz">
     <title>Installation :: Captus documentation</title>
-    <link href="/captus.docs/images/favicon.ico?1670973550" rel="icon" type="image/x-icon">
+    <link href="/captus.docs/images/favicon.ico?1670973999" rel="icon" type="image/x-icon">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/captus.docs/css/fontawesome-all.min.css?1670973550" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1670973550" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/featherlight.min.css?1670973550" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1670973550" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/auto-complete.css?1670973550" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1670973550" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/perfect-scrollbar.min.css?1670973550" rel="stylesheet">
-    <link href="/captus.docs/css/nucleus.css?1670973550" rel="stylesheet">
-    <link href="/captus.docs/css/fonts.css?1670973550" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1670973550" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/theme.css?1670973550" rel="stylesheet">
-    <link href="/captus.docs/css/theme-green.css?1670973550" rel="stylesheet" id="variant-style">
-    <link href="/captus.docs/css/ie.css?1670973550" rel="stylesheet">
-    <link href="/captus.docs/css/variant.css?1670973550" rel="stylesheet">
-    <link href="/captus.docs/css/print.css?1670973550" rel="stylesheet" media="print">
-    <script src="/captus.docs/js/variant.js?1670973550"></script>
+    <link href="/captus.docs/css/fontawesome-all.min.css?1670973999" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1670973999" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1670973999" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1670973999" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1670973999" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1670973999" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1670973999" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1670973999" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1670973999" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1670973999" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1670973999" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1670973999" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1670973999" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1670973999" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1670973999" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1670973999"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -37,7 +37,7 @@
       var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
       window.variants && variants.init( [ 'green' ] );
     </script>
-    <script src="/captus.docs/js/jquery.min.js?1670973550" defer></script>
+    <script src="/captus.docs/js/jquery.min.js?1670973999" defer></script>
 
 
   </head>
@@ -102,17 +102,18 @@
 </span></span><span style="display:flex;"><span>  - conda-forge
 </span></span><span style="display:flex;"><span>  - bioconda
 </span></span><span style="display:flex;"><span>  - defaults
-</span></span></code></pre></div><p><code>conda</code> sometimes takes too long to find and configure dependencies, we recommend installing <code>mamba</code> first:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>conda install mamba
 </span></span></code></pre></div><p>Now we are ready to create a separate environment for Captus:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mamba create -n captus -c bioconda captus
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>conda create -n captus -c bioconda captus
+</span></span></code></pre></div><p><code>conda</code> sometimes takes too long to find and configure dependencies, if that happens we recommend installing <code>mamba</code> first, and installing <code>Captus</code> with it:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>conda install mamba
+</span></span><span style="display:flex;"><span>mamba create -n captus -c bioconda captus
 </span></span></code></pre></div><p>Once <code>Captus</code> is installed in its own environment, let&rsquo;s activate it:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>conda activate captus
 </span></span></code></pre></div><p>And that is all! Notice that the beginning of your prompt should have changed from<code>(base)$</code> to <code>(captus)$</code> as we activate the environment.</p>
 <p>Just to verify it is correctly installed try typing <code>captus_assembly --help</code>, if everything went OK you should see the following output in the terminal:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>usage: captus_assembly command [options]
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
-</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Captus 0.9.89: Assembly of Phylogenomic Datasets from High-Throughput Sequencing data
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Captus 0.9.90: Assembly of Phylogenomic Datasets from High-Throughput Sequencing data
 </span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
 </span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Captus-assembly commands:
 </span></span><span style="display:flex;"><span>  command     Program commands (in typical order of execution)
@@ -215,12 +216,12 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/captus.docs/js/auto-complete.js?1670973550" defer></script>
-        <script src="/captus.docs/js/lunr.min.js?1670973550" defer></script>
-        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1670973550" defer></script>
-        <script src="/captus.docs/js/lunr.multi.min.js?1670973550" defer></script>
-        <script src="/captus.docs/js/lunr.en.min.js?1670973550" defer></script>
-        <script src="/captus.docs/js/search.js?1670973550" defer></script>
+        <script src="/captus.docs/js/auto-complete.js?1670973999" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1670973999" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1670973999" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1670973999" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1670973999" defer></script>
+        <script src="/captus.docs/js/search.js?1670973999" defer></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -320,14 +321,14 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
   <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
   <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
   <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
-  <script async defer src="https://buttons.github.io/buttons.js?1670973550"></script>
+  <script async defer src="https://buttons.github.io/buttons.js?1670973999"></script>
 
         </div>
       </div>
     </aside>
-    <script src="/captus.docs/js/clipboard.min.js?1670973550" defer></script>
-    <script src="/captus.docs/js/perfect-scrollbar.min.js?1670973550" defer></script>
-    <script src="/captus.docs/js/featherlight.min.js?1670973550" defer></script>
-    <script src="/captus.docs/js/theme.js?1670973550" defer></script>
+    <script src="/captus.docs/js/clipboard.min.js?1670973999" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1670973999" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1670973999" defer></script>
+    <script src="/captus.docs/js/theme.js?1670973999" defer></script>
   </body>
 </html>
