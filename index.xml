@@ -21,7 +21,7 @@
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/</guid>
       <description>Captus&amp;rsquo; first module is called captus_assembly and it aims to create marker alignments across samples starting from the raw sequencing reads of each sample (or alternatively from previously cleaned reads or even previously assembled reads).
 To accomplish this the module has four commands: clean, assemble, extract, and align which are tipically run in that order:
- 1. clean This command will perform adaptor trimming (plus poly-A trimming if you are cleaning RNAseq reads) followed by quality trimming using bbduk.</description>
+1. clean This command will perform adaptor trimming (plus poly-A trimming if you are cleaning RNAseq reads) followed by quality trimming using bbduk.</description>
     </item>
     <item>
       <title>Design</title>

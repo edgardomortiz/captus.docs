@@ -13,8 +13,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/tutorials/assembly/basic/</guid>
       <description>This basic tutorial takes you through the minimal but most general workflow of the captus_assembly pipeline.
-0. Preparation  Installation To run this tutorial, you need to install the following programs on your system:
- Captus and its dependencies (see  Installation) IQ-TREE (see  IQ-TREE documentation)  If conda  command is available, you can take the easiest way.
+0. Preparation Installation To run this tutorial, you need to install the following programs on your system:
+Captus and its dependencies (see Installation) IQ-TREE version 2.0 or higher (see IQ-TREE documentation) If conda command is available, you can take the easiest way.
 Simply run the two commands below to set up and activate an environment:</description>
     </item>
     <item>
@@ -23,7 +23,7 @@ Simply run the two commands below to set up and activate an environment:</descri
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/tutorials/assembly/advanced/</guid>
       <description>Under construction&amp;hellip;
- Handling different data types Assembling reads cleaned outside Captus Combining all assembled data types Importing pre-assembled sample (e.g., GenBank ref genome) Extracting all marker types simultaneously Discovering new markers by clustering in capture data Adding new markers by clustering unused contigs (capture data) Phylogenetic tree reconstruction using palalogs - ASTRAL-Pro   Created by Gentaro Shigita (01.10.2021)
+Handling different data types Assembling reads cleaned outside Captus Combining all assembled data types Importing pre-assembled sample (e.g., GenBank ref genome) Extracting all marker types simultaneously Discovering new markers by clustering in capture data Adding new markers by clustering unused contigs (capture data) Phylogenetic tree reconstruction using palalogs - ASTRAL-Pro Created by Gentaro Shigita (01.10.2021)
 Last modified by Gentaro Shigita (31.10.2022)</description>
     </item>
   </channel>

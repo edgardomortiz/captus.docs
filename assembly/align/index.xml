@@ -11,8 +11,8 @@
       <link>https://edgardomortiz.github.io/captus.docs/assembly/align/options/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/align/options/</guid>
-      <description>align  To show all available options and their default values you can type in your terminal:
-captus_assembly align --help  Input  -e, --captus_extractions_dir Path to the output directory from the extract command, (e.g. 03_extractions iy you used the default name). The align command depends entirely on the output from the extract step, in other words, you can&amp;rsquo;t provide your unaligned or aligned FASTA files for processing.
+      <description>align To show all available options and their default values you can type in your terminal:
+captus_assembly align --help Input -e, --captus_extractions_dir Path to the output directory from the extract command, (e.g. 03_extractions iy you used the default name). The align command depends entirely on the output from the extract step, in other words, you can&amp;rsquo;t provide your unaligned or aligned FASTA files for processing.
 This argument is required , the default is .</description>
     </item>
     <item>
@@ -22,15 +22,14 @@ This argument is required , the default is .</description>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/align/output/</guid>
       <description>For this example we will use the directory 03_extractions previously created with the extract module. We run the following Captus command to collect markers across samples and align them:
 captus_assembly align align -e 03_extractions_CAP/ -o 04_alignments_CAP -m ALL -f ALL After the run is finished we should see a new directory called 04_alignments with the following structure and files:
- 
-    Complete structure of the alignment output directory</description>
+Complete structure of the alignment output directory 1. 01_unaligned This directory contains the unaligned FASTA files corresponding to each marker that were gathered from the extractions directory.</description>
     </item>
     <item>
       <title>HTML Report</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/align/report/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/align/report/</guid>
-      <description>Concept  This align module generates several sets of alignments that are ready-to-use in popular phylogenetic tree inference programs (e.g., IQ-TREE, RAxML, ASTRAL). Each alignment set differs from one another in the following four respects: 1) whether they are trimmed, 2) which paralog filter  is applied, 3) whether they contain reference sequences, and 4) in which formats . Thus, it is important to understand the differences between each alignment set and carefully evaluate their quality in order to decide which alignment set to use for subsequent analyses.</description>
+      <description>Concept This align module generates several sets of alignments that are ready-to-use in popular phylogenetic tree inference programs (e.g., IQ-TREE, RAxML, ASTRAL). Each alignment set differs from one another in the following four respects: 1) whether they are trimmed, 2) which paralog filter is applied, 3) whether they contain reference sequences, and 4) in which formats . Thus, it is important to understand the differences between each alignment set and carefully evaluate their quality in order to decide which alignment set to use for subsequent analyses.</description>
     </item>
   </channel>
 </rss>

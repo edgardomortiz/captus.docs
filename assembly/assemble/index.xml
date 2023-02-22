@@ -12,17 +12,17 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/preparation/</guid>
       <description>If you cleaned your reads using Captus then the data is ready for analysis inside the directory you chose for the cleaned reads (./01_cleaned_reads/ by default). Then you can proceed to check the Options of the assemble command.
- Note If you want to provide reads cleaned elsewhere, please follow the same  naming convention required for raw reads and place your FASTQ files preferably in a single directory.
-   Created by Edgardo M.</description>
+Note If you want to provide reads cleaned elsewhere, please follow the same naming convention required for raw reads and place your FASTQ files preferably in a single directory.
+Created by Edgardo M.</description>
     </item>
     <item>
       <title>Options</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/options/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/options/</guid>
-      <description>assemble  To show all available options and their default values you can type in your terminal:
-captus_assembly assemble --help  Input  -r, --reads With this option you provide the location of your clean FASTQ files, there are several ways to list them:
-  Directory: providing the path to the directory containing your cleaned FASTQ files is the typical way to tell Captus which files to analyze. Subdirectories will not be searched in this case.</description>
+      <description>assemble To show all available options and their default values you can type in your terminal:
+captus_assembly assemble --help Input -r, --reads With this option you provide the location of your clean FASTQ files, there are several ways to list them:
+Directory: providing the path to the directory containing your cleaned FASTQ files is the typical way to tell Captus which files to analyze. Subdirectories will not be searched in this case.</description>
     </item>
     <item>
       <title>Output Files</title>
@@ -37,7 +37,7 @@ captus_assembly assemble --reads 01_clean_reads --sample_reads_target 1000000 --
       <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/report/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/report/</guid>
-      <description>Concept  No successful marker extractions can be achieved without successful assemblies. Even though this assemble module offers presets tuned for different data types, it is recommendable to repeat this step some times with different parameters to find optimal settings for your own data.
+      <description>Concept No successful marker extractions can be achieved without successful assemblies. Even though this assemble module offers presets tuned for different data types, it is recommendable to repeat this step some times with different parameters to find optimal settings for your own data.
 Captus assists you in this tedious process by automatically generating a useful report for assembly evaluation.
 Just open captus-assembly_assemble.report.html with your browser (internet connection required) to get general assembly statistics across all your samples!</description>
     </item>
