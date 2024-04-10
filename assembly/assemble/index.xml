@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Assemble on Captus documentation</title>
-    <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/</link>
+    <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/index.html</link>
     <description>Recent content in Assemble on Captus documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://edgardomortiz.github.io/captus.docs/assembly/assemble/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Input Preparation</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/preparation/</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/preparation/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/preparation/</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/preparation/index.html</guid>
       <description>If you cleaned your reads using Captus then the data is ready for analysis inside the directory you chose for the cleaned reads (./01_cleaned_reads/ by default). Then you can proceed to check the Options of the assemble command.
 Note If you want to provide reads cleaned elsewhere, please follow the same naming convention required for raw reads and place your FASTQ files preferably in a single directory.
 Created by Edgardo M.</description>
     </item>
     <item>
       <title>Options</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/options/</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/options/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/options/</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/options/index.html</guid>
       <description>assemble To show all available options and their default values you can type in your terminal:
 captus_assembly assemble --help Input -r, --reads With this option you provide the location of your clean FASTQ files, there are several ways to list them:
 Directory: providing the path to the directory containing your cleaned FASTQ files is the typical way to tell Captus which files to analyze. Subdirectories will not be searched in this case.</description>
     </item>
     <item>
       <title>Output Files</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/output/</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/output/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/output/</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/output/index.html</guid>
       <description>For this example we will use the directory 01_clean_reads previously created with the clean module. We run the following Captus command to assemble our cleaned reads:
 captus_assembly assemble --reads 01_clean_reads --sample_reads_target 1000000 --max_contig_gc 60.0 We are including the option --sample_reads_target 1000000 to show the expected output even though this option will not be very commonly used. Additionally, the option --max_contig_gc 60.0 is used to filter contigs with GC content over 60% after assembly, only when this option is used the file filtered_contigs.</description>
     </item>
     <item>
       <title>HTML Report</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/report/</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/report/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/report/</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/report/index.html</guid>
       <description>Concept No successful marker extractions can be achieved without successful assemblies. Even though this assemble module offers presets tuned for different data types, it is recommendable to repeat this step some times with different parameters to find optimal settings for your own data.
 Captus assists you in this tedious process by automatically generating a useful report for assembly evaluation.
 Just open captus-assembly_assemble.report.html with your browser (internet connection required) to get general assembly statistics across all your samples!</description>

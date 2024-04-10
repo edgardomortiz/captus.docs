@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clean on Captus documentation</title>
-    <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/</link>
+    <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/index.html</link>
     <description>Recent content in Clean on Captus documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://edgardomortiz.github.io/captus.docs/assembly/clean/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Input Preparation</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/preparation/</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/preparation/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/preparation/</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/preparation/index.html</guid>
       <description>Note Before starting your analysis, a VERY IMPORTANT step is to rename your FASTQ files so they clearly identify your samples throughout the entire analysis.
 In general, a good tip for renaming your samples is to think on how you want the names in your final phylogenetic tree.
 The only special characters that are safe to use in the sample name are -, and _ (_ is commonly used to replace spaces in many phylogenetic programs).</description>
     </item>
     <item>
       <title>Options</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/options/</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/options/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/options/</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/options/index.html</guid>
       <description>clean To show all available options and their default values you can type in your terminal:
 captus_assembly clean --help Input -r, --reads With this option you provide the location of your raw FASTQ files, there are several ways to list them:
 Directory: the path to the directory containing your FASTQ files is usually the easiest way to tell Captus which files to analyze. When you provide a directory, Captus searches within all its subdirectories for files with valid FASTQ extensions.</description>
     </item>
     <item>
       <title>Output Files</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/output/</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/output/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/output/</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/output/index.html</guid>
       <description>Imagine we start with a directory called 00_raw_reads with the following content:
 We have a samples with different data types, to distinguish them we added _CAP to the samples where hybridization-capture was used, _WGS for high-coverage whole genome sequencing, _RNA for RNA-Seq reads, and _GSK for genome skimming data (notice also the difference in file sizes). For this example, we only want to clean the samples in red rectangles corresponding to capture data.</description>
     </item>
     <item>
       <title>HTML Report</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/report/</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/report/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/report/</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/report/index.html</guid>
       <description>Concept Proper cleaning is the first step to perform proper analyses on high-throughput sequencing data. To assess the quality of raw reads and how it is improved by the cleaning, the clean module internally runs the famous quality check program, FastQC, or its faster emulator, Falco, on the reads before and after cleaning. Although both programs generate informative reports, they are in separate files for each sample, each read direction (for paired-end), and before and after cleaning.</description>
     </item>
   </channel>

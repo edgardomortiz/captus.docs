@@ -3,25 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <meta name="generator" content="Hugo 0.109.0">
-    <meta name="generator" content="Relearn 5.5.3+tip">
+    <meta name="generator" content="Hugo 0.124.1">
+    <meta name="generator" content="Relearn 5.12.0">
     <meta name="description" content="Documentation and tutorials for Captus">
     <meta name="author" content="Edgardo M. Ortiz">
     <title>Parallelization :: Captus documentation</title>
-    <link href="/captus.docs/images/favicon.ico?1677079984" rel="icon" type="image/x-icon">
+    <link href="/captus.docs/images/favicon.ico?1712756165" rel="icon" type="image/x-icon">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/captus.docs/css/fontawesome-all.min.css?1677079984" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1677079984" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/featherlight.min.css?1677079984" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1677079984" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/auto-complete.css?1677079984" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1677079984" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/perfect-scrollbar.min.css?1677079984" rel="stylesheet">
-    <link href="/captus.docs/css/nucleus.css?1677079984" rel="stylesheet">
-    <link href="/captus.docs/css/fonts.css?1677079984" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1677079984" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/theme.css?1677079984" rel="stylesheet">
-    <link href="/captus.docs/css/theme-green.css?1677079984" rel="stylesheet" id="variant-style">
-    <link href="/captus.docs/css/ie.css?1677079984" rel="stylesheet">
-    <link href="/captus.docs/css/variant.css?1677079984" rel="stylesheet">
-    <link href="/captus.docs/css/print.css?1677079984" rel="stylesheet" media="print">
-    <script src="/captus.docs/js/variant.js?1677079984"></script>
+    <link href="/captus.docs/css/fontawesome-all.min.css?1712756165" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1712756165" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/nucleus.css?1712756165" rel="stylesheet">
+    <link href="/captus.docs/css/auto-complete.css?1712756165" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1712756165" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1712756165" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1712756165" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1712756165" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1712756165" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1712756165" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/variant.css?1712756165" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1712756165" rel="stylesheet" media="print">
+    <link href="/captus.docs/css/ie.css?1712756165" rel="stylesheet">
+    <script src="/captus.docs/js/url.js?1712756165"></script>
+    <script src="/captus.docs/js/variant.js?1712756165"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -33,34 +33,35 @@
       window.T_Copied_to_clipboard = 'Copied to clipboard!';
       window.T_Copy_link_to_clipboard = 'Copy link to clipboard';
       window.T_Link_copied_to_clipboard = 'Copied link to clipboard!';
+      window.T_No_results_found = 'No results found for \u0022{0}\u0022';
+      window.T_N_results_found = '{1} results found for \u0022{0}\u0022';
       // some further base stuff
       var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
       window.variants && variants.init( [ 'green' ] );
     </script>
-    <script src="/captus.docs/js/jquery.min.js?1677079984" defer></script>
 
 
   </head>
-  <body class="mobile-support default disableInlineCopyToClipboard" data-url="/captus.docs/basics/parallelization/">
+  <body class="mobile-support html disableInlineCopyToClipboard" data-url="/captus.docs/basics/parallelization/index.html">
     <div id="body" class="default-animation">
       <div id="sidebar-overlay"></div>
       <div id="toc-overlay"></div>
-      <nav id="topbar" class="highlightable" dir="ltr">
+      <nav id="topbar" class="highlightable">
         <div>
           <div class="navigation">
-            <a class="nav nav-next" href="/captus.docs/assembly/index.html" title="Assembly (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
+            <a class="nav nav-next topbar-link" href="/captus.docs/assembly/index.html" title="Assembly (&#129106;)"><i class="fas fa-chevron-right fa-fw"></i></a>
           </div>
           <div class="navigation">
-            <a class="nav nav-prev" href="/captus.docs/basics/installation/index.html" title="Installation (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
+            <a class="nav nav-prev topbar-link" href="/captus.docs/basics/installation/index.html" title="Installation (&#129104;)"><i class="fas fa-chevron-left fa-fw"></i></a>
           </div>
           <div id="top-github-link">
-            <a class="github-link" title='Edit (CTRL+ALT+w)' href="https://github.com/edgardomortiz/Captus/tree/master/docs/content/basics/parallelization.md" target="blank">
+            <a class="github-link topbar-link" title='Edit (CTRL+ALT+w)' href="https://github.com/edgardomortiz/Captus/tree/master/docs/content/basics/parallelization.md" target="_blank">
               <i class="fas fa-pen fa-fw"></i>
             </a>
           </div>
           <div id="breadcrumbs">
             <span id="sidebar-toggle-span">
-              <a href="#" id="sidebar-toggle" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
+              <a href="#" id="sidebar-toggle" class="topbar-link" title='Menu (CTRL+ALT+n)'><i class="fas fa-bars fa-fw"></i></a>
             </span>
             <span id="toc-menu" title='Table of Contents (CTRL+ALT+t)'><i class="fas fa-list-alt fa-fw"></i></span>
             <ol class="links" itemscope itemtype="http://schema.org/BreadcrumbList">
@@ -70,8 +71,7 @@
             </ol>
           </div>
           <div class="default-animation progress">
-            <div class="toc-wrapper" dir="ltr">
-<nav id="TableOfContents">
+            <div class="toc-wrapper"><nav id="TableOfContents">
   <ul>
     <li>
       <ul>
@@ -93,7 +93,7 @@
           <div id="head-tags">
           </div>
           <article class="default">
-<h1>Parallelization</h1>
+<h1 id="parallelization">Parallelization</h1>
 
 <h1 id="and-other-common-options">(and other common options)</h1>
 <hr>
@@ -111,7 +111,7 @@
 <p>This argument is optional, the default is <strong>auto</strong> (the automatic adjustment varies between analysis steps).</p>
 <hr>
 <h3 id="--debug"><strong><code>--debug</code></strong></h3>
-<p>This flag enables the debugging mode, this <em><strong>disables parallelization</strong></em> so errors can be logged to screen. If you are seeing some samples failing steps or some other unexpected behavior you can enable <code>--debug</code> and submit the error shown to the <code>Issues</code> (<a href="https://github.com/edgardomortiz/Captus/issues">https://github.com/edgardomortiz/Captus/issues</a>) section in our GitHub repository.</p>
+<p>This flag enables the debugging mode, this <em><strong>disables parallelization</strong></em> so errors can be logged to screen. If you are seeing some samples failing steps or some other unexpected behavior you can enable <code>--debug</code> and submit the error shown to the <code>Issues</code> (<a href="https://github.com/edgardomortiz/Captus/issues" target="_blank">https://github.com/edgardomortiz/Captus/issues</a>) section in our GitHub repository.</p>
 <hr>
 <h3 id="--show_less"><strong><code>--show_less</code></strong></h3>
 <p>This flag produces less verbose screen printout. Essentially, information about each sample will not be shown (but still logged) during the run.</p>
@@ -125,7 +125,7 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
         </div>
       </main>
     </div>
-    <aside id="sidebar" class="default-animation showVisitedLinks" dir="ltr">
+    <aside id="sidebar" class="default-animation showVisitedLinks">
       <div id="header-wrapper" class="default-animation">
         <div id="header" class="default-animation">
           <a id="logo" href="/">
@@ -133,69 +133,67 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
           </a>
         </div>
         <div class="searchbox default-animation">
+          <i class="fas fa-search" title="Search (CTRL+ALT+f)"></i>
           <label class="a11y-only" for="search-by">Search</label>
-          <i class="fas fa-search"></i>
-          <input data-search-input id="search-by" type="search" placeholder="Search...">
+          <input data-search-input id="search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
           <span data-search-clear=""><i class="fas fa-times"></i></span>
         </div>
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/captus.docs/js/auto-complete.js?1677079984" defer></script>
-        <script src="/captus.docs/js/lunr.min.js?1677079984" defer></script>
-        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1677079984" defer></script>
-        <script src="/captus.docs/js/lunr.multi.min.js?1677079984" defer></script>
-        <script src="/captus.docs/js/lunr.en.min.js?1677079984" defer></script>
-        <script src="/captus.docs/js/search.js?1677079984" defer></script>
+        <script src="/captus.docs/js/auto-complete.js?1712756165" defer></script>
+        <script src="/captus.docs/js/lunr/lunr.min.js?1712756165" defer></script>
+        <script src="/captus.docs/js/lunr/lunr.stemmer.support.min.js?1712756165" defer></script>
+        <script src="/captus.docs/js/lunr/lunr.multi.min.js?1712756165" defer></script>
+        <script src="/captus.docs/js/lunr/lunr.en.min.js?1712756165" defer></script>
+        <script src="/captus.docs/js/search.js?1712756165" defer></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
-          <li>
-              <a class="padding" href="/captus.docs/index.html"><i class="fas fa-home"></i> Home</a>
-          </li>
+          <li><a class="padding" href="/captus.docs/index.html"><i class="fas fa-home"></i> Home</a></li>
         </ul>
       </div>
       <div id="content-wrapper" class="highlightable">
-        <ul class="topics collapsible-menu">
-          <li data-nav-id="/captus.docs/basics/" class="dd-item parent"><input type="checkbox" id="section-3494ad44d160b070fd31576fe4a3841e" aria-controls="subsections-3494ad44d160b070fd31576fe4a3841e" class="toggle" checked><label class="a11y-only toggle" for="section-3494ad44d160b070fd31576fe4a3841e" >Submenu Basics</label><a href="/captus.docs/basics/index.html">Basics<i class="fas fa-check read-icon"></i></a><ul id="subsections-3494ad44d160b070fd31576fe4a3841e">
-          <li data-nav-id="/captus.docs/basics/overview/" class="dd-item"><a href="/captus.docs/basics/overview/index.html">Overview<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/basics/installation/" class="dd-item"><a href="/captus.docs/basics/installation/index.html">Installation<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/basics/parallelization/" class="dd-item active"><a href="/captus.docs/basics/parallelization/index.html">Parallelization<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/captus.docs/assembly/" class="dd-item"><input type="checkbox" id="section-d26437a3e42ff73277da14a17983cc4a" aria-controls="subsections-d26437a3e42ff73277da14a17983cc4a" class="toggle"><label class="a11y-only toggle" for="section-d26437a3e42ff73277da14a17983cc4a" >Submenu Assembly</label><a href="/captus.docs/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-d26437a3e42ff73277da14a17983cc4a">
-          <li data-nav-id="/captus.docs/assembly/clean/" class="dd-item alwaysopen"><input type="checkbox" id="section-c872805a13ffe675b4d826b4bbe79398" aria-controls="subsections-c872805a13ffe675b4d826b4bbe79398" class="toggle" checked><label class="a11y-only toggle" for="section-c872805a13ffe675b4d826b4bbe79398" >Submenu Clean</label><a href="/captus.docs/assembly/clean/index.html"><b>1. </b>Clean<i class="fas fa-check read-icon"></i></a><ul id="subsections-c872805a13ffe675b4d826b4bbe79398">
-          <li data-nav-id="/captus.docs/assembly/clean/preparation/" class="dd-item"><a href="/captus.docs/assembly/clean/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/clean/options/" class="dd-item"><a href="/captus.docs/assembly/clean/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/clean/output/" class="dd-item"><a href="/captus.docs/assembly/clean/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/clean/report/" class="dd-item"><a href="/captus.docs/assembly/clean/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/captus.docs/assembly/assemble/" class="dd-item alwaysopen"><input type="checkbox" id="section-a84f65fc279cc2da70eab7b44ff6d8d2" aria-controls="subsections-a84f65fc279cc2da70eab7b44ff6d8d2" class="toggle" checked><label class="a11y-only toggle" for="section-a84f65fc279cc2da70eab7b44ff6d8d2" >Submenu Assemble</label><a href="/captus.docs/assembly/assemble/index.html"><b>2. </b>Assemble<i class="fas fa-check read-icon"></i></a><ul id="subsections-a84f65fc279cc2da70eab7b44ff6d8d2">
-          <li data-nav-id="/captus.docs/assembly/assemble/preparation/" class="dd-item"><a href="/captus.docs/assembly/assemble/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/assemble/options/" class="dd-item"><a href="/captus.docs/assembly/assemble/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/assemble/output/" class="dd-item"><a href="/captus.docs/assembly/assemble/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/assemble/report/" class="dd-item"><a href="/captus.docs/assembly/assemble/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/captus.docs/assembly/extract/" class="dd-item alwaysopen"><input type="checkbox" id="section-70e7375f0d352e293150a5450dcea703" aria-controls="subsections-70e7375f0d352e293150a5450dcea703" class="toggle" checked><label class="a11y-only toggle" for="section-70e7375f0d352e293150a5450dcea703" >Submenu Extract</label><a href="/captus.docs/assembly/extract/index.html"><b>3. </b>Extract<i class="fas fa-check read-icon"></i></a><ul id="subsections-70e7375f0d352e293150a5450dcea703">
-          <li data-nav-id="/captus.docs/assembly/extract/preparation/" class="dd-item"><a href="/captus.docs/assembly/extract/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/extract/options/" class="dd-item"><a href="/captus.docs/assembly/extract/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/extract/output/" class="dd-item"><a href="/captus.docs/assembly/extract/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/extract/report/" class="dd-item"><a href="/captus.docs/assembly/extract/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
-          <li data-nav-id="/captus.docs/assembly/align/" class="dd-item alwaysopen"><input type="checkbox" id="section-e75d36c61d53e0a5569727f2f076837e" aria-controls="subsections-e75d36c61d53e0a5569727f2f076837e" class="toggle" checked><label class="a11y-only toggle" for="section-e75d36c61d53e0a5569727f2f076837e" >Submenu Align</label><a href="/captus.docs/assembly/align/index.html"><b>4. </b>Align<i class="fas fa-check read-icon"></i></a><ul id="subsections-e75d36c61d53e0a5569727f2f076837e">
-          <li data-nav-id="/captus.docs/assembly/align/options/" class="dd-item"><a href="/captus.docs/assembly/align/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/align/output/" class="dd-item"><a href="/captus.docs/assembly/align/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/assembly/align/report/" class="dd-item"><a href="/captus.docs/assembly/align/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
-          <li data-nav-id="/captus.docs/design/" class="dd-item"><a href="/captus.docs/design/index.html">Design<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/tutorials/" class="dd-item"><input type="checkbox" id="section-90d1aeee0e96e115d1edea3b994d19fb" aria-controls="subsections-90d1aeee0e96e115d1edea3b994d19fb" class="toggle"><label class="a11y-only toggle" for="section-90d1aeee0e96e115d1edea3b994d19fb" >Submenu Tutorials</label><a href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a><ul id="subsections-90d1aeee0e96e115d1edea3b994d19fb">
-          <li data-nav-id="/captus.docs/tutorials/assembly/" class="dd-item alwaysopen"><input type="checkbox" id="section-740840fed0965cd53aaef708df5dc95d" aria-controls="subsections-740840fed0965cd53aaef708df5dc95d" class="toggle" checked><label class="a11y-only toggle" for="section-740840fed0965cd53aaef708df5dc95d" >Submenu Assembly</label><a href="/captus.docs/tutorials/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-740840fed0965cd53aaef708df5dc95d">
-          <li data-nav-id="/captus.docs/tutorials/assembly/basic/" class="dd-item"><a href="/captus.docs/tutorials/assembly/basic/index.html"><i class="fas fa-school"></i> Basic<i class="fas fa-check read-icon"></i></a></li>
-          <li data-nav-id="/captus.docs/tutorials/assembly/advanced/" class="dd-item"><a href="/captus.docs/tutorials/assembly/advanced/index.html"><i class="fas fa-graduation-cap"></i> Advanced<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+        <ul class="topics enlarge morespace collapsible-menu">
+          <li data-nav-id="/captus.docs/basics/index.html" class="parent "><input type="checkbox" id="section-a6deabe447afe1b2e1405bfc57ca61ff" aria-controls="subsections-a6deabe447afe1b2e1405bfc57ca61ff" checked><label for="section-a6deabe447afe1b2e1405bfc57ca61ff"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Basics</span></label><a class="padding" href="/captus.docs/basics/index.html">Basics<i class="fas fa-check read-icon"></i></a><ul id="subsections-a6deabe447afe1b2e1405bfc57ca61ff" class="morespace collapsible-menu">
+          <li data-nav-id="/captus.docs/basics/overview/index.html" class=""><a class="padding" href="/captus.docs/basics/overview/index.html">Overview<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/installation/index.html" class=""><a class="padding" href="/captus.docs/basics/installation/index.html">Installation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/basics/parallelization/index.html" class="active"><a class="padding" href="/captus.docs/basics/parallelization/index.html">Parallelization<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/index.html" class=""><input type="checkbox" id="section-911ba432c056dd9608a0f55d402289be" aria-controls="subsections-911ba432c056dd9608a0f55d402289be"><label for="section-911ba432c056dd9608a0f55d402289be"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Assembly</span></label><a class="padding" href="/captus.docs/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-911ba432c056dd9608a0f55d402289be" class="morespace collapsible-menu">
+          <li data-nav-id="/captus.docs/assembly/clean/index.html" class="alwaysopen"><input type="checkbox" id="section-a4378026e623f4ffa37b722a2c0d2f01" aria-controls="subsections-a4378026e623f4ffa37b722a2c0d2f01" checked><label for="section-a4378026e623f4ffa37b722a2c0d2f01"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Clean</span></label><a class="padding" href="/captus.docs/assembly/clean/index.html"><b>1. </b>Clean<i class="fas fa-check read-icon"></i></a><ul id="subsections-a4378026e623f4ffa37b722a2c0d2f01" class="morespace collapsible-menu">
+          <li data-nav-id="/captus.docs/assembly/clean/preparation/index.html" class=""><a class="padding" href="/captus.docs/assembly/clean/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/options/index.html" class=""><a class="padding" href="/captus.docs/assembly/clean/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/output/index.html" class=""><a class="padding" href="/captus.docs/assembly/clean/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/clean/report/index.html" class=""><a class="padding" href="/captus.docs/assembly/clean/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/index.html" class="alwaysopen"><input type="checkbox" id="section-2bc1af4c52c4e9983bd451f9472d3adb" aria-controls="subsections-2bc1af4c52c4e9983bd451f9472d3adb" checked><label for="section-2bc1af4c52c4e9983bd451f9472d3adb"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Assemble</span></label><a class="padding" href="/captus.docs/assembly/assemble/index.html"><b>2. </b>Assemble<i class="fas fa-check read-icon"></i></a><ul id="subsections-2bc1af4c52c4e9983bd451f9472d3adb" class="morespace collapsible-menu">
+          <li data-nav-id="/captus.docs/assembly/assemble/preparation/index.html" class=""><a class="padding" href="/captus.docs/assembly/assemble/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/options/index.html" class=""><a class="padding" href="/captus.docs/assembly/assemble/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/output/index.html" class=""><a class="padding" href="/captus.docs/assembly/assemble/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/assemble/report/index.html" class=""><a class="padding" href="/captus.docs/assembly/assemble/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/extract/index.html" class="alwaysopen"><input type="checkbox" id="section-2d7d2bcbd553e306e5bdc5e08cd1ee2c" aria-controls="subsections-2d7d2bcbd553e306e5bdc5e08cd1ee2c" checked><label for="section-2d7d2bcbd553e306e5bdc5e08cd1ee2c"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Extract</span></label><a class="padding" href="/captus.docs/assembly/extract/index.html"><b>3. </b>Extract<i class="fas fa-check read-icon"></i></a><ul id="subsections-2d7d2bcbd553e306e5bdc5e08cd1ee2c" class="morespace collapsible-menu">
+          <li data-nav-id="/captus.docs/assembly/extract/preparation/index.html" class=""><a class="padding" href="/captus.docs/assembly/extract/preparation/index.html"><i class="fas fa-clipboard-check"></i> Input Preparation<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/options/index.html" class=""><a class="padding" href="/captus.docs/assembly/extract/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/output/index.html" class=""><a class="padding" href="/captus.docs/assembly/extract/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/extract/report/index.html" class=""><a class="padding" href="/captus.docs/assembly/extract/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li>
+          <li data-nav-id="/captus.docs/assembly/align/index.html" class="alwaysopen"><input type="checkbox" id="section-b7d7c1356d6046dce2612e66a4ad8976" aria-controls="subsections-b7d7c1356d6046dce2612e66a4ad8976" checked><label for="section-b7d7c1356d6046dce2612e66a4ad8976"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Align</span></label><a class="padding" href="/captus.docs/assembly/align/index.html"><b>4. </b>Align<i class="fas fa-check read-icon"></i></a><ul id="subsections-b7d7c1356d6046dce2612e66a4ad8976" class="morespace collapsible-menu">
+          <li data-nav-id="/captus.docs/assembly/align/options/index.html" class=""><a class="padding" href="/captus.docs/assembly/align/options/index.html"><i class="fas fa-cog"></i> Options<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/output/index.html" class=""><a class="padding" href="/captus.docs/assembly/align/output/index.html"><i class="fas fa-dna"></i> Output Files<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/assembly/align/report/index.html" class=""><a class="padding" href="/captus.docs/assembly/align/report/index.html"><i class="fas fa-chart-bar"></i> HTML Report<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
+          <li data-nav-id="/captus.docs/design/index.html" class=""><a class="padding" href="/captus.docs/design/index.html">Design<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/tutorials/index.html" class=""><input type="checkbox" id="section-3ac49b4868ca27fd0182ba18f8675a7a" aria-controls="subsections-3ac49b4868ca27fd0182ba18f8675a7a"><label for="section-3ac49b4868ca27fd0182ba18f8675a7a"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Tutorials</span></label><a class="padding" href="/captus.docs/tutorials/index.html">Tutorials<i class="fas fa-check read-icon"></i></a><ul id="subsections-3ac49b4868ca27fd0182ba18f8675a7a" class="morespace collapsible-menu">
+          <li data-nav-id="/captus.docs/tutorials/assembly/index.html" class="alwaysopen"><input type="checkbox" id="section-c43a0d5204ef8e650675143aae3b10bc" aria-controls="subsections-c43a0d5204ef8e650675143aae3b10bc" checked><label for="section-c43a0d5204ef8e650675143aae3b10bc"><i class="fas fa-chevron-down"></i><i class="fas fa-chevron-right"></i><span class="a11y-only">Submenu Assembly</span></label><a class="padding" href="/captus.docs/tutorials/assembly/index.html">Assembly<i class="fas fa-check read-icon"></i></a><ul id="subsections-c43a0d5204ef8e650675143aae3b10bc" class="morespace collapsible-menu">
+          <li data-nav-id="/captus.docs/tutorials/assembly/basic/index.html" class=""><a class="padding" href="/captus.docs/tutorials/assembly/basic/index.html"><i class="fas fa-school"></i> Basic<i class="fas fa-check read-icon"></i></a></li>
+          <li data-nav-id="/captus.docs/tutorials/assembly/advanced/index.html" class=""><a class="padding" href="/captus.docs/tutorials/assembly/advanced/index.html"><i class="fas fa-graduation-cap"></i> Advanced<i class="fas fa-check read-icon"></i></a></li></ul></li></ul></li>
         </ul>
         <div id="shortcuts">
-          <div class="nav-title">More</div>
-          <ul>
-            <li><a class="padding" href="https://github.com/edgardomortiz/Captus"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
+          <div class="nav-title padding">More</div>
+          <ul class="space">
+            <li><a class="padding"href="https://github.com/edgardomortiz/Captus"><i class='fab fa-fw fa-github'></i> GitHub repo</a></li>
             <li><a class="padding" href="/captus.docs/more/credits/index.html"><i class='fas fa-fw fa-bullhorn'></i> Credits</a></li>
           </ul>
         </div>
-        <div class="footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
-        <hr class="default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
+        <div class="padding footermargin footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter"></div>
+        <hr class="padding default-animation footerLangSwitch footerVariantSwitch footerVisitedLinks footerFooter showVisitedLinks showFooter">
         <div id="prefooter" class="footerLangSwitch footerVariantSwitch footerVisitedLinks showVisitedLinks">
           <ul>
             <li id="select-language-container" class="footerLangSwitch">
@@ -205,6 +203,7 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
                 <div class="select-style">
                   <label class="a11y-only" for="select-language">Language</label>
                   <select id="select-language" onchange="location = baseUri + this.value;">
+                    <option lang="en" id="en" value="/captus.docs/basics/parallelization/index.html" selected></option>
                   </select>
                 </div>
                 <div class="select-clear"></div>
@@ -246,14 +245,13 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
   <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
   <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
   <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
-  <script async defer src="https://buttons.github.io/buttons.js?1677079984"></script>
+  <script async defer src="https://buttons.github.io/buttons.js?1712756165"></script>
 
         </div>
       </div>
     </aside>
-    <script src="/captus.docs/js/clipboard.min.js?1677079984" defer></script>
-    <script src="/captus.docs/js/perfect-scrollbar.min.js?1677079984" defer></script>
-    <script src="/captus.docs/js/featherlight.min.js?1677079984" defer></script>
-    <script src="/captus.docs/js/theme.js?1677079984" defer></script>
+    <script src="/captus.docs/js/clipboard.min.js?1712756165" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1712756165" defer></script>
+    <script src="/captus.docs/js/theme.js?1712756165" defer></script>
   </body>
 </html>
