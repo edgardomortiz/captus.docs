@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Assembly on Captus documentation</title>
-    <link>https://edgardomortiz.github.io/captus.docs/assembly/index.html</link>
+    <link>https://edgardomortiz.github.io/captus.docs/assembly/</link>
     <description>Recent content in Assembly on Captus documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language><atom:link href="https://edgardomortiz.github.io/captus.docs/assembly/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Clean</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/index.html</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/index.html</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/</guid>
       <description>Unless you are starting with your own assemblies, cleaning will be the first step in the analysis. Captus makes it easy to process many samples in a consistent manner, automatically, and providing a comprehensive Quality Control HTML report.
 Captus allows you the flexibility to provide reads cleaned elsewhere. however, we recommend our cleaning method for its accuracy in removing adaptors, which in turn improves the chances of getting a higher quality assembly.</description>
     </item>
     <item>
       <title>Assemble</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/index.html</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/index.html</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/</guid>
       <description>The next step in the workflow is to perform de novo assembly with MEGAHIT on the cleaned reads. Captus makes it easy to process many samples in a consistent manner, automatically, and providing a comprehensive Assembly Control HTML report.
 MEGAHIT is an extremely fast and robust de novo assembler that is very memory-efficient thanks to the use of a new data structure called succint De Bruijn Graph (sDBG). Most importantly, accuracy is not sacrificed because it was originally designed for assembling metagenomes.</description>
     </item>
     <item>
       <title>Extract</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/index.html</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/extract/index.html</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/extract/</guid>
       <description>The next step in the workflow is to search markers within the assemblies and extract them. For that you need to provide Captus reference sequence(s) of the marker(s) you want to extract. You can provide coding sequences in either nucleotide or aminoacid, in this case, protein extraction will be performed with Scipio. One key advantage of Scipio is its ability of reconstructing gene models (i.e., exons + introns) from separate contigs in highly fragmented assemblies, which are not uncommon when analyzing hybridization capture or genome skimming data.</description>
     </item>
     <item>
       <title>Align</title>
-      <link>https://edgardomortiz.github.io/captus.docs/assembly/align/index.html</link>
+      <link>https://edgardomortiz.github.io/captus.docs/assembly/align/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/assembly/align/index.html</guid>
+      <guid>https://edgardomortiz.github.io/captus.docs/assembly/align/</guid>
       <description>The last step in the Captus workflow is to align the extracted markers so you can estimate phylogenetic trees with your favorite tool (e.g., IQ-TREE, RAxML, MrBayes, SVDQuartets, etc.).
 Captus starts this step by gathering all the markers across your extracted samples and building a FASTA file per marker. Then, it will add the references used during extraction, these are useful to improve alignment since they serve as guides. Then Captus aligns the files using MAFFT or MUSCLE, however, if you choose to align coding sequence in aminoacid (AA) and nucleotide (NT) in the same run, Captus will first align the AA version with MAFFT or MUSCLE and then use that alignment as template to align the NT version, thus producing an codon-aware alignment of the coding sequence in nucleotides.</description>
     </item>
