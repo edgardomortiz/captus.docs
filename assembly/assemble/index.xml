@@ -11,35 +11,57 @@
       <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/preparation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/preparation/</guid>
-      <description>If you cleaned your reads using Captus then the data is ready for analysis inside the directory you chose for the cleaned reads (./01_cleaned_reads/ by default). Then you can proceed to check the Options of the assemble command.
-Note If you want to provide reads cleaned elsewhere, please follow the same naming convention required for raw reads and place your FASTQ files preferably in a single directory.
-Created by Edgardo M.</description>
+      <description>&lt;p&gt;If you cleaned your reads using &lt;code&gt;Captus&lt;/code&gt; then the data is ready for analysis inside the directory you chose for the cleaned reads (&lt;code&gt;./01_cleaned_reads/&lt;/code&gt; by default). Then you can proceed to check the &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/assembly/assemble/options/&#34;&gt;Options&lt;/a&gt; of the &lt;code&gt;assemble&lt;/code&gt; command.&lt;/p&gt;
+
+&lt;div class=&#34;box notices cstyle note&#34;&gt;
+    &lt;div class=&#34;box-label&#34;&gt;&lt;i class=&#34;fa-fw fas fa-exclamation-circle&#34;&gt;&lt;/i&gt; Note&lt;/div&gt;
+    &lt;div class=&#34;box-content&#34;&gt;
+&lt;p&gt;If you want to provide reads cleaned elsewhere, please follow the same &lt;i class=&#34;fas fa-exclamation-triangle&#34;&gt;&lt;/i&gt; &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/assembly/clean/preparation/&#34;&gt;&lt;strong&gt;naming convention&lt;/strong&gt;&lt;/a&gt; required for raw reads and place your FASTQ files preferably in a single directory.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Options</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/options/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/options/</guid>
-      <description>assemble To show all available options and their default values you can type in your terminal:
-captus_assembly assemble --help Input -r, --reads With this option you provide the location of your clean FASTQ files, there are several ways to list them:
-Directory: providing the path to the directory containing your cleaned FASTQ files is the typical way to tell Captus which files to analyze. Subdirectories will not be searched in this case.</description>
+      <description>&lt;h1 id=&#34;assemble&#34;&gt;assemble&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;To show all available options and their default values you can type in your terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;captus assemble --help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;input&#34;&gt;&lt;em&gt;Input&lt;/em&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-r---reads&#34;&gt;&lt;strong&gt;&lt;code&gt;-r, --reads&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;With this option you provide the location of your clean FASTQ files, there are several ways to list them:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Directory:&lt;/strong&gt;&lt;/em&gt; providing the path to the directory containing your cleaned FASTQ files is the typical way to tell &lt;code&gt;Captus&lt;/code&gt; which files to analyze. Subdirectories will not be searched in this case. If you cleaned your reads with &lt;code&gt;Captus&lt;/code&gt; just use &lt;code&gt;-r 01_clean_reads&lt;/code&gt; or the name you gave to the output directory.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Output Files</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/output/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/output/</guid>
-      <description>For this example we will use the directory 01_clean_reads previously created with the clean module. We run the following Captus command to assemble our cleaned reads:
-captus_assembly assemble --reads 01_clean_reads --sample_reads_target 1000000 --max_contig_gc 60.0 We are including the option --sample_reads_target 1000000 to show the expected output even though this option will not be very commonly used. Additionally, the option --max_contig_gc 60.0 is used to filter contigs with GC content over 60% after assembly, only when this option is used the file filtered_contigs.</description>
+      <description>&lt;p&gt;For this example we will use the directory &lt;code&gt;01_clean_reads&lt;/code&gt; previously created with the &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/assembly/clean/output/&#34;&gt;&lt;code&gt;clean&lt;/code&gt; module&lt;/a&gt;. We run the following &lt;code&gt;Captus&lt;/code&gt; command to assemble our cleaned reads:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;captus assemble --reads 01_clean_reads --sample_reads_target 1000000 --max_contig_gc 60.0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;We are including the option &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/assembly/assemble/options/#--sample_reads_target&#34;&gt;&lt;code&gt;--sample_reads_target 1000000&lt;/code&gt;&lt;/a&gt; to show the expected output even though this option will not be very commonly used. Additionally, the option &lt;code&gt;--max_contig_gc 60.0&lt;/code&gt; is used to filter contigs with GC content over 60% after assembly, the filtered contigs are always saved to &lt;code&gt;removed_contigs.fasta&lt;/code&gt; in case the filtering has to be repeated after changing the thresholds.&lt;/p&gt;</description>
     </item>
     <item>
       <title>HTML Report</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/assemble/report/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/assemble/report/</guid>
-      <description>Concept No successful marker extractions can be achieved without successful assemblies. Even though this assemble module offers presets tuned for different data types, it is recommendable to repeat this step some times with different parameters to find optimal settings for your own data.
-Captus assists you in this tedious process by automatically generating a useful report for assembly evaluation.
-Just open captus-assembly_assemble.report.html with your browser (internet connection required) to get general assembly statistics across all your samples!</description>
+      <description>&lt;h2 id=&#34;concept&#34;&gt;Concept&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;No successful marker extractions can be achieved without successful assemblies&lt;/strong&gt;. Even though this &lt;code&gt;assemble&lt;/code&gt; module offers presets tuned for different data types, it is recommendable to repeat this step some times with different parameters to find optimal settings for your own data.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Captus&lt;/code&gt; assists you in this tedious process by automatically generating a useful report for assembly evaluation.&lt;br&gt;
+Just open &lt;code&gt;captus-assemble_report.html&lt;/code&gt; with your browser (internet connection required) to get general assembly statistics across all your samples!
+
+&lt;div class=&#34;box notices cstyle tip&#34;&gt;
+    &lt;div class=&#34;box-label&#34;&gt;&lt;i class=&#34;fa-fw fas fa-lightbulb&#34;&gt;&lt;/i&gt; Tip&lt;/div&gt;
+    &lt;div class=&#34;box-content&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The entire report is based on data stored in the following three files:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

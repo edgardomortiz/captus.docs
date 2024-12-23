@@ -12,7 +12,10 @@
       <link>https://edgardomortiz.github.io/captus.docs/tutorials/assembly/</link>
       <pubDate>Sun, 25 Jul 2021 00:56:06 +0200</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/tutorials/assembly/</guid>
-      <description> Basic Tutorial - The least things you should know Advanced Tutorial - Many more things you can do </description>
+      <description>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/tutorials/assembly/basic/&#34;&gt;Basic Tutorial&lt;/a&gt; - &lt;em&gt;The least things you should know&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/tutorials/assembly/advanced/&#34;&gt;Advanced Tutorial&lt;/a&gt; - &lt;em&gt;Many more things you can do&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>

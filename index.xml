@@ -12,23 +12,26 @@
       <link>https://edgardomortiz.github.io/captus.docs/basics/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/basics/</guid>
-      <description>Basics Discover the core-concepts behind Captus and how to get started.</description>
+      <description>&lt;h1 id=&#34;basics&#34;&gt;Basics&lt;/h1&gt;
+&lt;p&gt;Discover the core-concepts behind &lt;code&gt;Captus&lt;/code&gt; and how to get started.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Assembly</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/</guid>
-      <description>Captus&amp;rsquo; first module is called captus_assembly and it aims to create marker alignments across samples starting from the raw sequencing reads of each sample (or alternatively from previously cleaned reads or even previously assembled reads).
-To accomplish this the module has four commands: clean, assemble, extract, and align which are tipically run in that order:
-1. clean This command will perform adaptor trimming (plus poly-A trimming if you are cleaning RNAseq reads) followed by quality trimming using bbduk.</description>
+      <description>&lt;p&gt;Captus&amp;rsquo; first module is called &lt;code&gt;captus_assembly&lt;/code&gt; but can also be executed as simply &lt;code&gt;captus&lt;/code&gt; and it aims to create marker alignments across samples starting from the raw sequencing reads of each sample (or alternatively from previously cleaned reads or even previously assembled reads).&lt;/p&gt;
+&lt;p&gt;To accomplish this the module has four commands: &lt;code&gt;clean&lt;/code&gt;, &lt;code&gt;assemble&lt;/code&gt;, &lt;code&gt;extract&lt;/code&gt;, and &lt;code&gt;align&lt;/code&gt; which are tipically run in that order:&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;1-clean&#34;&gt;1. &lt;em&gt;clean&lt;/em&gt;&lt;/h2&gt;
+&lt;p&gt;This command will perform adaptor trimming (plus poly-A trimming if you are cleaning RNAseq reads) followed by quality trimming using &lt;code&gt;bbduk.sh&lt;/code&gt; from the &lt;a href=&#34;https://jgi.doe.gov/data-and-tools/bbtools/&#34;&gt;BBTools&lt;/a&gt; suite. Once the cleaning is completed, &lt;a href=&#34;https://www.bioinformatics.babraham.ac.uk/projects/fastqc/&#34;&gt;&lt;code&gt;FastQC&lt;/code&gt;&lt;/a&gt; or &lt;a href=&#34;https://github.com/smithlabcode/falco&#34;&gt;&lt;code&gt;Falco&lt;/code&gt;&lt;/a&gt; is run on the raw and cleaned reads and a HTML report is generated summarizing the results from all the samples.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Design</title>
       <link>https://edgardomortiz.github.io/captus.docs/design/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/design/</guid>
-      <description>Code is being refactored.</description>
+      <description>&lt;p&gt;Code is being refactored.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tutorials</title>

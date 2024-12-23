@@ -11,33 +11,57 @@
       <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/preparation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/preparation/</guid>
-      <description>Note Before starting your analysis, a VERY IMPORTANT step is to rename your FASTQ files so they clearly identify your samples throughout the entire analysis.
-In general, a good tip for renaming your samples is to think on how you want the names in your final phylogenetic tree.
-The only special characters that are safe to use in the sample name are -, and _ (_ is commonly used to replace spaces in many phylogenetic programs).</description>
+      <description>&lt;div class=&#34;box notices cstyle note&#34;&gt;
+    &lt;div class=&#34;box-label&#34;&gt;&lt;i class=&#34;fa-fw fas fa-exclamation-circle&#34;&gt;&lt;/i&gt; Note&lt;/div&gt;
+    &lt;div class=&#34;box-content&#34;&gt;
+&lt;p&gt;Before starting your analysis, a &lt;i class=&#34;fas fa-exclamation-triangle&#34;&gt;&lt;/i&gt; &lt;strong&gt;VERY IMPORTANT&lt;/strong&gt; step is to rename your FASTQ files so they clearly identify your samples throughout the entire analysis.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;In general, a good tip for renaming your samples is to think on how you want the names in your final phylogenetic tree.&lt;/p&gt;
+&lt;p&gt;The only special characters that are safe to use in the sample name are &lt;code&gt;-&lt;/code&gt;, and &lt;code&gt;_&lt;/code&gt; (&lt;code&gt;_&lt;/code&gt; is commonly used to replace spaces in many phylogenetic programs). Otherwise, do not use spaces, other special characters (&lt;code&gt;! &amp;quot; # $ % &amp;amp; ( ) * + , . / : ; &amp;lt; = &amp;gt; ? @ [ \ ] ^ ` { | } ~&lt;/code&gt;), or accented letters (like &lt;code&gt;á&lt;/code&gt;, &lt;code&gt;è&lt;/code&gt;, &lt;code&gt;ü&lt;/code&gt;, &lt;code&gt;ç&lt;/code&gt;, &lt;code&gt;ñ&lt;/code&gt;), they are just guaranteed to give you headaches at some point.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Options</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/options/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/options/</guid>
-      <description>clean To show all available options and their default values you can type in your terminal:
-captus_assembly clean --help Input -r, --reads With this option you provide the location of your raw FASTQ files, there are several ways to list them:
-Directory: the path to the directory containing your FASTQ files is usually the easiest way to tell Captus which files to analyze. When you provide a directory, Captus searches within all its subdirectories for files with valid FASTQ extensions.</description>
+      <description>&lt;h1 id=&#34;clean&#34;&gt;clean&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;To show all available options and their default values you can type in your terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;captus clean --help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;input&#34;&gt;&lt;em&gt;Input&lt;/em&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-r---reads&#34;&gt;&lt;strong&gt;&lt;code&gt;-r, --reads&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;With this option you provide the location of your raw FASTQ files, there are several ways to list them:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Directory:&lt;/strong&gt;&lt;/em&gt; the path to the directory containing your FASTQ files is usually the easiest way to tell &lt;code&gt;Captus&lt;/code&gt; which files to analyze. When you provide a directory, &lt;code&gt;Captus&lt;/code&gt; searches within all its subdirectories for files with &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/assembly/clean/preparation/&#34;&gt;valid FASTQ extensions&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Output Files</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/output/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/output/</guid>
-      <description>Imagine we start with a directory called 00_raw_reads with the following content:
-We have a samples with different data types, to distinguish them we added _CAP to the samples where hybridization-capture was used, _WGS for high-coverage whole genome sequencing, _RNA for RNA-Seq reads, and _GSK for genome skimming data (notice also the difference in file sizes). For this example, we only want to clean the samples in red rectangles corresponding to capture data.</description>
+      <description>&lt;p&gt;Imagine we start with a directory called &lt;code&gt;00_raw_reads&lt;/code&gt; with the following content:&lt;/p&gt;
+&lt;p&gt;
+		
+&lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/captus.docs/images/raw_reads.png?width=640&amp;amp;classes=shadow&#34; data-featherlight=&#34;image&#34;&gt;
+&lt;img src=&#34;https://edgardomortiz.github.io/captus.docs/captus.docs/images/raw_reads.png?width=640&amp;amp;classes=shadow&#34; alt=&#34;Raw reads&#34; class=&#34;shadow&#34; style=&#34;height: auto; width: 640;&#34; loading=&#34;lazy&#34;&gt;
+&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;We have a samples with different data types, to distinguish them we added &lt;code&gt;_CAP&lt;/code&gt; to the samples where hybridization-capture was used, &lt;code&gt;_WGS&lt;/code&gt; for high-coverage whole genome sequencing, &lt;code&gt;_RNA&lt;/code&gt; for RNA-Seq reads, and &lt;code&gt;_GSK&lt;/code&gt; for genome skimming data (notice also the difference in file sizes). For this example, we only want to clean the samples in red rectangles corresponding to capture data. We run the following &lt;code&gt;Captus&lt;/code&gt; command:&lt;/p&gt;</description>
     </item>
     <item>
       <title>HTML Report</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/clean/report/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/clean/report/</guid>
-      <description>Concept Proper cleaning is the first step to perform proper analyses on high-throughput sequencing data. To assess the quality of raw reads and how it is improved by the cleaning, the clean module internally runs the famous quality check program, FastQC, or its faster emulator, Falco, on the reads before and after cleaning. Although both programs generate informative reports, they are in separate files for each sample, each read direction (for paired-end), and before and after cleaning.</description>
+      <description>&lt;h2 id=&#34;concept&#34;&gt;Concept&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;strong&gt;Proper cleaning is the first step to perform proper analyses&lt;/strong&gt; on high-throughput sequencing data.
+To assess the quality of raw reads and how it is improved by the cleaning, the &lt;code&gt;clean&lt;/code&gt; module internally runs the famous quality check program, &lt;a href=&#34;https://www.bioinformatics.babraham.ac.uk/projects/fastqc&#34;&gt;&lt;code&gt;FastQC&lt;/code&gt;&lt;/a&gt;, or its faster emulator, &lt;a href=&#34;https://github.com/smithlabcode/falco&#34;&gt;&lt;code&gt;Falco&lt;/code&gt;&lt;/a&gt;, on the reads before and after cleaning.
+Although both programs generate informative reports, they are in separate files for each sample, each read direction (for paired-end), and before and after cleaning.
+This makes it tedious to review every report, and can lead to overlook some serious problems, such as residual low-quality bases or adaptor sequences, contamination of different samples, and improper setting of cleaning parameters.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

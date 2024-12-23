@@ -11,33 +11,66 @@
       <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/preparation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/extract/preparation/</guid>
-      <description>At this point you should have de novo assemblies from your samples ready. However, Captus also gives you the flexibility of starting the analysis from this point by providing your own assemblies as FASTA files or complementing you newly aasembled samples with other assemblies (e.g. genomes or transcriptomes from GenBank). If you want to do so, please read the following note:
-How to rename your FASTA assemblies for Captus Note In order to add your own FASTA assembly files, a VERY IMPORTANT step is to rename them so they are clearly identified throughout the rest of the analysis.</description>
+      <description>&lt;p&gt;At this point you should have &lt;em&gt;de novo&lt;/em&gt; assemblies from your samples ready. However, &lt;code&gt;Captus&lt;/code&gt; also gives you the flexibility of starting the analysis from this point by providing your own assemblies as FASTA files or complementing you newly aasembled samples with other assemblies (e.g. genomes or transcriptomes from GenBank). If you want to do so, please read the following note:&lt;/p&gt;
+
+&lt;div class=&#34;expand&#34;&gt;
+    &lt;a class=&#34;expand-label&#34; onclick=&#34;$t=$(this); if($t.parent(&#39;.expand-expanded.expand-marked&#39;).length){ $t.next().css(&#39;display&#39;,&#39;none&#39;) }else if($t.parent(&#39;.expand-marked&#39;).length){ $t.next().css(&#39;display&#39;,&#39;block&#39;) }else{ $t.next(&#39;.expand-content&#39;).slideToggle(100); } $t.parent().toggleClass(&#39;expand-expanded&#39;);&#34;&gt;
+        &lt;i class=&#34;fas fa-chevron-down&#34;&gt;&lt;/i&gt;
+        &lt;i class=&#34;fas fa-chevron-left expand-rtl direction-ltr&#34;&gt;&lt;/i&gt;
+        &lt;i class=&#34;fas fa-chevron-right expand-ltr direction-ltr&#34;&gt;&lt;/i&gt;
+        How to rename your FASTA assemblies for Captus
+    &lt;/a&gt;
+    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
+&lt;div class=&#34;box notices cstyle note&#34;&gt;
+    &lt;div class=&#34;box-label&#34;&gt;&lt;i class=&#34;fa-fw fas fa-exclamation-circle&#34;&gt;&lt;/i&gt; Note&lt;/div&gt;
+    &lt;div class=&#34;box-content&#34;&gt;
+&lt;p&gt;In order to add your own FASTA assembly files, a &lt;i class=&#34;fas fa-exclamation-triangle&#34;&gt;&lt;/i&gt; &lt;strong&gt;VERY IMPORTANT&lt;/strong&gt; step is to rename them so they are clearly identified throughout the rest of the analysis.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Options</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/options/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/extract/options/</guid>
-      <description>extract To show all available options and their default values you can type in your terminal:
-captus_assembly extract --help Input -a, --captus_assemblies_dir Path to the output directory from the assemble command, (e.g. 02_assemblies if you used the default name). If you didn&amp;rsquo;t assemble any sample in Captus this directory will be created in order to import your contigs assembled elsewhere.
-This argument is required , the default is ./02_assemblies/
--f, --fastas With this option you can provide the location of your own FASTA assembly files, there are several ways to list them:</description>
+      <description>&lt;h1 id=&#34;extract&#34;&gt;extract&lt;/h1&gt;
+&lt;hr&gt;
+&lt;p&gt;To show all available options and their default values you can type in your terminal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;captus extract --help
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;input&#34;&gt;&lt;em&gt;Input&lt;/em&gt;&lt;/h2&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;-a---captus_assemblies_dir&#34;&gt;&lt;strong&gt;&lt;code&gt;-a, --captus_assemblies_dir&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Path to the output directory from the &lt;code&gt;assemble&lt;/code&gt; command, (e.g. &lt;code&gt;02_assemblies&lt;/code&gt; if you used the default name). If you didn&amp;rsquo;t assemble any sample in &lt;code&gt;Captus&lt;/code&gt; this directory will be created in order to import your contigs assembled elsewhere.&lt;/p&gt;
+&lt;p&gt;This argument is &lt;strong&gt;required&lt;/strong&gt; &lt;i class=&#34;fas fa-exclamation-triangle&#34;&gt;&lt;/i&gt;, the default is &lt;strong&gt;./02_assemblies/&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Output Files</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/output/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/extract/output/</guid>
-      <description>For this example we will use the directory 02_assemblies previously created with the assemble module. We run the following Captus command to search and extract our reference markers from the assemblies:
-captus_assembly extract -a 02_assemblies \ -n Angiosperms353 \ -p SeedPlantsPTD \ -m SeedPlantsMIT \ -d noncoding_DNA.fasta \ -c \ --max_loci_files 500 Warning Notice the addition of option --max_loci_files 500, which is used only for showing the output directories containing separate FASTA file per marker (3&amp;rsquo;, 4&amp;rsquo;, 5&amp;rsquo;, 6&amp;rsquo;, 13&amp;rsquo;, and 14&amp;rsquo; in the image below, not created by default), we don&amp;rsquo;t recommend using this option in your runs since it will unnecesarily create large numbers of small FASTA files which would have to be concatenated again anyways during the alignment step.</description>
+      <description>&lt;p&gt;For this example we will use the directory &lt;code&gt;02_assemblies&lt;/code&gt; previously created with the &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/assembly/assemble/output/&#34;&gt;&lt;code&gt;assemble&lt;/code&gt; module&lt;/a&gt;. We run the following &lt;code&gt;Captus&lt;/code&gt; command to search and extract our reference markers from the assemblies:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;captus extract -a 02_assemblies \
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-n Angiosperms353 \
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-p SeedPlantsPTD \
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-m SeedPlantsMIT \
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-d noncoding_DNA.fasta \
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-c \
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--max_loci_files 500
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&#34;box notices cstyle warning&#34;&gt;
+    &lt;div class=&#34;box-label&#34;&gt;&lt;i class=&#34;fa-fw fas fa-exclamation-triangle&#34;&gt;&lt;/i&gt; Warning&lt;/div&gt;
+    &lt;div class=&#34;box-content&#34;&gt;
+&lt;p&gt;Notice the addition of option &lt;code&gt;--max_loci_files 500&lt;/code&gt;, which is used only for showing the output directories containing separate FASTA file per marker (&lt;strong&gt;3&amp;rsquo;&lt;/strong&gt;, &lt;strong&gt;4&amp;rsquo;&lt;/strong&gt;, &lt;strong&gt;5&amp;rsquo;&lt;/strong&gt;, &lt;strong&gt;6&amp;rsquo;&lt;/strong&gt;, &lt;strong&gt;13&amp;rsquo;&lt;/strong&gt;, and &lt;strong&gt;14&amp;rsquo;&lt;/strong&gt; in the image below, not created by default), we don&amp;rsquo;t recommend using this option in your runs since it will unnecesarily create large numbers of small FASTA files which would have to be concatenated again anyways during the alignment step.&lt;br&gt;
+You can read more about the option here: &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/captus.docs/assembly/extract/options/#--max_loci_files&#34;&gt;&lt;strong&gt;&amp;ndash;max_loci_files&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>HTML Report</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/extract/report/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/extract/report/</guid>
-      <description>Concept The output from this extract module, such as how many loci are recovered, in how many samples, and to what extent, would be the most direct indication of whether your analysis is successful or not, and thus would be of most interest to many users. However, collecting, summarizing, and visualizing such important information can be backbreaking, especially in a phylo&amp;quot;genomic&amp;quot; project which typically employs hundreds or even thousands of samples and loci.</description>
+      <description>&lt;h2 id=&#34;concept&#34;&gt;Concept&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;The output from this &lt;code&gt;extract&lt;/code&gt; module, such as &lt;strong&gt;how many loci are recovered, in how many samples, and to what extent, would be the most direct indication of whether your analysis is successful or not&lt;/strong&gt;, and thus would be of most interest to many users.
+However, collecting, summarizing, and visualizing such important information can be backbreaking, especially in a phylo&amp;quot;genomic&amp;quot; project which typically employs hundreds or even thousands of samples and loci.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
