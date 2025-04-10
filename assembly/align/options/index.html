@@ -8,20 +8,20 @@
     <meta name="description" content="Documentation and tutorials for Captus">
     <meta name="author" content="Edgardo M. Ortiz">
     <title>Options :: Captus documentation</title>
-    <link href="/captus.docs/images/favicon.ico?1734996903" rel="icon" type="image/x-icon">
+    <link href="/captus.docs/images/favicon.ico?1744256561" rel="icon" type="image/x-icon">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/captus.docs/css/fontawesome-all.min.css?1734996903" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1734996903" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/featherlight.min.css?1734996903" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1734996903" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/auto-complete.css?1734996903" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1734996903" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/perfect-scrollbar.min.css?1734996903" rel="stylesheet">
-    <link href="/captus.docs/css/nucleus.css?1734996903" rel="stylesheet">
-    <link href="/captus.docs/css/fonts.css?1734996903" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1734996903" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/theme.css?1734996903" rel="stylesheet">
-    <link href="/captus.docs/css/theme-green.css?1734996903" rel="stylesheet" id="variant-style">
-    <link href="/captus.docs/css/ie.css?1734996903" rel="stylesheet">
-    <link href="/captus.docs/css/variant.css?1734996903" rel="stylesheet">
-    <link href="/captus.docs/css/print.css?1734996903" rel="stylesheet" media="print">
-    <script src="/captus.docs/js/variant.js?1734996903"></script>
+    <link href="/captus.docs/css/fontawesome-all.min.css?1744256561" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1744256561" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1744256561" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1744256561" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1744256561" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1744256561" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1744256561" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1744256561" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1744256561" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1744256561" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1744256561" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1744256561" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1744256561" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1744256561" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1744256561" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1744256561"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -37,7 +37,7 @@
       var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
       window.variants && variants.init( [ 'green' ] );
     </script>
-    <script src="/captus.docs/js/jquery.min.js?1734996903" defer></script>
+    <script src="/captus.docs/js/jquery.min.js?1744256561" defer></script>
 
 
   </head>
@@ -80,7 +80,7 @@
         <li><a href="#-m---markers"><strong><code>-m, --markers</code></strong></a></li>
         <li><a href="#-f---formats"><strong><code>-f, --formats</code></strong></a></li>
         <li><a href="#--max_paralogs"><strong><code>--max_paralogs</code></strong></a></li>
-        <li><a href="#--min_samples"><strong><code>--min_samples</code></strong></a></li>
+        <li><a href="#-s---min_samples"><strong><code>-s, --min_samples</code></strong></a></li>
       </ul>
     </li>
     <li><a href="#output"><em>Output</em></a>
@@ -104,12 +104,17 @@
         <li><a href="#--tolerance"><strong><code>--tolerance</code></strong></a></li>
       </ul>
     </li>
-    <li><a href="#trimming-clipkit"><em>Trimming (ClipKIT)</em></a>
+    <li><a href="#trimming-taper-and-clipkit"><em>Trimming (TAPER and ClipKIT)</em></a>
       <ul>
+        <li><a href="#-c---taper_cutoff"><strong><code>-c, --taper_cutoff</code></strong></a></li>
+        <li><a href="#--taper_conservative"><strong><code>--taper_conservative</code></strong></a></li>
+        <li><a href="#--taper_ufiltered"><strong><code>--taper_ufiltered</code></strong></a></li>
+        <li><a href="#--disable_taper"><strong><code>--disable_taper</code></strong></a></li>
         <li><a href="#--clipkit_method"><strong><code>--clipkit_method</code></strong></a></li>
-        <li><a href="#--clipkit_gaps"><strong><code>--clipkit_gaps</code></strong></a></li>
-        <li><a href="#--min_data_per_column"><strong><code>--min_data_per_column</code></strong></a></li>
-        <li><a href="#--min_coverage"><strong><code>--min_coverage</code></strong></a></li>
+        <li><a href="#-g---clipkit_gaps"><strong><code>-g, --clipkit_gaps</code></strong></a></li>
+        <li><a href="#-d---min_data_per_column"><strong><code>-d, --min_data_per_column</code></strong></a></li>
+        <li><a href="#--ends_only"><strong><code>--ends_only</code></strong></a></li>
+        <li><a href="#-v---min_coverage"><strong><code>-v, --min_coverage</code></strong></a></li>
       </ul>
     </li>
     <li><a href="#other"><em>Other</em></a>
@@ -209,7 +214,7 @@
 <p>Maximum number of secondary hits (copies) per sample to import from the extraction step. Large numbers of marker copies per sample can increase alignment times. Hits (copies) are ranked from best to worst during the &rsquo;extract&rsquo; step. -1 disables the initial removal of paralogs and aligns which might be useful if you expect very high ploidy levels for example.</p>
 <p>This argument is optional, the default is <strong>5</strong></p>
 <hr>
-<h3 id="--min_samples"><strong><code>--min_samples</code></strong></h3>
+<h3 id="-s---min_samples"><strong><code>-s, --min_samples</code></strong></h3>
 <p>Minimum number of samples in a marker to proceed with alignment. Markers with fewer samples will be skipped. The default <strong>4</strong> corresponds to smallest number of sequences to build a rooted phylogeny.</p>
 <p>This argument is optional, the default is <strong>4</strong></p>
 <hr>
@@ -249,7 +254,7 @@
 <p>When <code>AA</code>s and their corresponding <code>NT</code>s are aligned in the same run, <code>Captus</code> uses the <code>AA</code> alignment as template for aligning the <code>NT</code> format, thus obtaining a codon-aware alignment for the coding sequences in nucleotides. Use this flag to disable this method and use the regular <code>MAFFT</code>/<code>MUSCLE</code> nucleotide alignment.</p>
 <hr>
 <h3 id="--outgroup"><strong><code>--outgroup</code></strong></h3>
-<p>Outgroup sample names, separated by commas, no spaces. <code>Captus</code> will place these samples whenever possible at the beginning of the alignments, since many phylogenetic programs root the resulting phylogeny at the first sample in the alignment your trees will be automatically rooted.<br>
+<p>Outgroup sample names, separated by commas, no spaces. <code>Captus</code> will place these samples whenever possible at the beginning of the alignments, since many phylogenetic programs root the resulting phylogeny at the first sample in the alignment your trees will be automatically rooted.
 Example: <code>--outgroup sample2,sample5</code></p>
 <p>This argument is optional and has no default.</p>
 <hr>
@@ -270,7 +275,20 @@ chosen most frequently among all other samples in the alignment. This method was
 <p>Only applicable to the <code>informed</code> filter. If the selected copy&rsquo;s identity to the most commonly chosen reference is below this number of Standard Deviations from the mean, it will also be removed (the lower the number the stricter the filter).</p>
 <p>This argument is optional, the default is <strong>2.0</strong>.</p>
 <hr>
-<h2 id="trimming-clipkit"><em>Trimming (ClipKIT)</em></h2>
+<h2 id="trimming-taper-and-clipkit"><em>Trimming (TAPER and ClipKIT)</em></h2>
+<hr>
+<h3 id="-c---taper_cutoff"><strong><code>-c, --taper_cutoff</code></strong></h3>
+<p>TAPER cutoff threshold, values greater than 1.0 are recommended, the lower the value the more aggressive the correction, 3.0 recommended by TAPER&rsquo;s authors.</p>
+<p>This argument is optional, the default is <strong>3.0</strong>.</p>
+<hr>
+<h3 id="--taper_conservative"><strong><code>--taper_conservative</code></strong></h3>
+<p>Enable the more conservative mode of TAPER. Captus uses the aggressive mode by default, see &lsquo;correction_multi_aggressive.jl&rsquo; at <a href="https://github.com/chaoszhang/TAPER%22">https://github.com/chaoszhang/TAPER&quot;</a>.</p>
+<hr>
+<h3 id="--taper_ufiltered"><strong><code>--taper_ufiltered</code></strong></h3>
+<p>Enable TAPER correction even for alignments than have not been paralog-filtered, TAPER is only able to distinguish error when an unfiltered alignment contains copies of the locus that are not extremely divergent.</p>
+<hr>
+<h3 id="--disable_taper"><strong><code>--disable_taper</code></strong></h3>
+<p>Disable TAPER algorithm for masking for erroneous regions in alignments, see <a href="https://doi.org/10.1111/2041-210X.13696">https://doi.org/10.1111/2041-210X.13696</a></p>
 <hr>
 <h3 id="--clipkit_method"><strong><code>--clipkit_method</code></strong></h3>
 <p>Select <a href="https://jlsteenwyk.com/ClipKIT/advanced/index.html#modes">ClipKIT&rsquo;s trimming mode</a>. Valid trimming modes are:</p>
@@ -286,22 +304,25 @@ chosen most frequently among all other samples in the alignment. This method was
 </ul>
 <p>This argument is optional, the default is <strong>gappy</strong>.</p>
 <hr>
-<h3 id="--clipkit_gaps"><strong><code>--clipkit_gaps</code></strong></h3>
+<h3 id="-g---clipkit_gaps"><strong><code>-g, --clipkit_gaps</code></strong></h3>
 <p>Gappyness threshold per position. Accepted values between 0 and 1. This argument is ignored when using the <code>kpi</code> and <code>kpic</code> algorithms or intermediate steps that use <code>smart-gap</code>.</p>
 <p>This argument is optional, the default is <strong>0.9</strong>.</p>
 <hr>
-<h3 id="--min_data_per_column"><strong><code>--min_data_per_column</code></strong></h3>
+<h3 id="-d---min_data_per_column"><strong><code>-d, --min_data_per_column</code></strong></h3>
 <p>Minimum number of non-missing sites per column. When this parameter is &gt; 0, Captus will dynamically calculate a <code>--clipkit_gaps</code> threshold per alignment to keep this minimum amount of data per column.</p>
 <p>This argument is optional, the default is <strong>0</strong>.</p>
 <hr>
-<h3 id="--min_coverage"><strong><code>--min_coverage</code></strong></h3>
+<h3 id="--ends_only"><strong><code>--ends_only</code></strong></h3>
+<p>Trim only the ends of the alignments (do not trim internal gaps).</p>
+<hr>
+<h3 id="-v---min_coverage"><strong><code>-v, --min_coverage</code></strong></h3>
 <p>Minimum coverage of sequence as proportion of the mean of sequence lengths in the alignment, ignoring gaps. After <code>ClipKIT</code> finishes trimming columns, <code>Captus</code> will also remove short sequences below this threshold.</p>
 <p>This argument is optional, the default is <strong>0.4</strong>.</p>
 <hr>
 <h2 id="other"><em>Other</em></h2>
 <hr>
 <h3 id="--collect_only"><strong><code>--collect_only</code></strong></h3>
-<p>Only collect the markers from the extraction folder and exit, it skips the addition of reference target sequences and subsequent steps</p>
+<p>Only collect the markers from the extraction folder and exit, it skips the addition of reference target sequences and subsequent steps.</p>
 <hr>
 <h3 id="--redo_from"><strong><code>--redo_from</code></strong></h3>
 <p>You can repeat the analysis without undoing all the steps. These are the points from which you can restart the <code>align</code> command:</p>
@@ -323,8 +344,8 @@ chosen most frequently among all other samples in the alignment. This method was
 <h3 id="--ram---threads---concurrent---debug"><strong><code>--ram</code></strong>, <strong><code>--threads</code></strong>, <strong><code>--concurrent</code></strong>, <strong><code>--debug</code></strong>,</h3>
 <p>See <a href="https://edgardomortiz.github.io/captus.docs/basics/parallelization/">Parallelization (and other common options)</a></p>
 <hr>
-<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (06.08.2021)<br>
-Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (18.12.2024)</p>
+<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (06.08.2021)
+Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (09.04.2024)</p>
 
             <footer class="footline">
             </footer>
@@ -348,12 +369,12 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/captus.docs/js/auto-complete.js?1734996903" defer></script>
-        <script src="/captus.docs/js/lunr.min.js?1734996903" defer></script>
-        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1734996903" defer></script>
-        <script src="/captus.docs/js/lunr.multi.min.js?1734996903" defer></script>
-        <script src="/captus.docs/js/lunr.en.min.js?1734996903" defer></script>
-        <script src="/captus.docs/js/search.js?1734996903" defer></script>
+        <script src="/captus.docs/js/auto-complete.js?1744256561" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1744256561" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1744256561" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1744256561" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1744256561" defer></script>
+        <script src="/captus.docs/js/search.js?1744256561" defer></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -454,14 +475,14 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
   <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
   <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
   <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
-  <script async defer src="https://buttons.github.io/buttons.js?1734996903"></script>
+  <script async defer src="https://buttons.github.io/buttons.js?1744256561"></script>
 
         </div>
       </div>
     </aside>
-    <script src="/captus.docs/js/clipboard.min.js?1734996903" defer></script>
-    <script src="/captus.docs/js/perfect-scrollbar.min.js?1734996903" defer></script>
-    <script src="/captus.docs/js/featherlight.min.js?1734996903" defer></script>
-    <script src="/captus.docs/js/theme.js?1734996903" defer></script>
+    <script src="/captus.docs/js/clipboard.min.js?1744256561" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1744256561" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1744256561" defer></script>
+    <script src="/captus.docs/js/theme.js?1744256561" defer></script>
   </body>
 </html>

@@ -20,12 +20,13 @@
       <guid>https://edgardomortiz.github.io/captus.docs/basics/installation/</guid>
       <description>&lt;h3 id=&#34;using-condamamba-recommended&#34;&gt;Using conda/mamba (recommended)&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;Captus&lt;/code&gt; is available as a &lt;a href=&#34;https://anaconda.org/bioconda/captus&#34;&gt;conda package&lt;/a&gt;. If you have &lt;code&gt;conda&lt;/code&gt; &lt;a href=&#34;https://docs.conda.io/projects/conda/en/latest/index.html&#34;&gt;&lt;i class=&#34;fas fa-question-circle fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt; or &lt;code&gt;mamba&lt;/code&gt; &lt;a href=&#34;https://mamba.readthedocs.io/en/latest/index.html&#34;&gt;&lt;i class=&#34;fas fa-question-circle fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt; installed, you can easily create a new environment and install &lt;code&gt;Captus&lt;/code&gt; with all dependencies using the following command:&lt;/p&gt;
+&lt;h5 id=&#34;linux&#34;&gt;Linux:&lt;/h5&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conda create -n captus -c bioconda -c conda-forge captus
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;
-&lt;div class=&#34;box notices cstyle warning&#34;&gt;
-    &lt;div class=&#34;box-label&#34;&gt;&lt;i class=&#34;fa-fw fas fa-exclamation-triangle&#34;&gt;&lt;/i&gt; Important for macOS users&lt;/div&gt;
-    &lt;div class=&#34;box-content&#34;&gt;
-&lt;p&gt;One of the builds of the latest version of &lt;code&gt;MEGAHIT&lt;/code&gt; (v1.2.9) on &lt;code&gt;Bioconda&lt;/code&gt; is broken. To ensure you install a functional one, please specify the build number as follows:&lt;/p&gt;</description>
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mamba create -n captus -c bioconda -c conda-forge captus
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;mac-computers-with-intel-processors&#34;&gt;Mac computers with Intel processors:&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conda create -n captus -c bioconda -c conda-forge captus megahit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1.2.9&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;hfbae3c0_0
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;</description>
     </item>
     <item>
       <title>Parallelization</title>

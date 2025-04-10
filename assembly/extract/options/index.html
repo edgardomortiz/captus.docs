@@ -8,20 +8,20 @@
     <meta name="description" content="Documentation and tutorials for Captus">
     <meta name="author" content="Edgardo M. Ortiz">
     <title>Options :: Captus documentation</title>
-    <link href="/captus.docs/images/favicon.ico?1734996903" rel="icon" type="image/x-icon">
+    <link href="/captus.docs/images/favicon.ico?1744256562" rel="icon" type="image/x-icon">
     <!-- https://github.com/filamentgroup/loadCSS/blob/master/README.md#how-to-use -->
-    <link href="/captus.docs/css/fontawesome-all.min.css?1734996903" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1734996903" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/featherlight.min.css?1734996903" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1734996903" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/auto-complete.css?1734996903" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1734996903" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/perfect-scrollbar.min.css?1734996903" rel="stylesheet">
-    <link href="/captus.docs/css/nucleus.css?1734996903" rel="stylesheet">
-    <link href="/captus.docs/css/fonts.css?1734996903" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1734996903" rel="stylesheet"></noscript>
-    <link href="/captus.docs/css/theme.css?1734996903" rel="stylesheet">
-    <link href="/captus.docs/css/theme-green.css?1734996903" rel="stylesheet" id="variant-style">
-    <link href="/captus.docs/css/ie.css?1734996903" rel="stylesheet">
-    <link href="/captus.docs/css/variant.css?1734996903" rel="stylesheet">
-    <link href="/captus.docs/css/print.css?1734996903" rel="stylesheet" media="print">
-    <script src="/captus.docs/js/variant.js?1734996903"></script>
+    <link href="/captus.docs/css/fontawesome-all.min.css?1744256562" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fontawesome-all.min.css?1744256562" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/featherlight.min.css?1744256562" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/featherlight.min.css?1744256562" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/auto-complete.css?1744256562" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/auto-complete.css?1744256562" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/perfect-scrollbar.min.css?1744256562" rel="stylesheet">
+    <link href="/captus.docs/css/nucleus.css?1744256562" rel="stylesheet">
+    <link href="/captus.docs/css/fonts.css?1744256562" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/captus.docs/css/fonts.css?1744256562" rel="stylesheet"></noscript>
+    <link href="/captus.docs/css/theme.css?1744256562" rel="stylesheet">
+    <link href="/captus.docs/css/theme-green.css?1744256562" rel="stylesheet" id="variant-style">
+    <link href="/captus.docs/css/ie.css?1744256562" rel="stylesheet">
+    <link href="/captus.docs/css/variant.css?1744256562" rel="stylesheet">
+    <link href="/captus.docs/css/print.css?1744256562" rel="stylesheet" media="print">
+    <script src="/captus.docs/js/variant.js?1744256562"></script>
     <script>
       // hack to let hugo tell us how to get to the root when using relativeURLs, it needs to be called *url= for it to do its magic:
       // https://github.com/gohugoio/hugo/blob/145b3fcce35fbac25c7033c91c1b7ae6d1179da8/transform/urlreplacers/absurlreplacer.go#L72
@@ -37,7 +37,7 @@
       var baseUriFull='https:\/\/edgardomortiz.github.io\/captus.docs/';
       window.variants && variants.init( [ 'green' ] );
     </script>
-    <script src="/captus.docs/js/jquery.min.js?1734996903" defer></script>
+    <script src="/captus.docs/js/jquery.min.js?1744256562" defer></script>
 
 
   </head>
@@ -86,6 +86,7 @@
         <li><a href="#--ignore_depth"><strong><code>--ignore_depth</code></strong></a></li>
         <li><a href="#--disable_stitching"><strong><code>--disable_stitching</code></strong></a></li>
         <li><a href="#--max_paralogs"><strong><code>--max_paralogs</code></strong></a></li>
+        <li><a href="#--paralog_tolerance"><strong><code>--paralog_tolerance</code></strong></a></li>
         <li><a href="#--keep_all"><strong><code>--keep_all</code></strong></a></li>
         <li><a href="#--overwrite"><strong><code>--overwrite</code></strong></a></li>
       </ul>
@@ -144,9 +145,9 @@
         <li><a href="#--cl_seq_id_mode"><strong><code>--cl_seq_id_mode</code></strong></a></li>
         <li><a href="#--cl_min_coverage"><strong><code>--cl_min_coverage</code></strong></a></li>
         <li><a href="#--cl_cov_mode"><strong><code>--cl_cov_mode</code></strong></a></li>
-        <li><a href="#--cl_max_seq_len"><strong><code>--cl_max_seq_len</code></strong></a></li>
-        <li><a href="#--cl_rep_min_len"><strong><code>--cl_rep_min_len</code></strong></a></li>
         <li><a href="#--cl_min_samples"><strong><code>--cl_min_samples</code></strong></a></li>
+        <li><a href="#--cl_rep_min_len"><strong><code>--cl_rep_min_len</code></strong></a></li>
+        <li><a href="#--cl_max_seq_len"><strong><code>--cl_max_seq_len</code></strong></a></li>
         <li><a href="#--cl_max_copies"><strong><code>--cl_max_copies</code></strong></a></li>
         <li><a href="#--cl_tmp_dir"><strong><code>--cl_tmp_dir</code></strong></a></li>
       </ul>
@@ -215,6 +216,10 @@
 <p>Maximum number of secondary hits (copies) of any particular reference marker allowed in the output. We recommend disabling the removal of paralogs (secondary hits/copies) during the <code>extract</code> step because the <code>align</code> step uses a more sophisticated filter for paralogs. This can be useful for exploratory runs, for example: if after an initial run allowing all paralogs we found out that the average number of secondary hits across samples is 5, we could use this number to get rid of outliers.</p>
 <p>This argument is optional, the default is <strong>-1</strong> (include all paralogs in the output).</p>
 <hr>
+<h3 id="--paralog_tolerance"><strong><code>--paralog_tolerance</code></strong></h3>
+<p>Only paralogs with a wscore &gt;= (locus best hit wscore / paralog_tolerance will be retained)</p>
+<p>This argument is optional, the default is <strong>5</strong></p>
+<hr>
 <h4 id="--max_loci_files"><strong><code>--max_loci_files</code></strong></h4>
 <p>When the number of loci in the reference exceeds this value, <code>Captus</code> will not write a separate FASTA file per sample per marker, otherwise the hard drive fills up with tons of small files. The file that includes all the extracted markers grouped per sample is still written (this is the only file needed by the final step <code>align</code> to produce the marker alignments across all samples).</p>
 <p>This argument is optional, the default is <strong>0</strong> (do not write separate loci files).</p>
@@ -263,8 +268,8 @@
 <p>This argument is optional, the default is <strong>20</strong>.</p>
 <hr>
 <h3 id="--nuc_depth_tolerance"><strong><code>--nuc_depth_tolerance</code></strong></h3>
-<p>Allow nuclear contigs with a minimum depth equal to the median depth divided by this number and a maximum depth equal to the median depth multipled by this number. This median depth is calculated only from the contigs with hits to the nuclear proteins.</p>
-<p>This argument is optional, the default is <strong>20</strong>.</p>
+<p>Minimum contig depth = 10^(log(depth of contig with best hit in locus) / nuc_depth_tolerance), values must be &gt;= 1.0 (1 is the most strict).</p>
+<p>This argument is optional, the default is <strong>2.0</strong>.</p>
 <hr>
 <h2 id="plastidial-proteins-scipio"><em>Plastidial proteins (Scipio)</em></h2>
 <hr>
@@ -294,8 +299,8 @@
 <p>This argument is optional, the default is <strong>20</strong>.</p>
 <hr>
 <h3 id="--ptd_depth_tolerance"><strong><code>--ptd_depth_tolerance</code></strong></h3>
-<p>Allow plastidial contigs with a minimum depth equal to the median depth divided by this number and a maximum depth equal to the median depth multipled by this number. This median depth is calculated only from the contigs with hits to the plastidial proteins.</p>
-<p>This argument is optional, the default is <strong>10</strong>.</p>
+<p>Minimum contig depth = 10^(log(depth of contig with best hit in locus) / ptd_depth_tolerance), values must be &gt;= 1.0 (1 is the most strict).</p>
+<p>This argument is optional, the default is <strong>2.0</strong>.</p>
 <hr>
 <h2 id="mitochondrial-proteins-scipio"><em>Mitochondrial proteins (Scipio)</em></h2>
 <hr>
@@ -325,8 +330,8 @@
 <p>This argument is optional, the default is <strong>20</strong>.</p>
 <hr>
 <h3 id="--mit_depth_tolerance"><strong><code>--mit_depth_tolerance</code></strong></h3>
-<p>Allow mitochondrial contigs with a minimum depth equal to the median depth divided by this number and a maximum depth equal to the median depth multipled by this number. This median depth is calculated only from the contigs with hits to the mitochondrial proteins.</p>
-<p>This argument is optional, the default is <strong>10</strong>.</p>
+<p>Minimum contig depth = 10^(log(depth of contig with best hit in locus) / mit_depth_tolerance), values must be &gt;= 1.0 (1 is the most strict).</p>
+<p>This argument is optional, the default is <strong>2.0</strong>.</p>
 <hr>
 <h2 id="miscellaneous-dna-markers-blat"><em>Miscellaneous DNA markers (BLAT)</em></h2>
 <hr>
@@ -343,8 +348,8 @@
 <p>This argument is optional, the default is <strong>20</strong>.</p>
 <hr>
 <h3 id="--dna_depth_tolerance"><strong><code>--dna_depth_tolerance</code></strong></h3>
-<p>Allow contigs with a minimum depth equal to the median depth divided by this number and a maximum depth equal to the median depth multipled by this number. This median depth is calculated only from the contigs with hits to the miscellaneous DNA reference targets.</p>
-<p>This argument is optional, the default is <strong>10</strong>.</p>
+<p>Minimum contig depth = 10^(log(depth of contig with best hit in locus) / dna_depth_tolerance), values must be &gt;= 1.0 (1 is the most strict).</p>
+<p>This argument is optional, the default is <strong>2.0</strong>.</p>
 <hr>
 <h2 id="assemblies-clustering-mmseqs2"><em>Assemblies clustering (MMSeqs2)</em></h2>
 <p>Most contigs in your assemblies will not contain hits to your references, that means that many potentially useful markers usually remain unused and unexplored. With this feature you can cluster your unused contigs across samples to find new markers that can complement your phylogenomic dataset.</p>
@@ -402,21 +407,21 @@
 </ul>
 <p>This argument is optional, the default is <strong>1</strong>.</p>
 <hr>
-<h3 id="--cl_max_seq_len"><strong><code>--cl_max_seq_len</code></strong></h3>
-<p>Do not cluster sequences longer than this length in bp, the maximum allowed by MMseqs2 is 65535. Use the value <code>0</code> to disable this filter.</p>
-<p>This argument is optional, the default is <strong>20000</strong>.</p>
+<h3 id="--cl_min_samples"><strong><code>--cl_min_samples</code></strong></h3>
+<p>Minimum number of samples per cluster.</p>
+<p>This argument is optional, the default is <strong>auto</strong> (= 66% of the total number of samples or at least 4).</p>
 <hr>
 <h3 id="--cl_rep_min_len"><strong><code>--cl_rep_min_len</code></strong></h3>
 <p>After clustering is finished, only accept cluster representatives of at least this length to be part of the new miscellaneous DNA reference. This avoids the creation of very short locus alignments. Use the value <code>0</code> to disable this filter.</p>
 <p>This argument is optional, the default is <strong>500</strong>.</p>
 <hr>
-<h3 id="--cl_min_samples"><strong><code>--cl_min_samples</code></strong></h3>
-<p>Minimum number of samples per cluster.</p>
-<p>This argument is optional, the default is <strong>auto</strong> (= 30% of the total number of samples or at least 4).</p>
+<h3 id="--cl_max_seq_len"><strong><code>--cl_max_seq_len</code></strong></h3>
+<p>Do not cluster sequences longer than this length in bp, the maximum allowed by MMseqs2 is 65535. Use the value <code>0</code> to disable this filter.</p>
+<p>This argument is optional, the default is <strong>5000</strong>.</p>
 <hr>
 <h3 id="--cl_max_copies"><strong><code>--cl_max_copies</code></strong></h3>
 <p>Maximum average number of sequences per sample in a cluster. Helpful for excluding excessively paralogous loci.</p>
-<p>This argument is optional, the default is <strong>5</strong>.</p>
+<p>This argument is optional, the default is <strong>3</strong>.</p>
 <hr>
 <h3 id="--cl_tmp_dir"><strong><code>--cl_tmp_dir</code></strong></h3>
 <p>Path where to create the temporary directory for <code>MMseqs2</code>. Clustering can become slow when done on external drives, set this location to an internal drive.</p>
@@ -434,8 +439,8 @@
 <h3 id="--ram---threads---concurrent---debug---show_less"><strong><code>--ram</code></strong>, <strong><code>--threads</code></strong>, <strong><code>--concurrent</code></strong>, <strong><code>--debug</code></strong>, <strong><code>--show_less</code></strong></h3>
 <p>See <a href="https://edgardomortiz.github.io/captus.docs/basics/parallelization/">Parallelization (and other common options)</a></p>
 <hr>
-<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (06.08.2021)<br>
-Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (18.12.2024)</p>
+<p>Created by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (06.08.2021)
+Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credits/#edgardo-m-ortiz">Edgardo M. Ortiz</a> (09.04.2024)</p>
 
             <footer class="footline">
             </footer>
@@ -459,12 +464,12 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
         <script>
           var contentLangs=['en'];
         </script>
-        <script src="/captus.docs/js/auto-complete.js?1734996903" defer></script>
-        <script src="/captus.docs/js/lunr.min.js?1734996903" defer></script>
-        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1734996903" defer></script>
-        <script src="/captus.docs/js/lunr.multi.min.js?1734996903" defer></script>
-        <script src="/captus.docs/js/lunr.en.min.js?1734996903" defer></script>
-        <script src="/captus.docs/js/search.js?1734996903" defer></script>
+        <script src="/captus.docs/js/auto-complete.js?1744256562" defer></script>
+        <script src="/captus.docs/js/lunr.min.js?1744256562" defer></script>
+        <script src="/captus.docs/js/lunr.stemmer.support.min.js?1744256562" defer></script>
+        <script src="/captus.docs/js/lunr.multi.min.js?1744256562" defer></script>
+        <script src="/captus.docs/js/lunr.en.min.js?1744256562" defer></script>
+        <script src="/captus.docs/js/search.js?1744256562" defer></script>
       </div>
       <div id="homelinks" class="default-animation">
         <ul>
@@ -565,14 +570,14 @@ Last modified by <a href="https://edgardomortiz.github.io/captus.docs/more/credi
   <a class="github-button" href="https://github.com/edgardomortiz/Captus" data-icon="octicon-star" data-show-count="true" aria-label="Star Captus on GitHub">Star</a>
   <a class="github-button" href="https://github.com/edgardomortiz/Captus/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork Captus on GitHub">Fork</a>
   <p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p>
-  <script async defer src="https://buttons.github.io/buttons.js?1734996903"></script>
+  <script async defer src="https://buttons.github.io/buttons.js?1744256562"></script>
 
         </div>
       </div>
     </aside>
-    <script src="/captus.docs/js/clipboard.min.js?1734996903" defer></script>
-    <script src="/captus.docs/js/perfect-scrollbar.min.js?1734996903" defer></script>
-    <script src="/captus.docs/js/featherlight.min.js?1734996903" defer></script>
-    <script src="/captus.docs/js/theme.js?1734996903" defer></script>
+    <script src="/captus.docs/js/clipboard.min.js?1744256562" defer></script>
+    <script src="/captus.docs/js/perfect-scrollbar.min.js?1744256562" defer></script>
+    <script src="/captus.docs/js/featherlight.min.js?1744256562" defer></script>
+    <script src="/captus.docs/js/theme.js?1744256562" defer></script>
   </body>
 </html>
