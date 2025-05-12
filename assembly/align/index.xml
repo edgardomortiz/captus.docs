@@ -11,56 +11,25 @@
       <link>https://edgardomortiz.github.io/captus.docs/assembly/align/options/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/align/options/</guid>
-      <description>&lt;h1 id=&#34;align&#34;&gt;align&lt;/h1&gt;
-&lt;hr&gt;
-&lt;p&gt;To show all available options and their default values you can type in your terminal:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;captus align --help
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;input&#34;&gt;&lt;em&gt;Input&lt;/em&gt;&lt;/h2&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;-e---captus_extractions_dir&#34;&gt;&lt;strong&gt;&lt;code&gt;-e, --captus_extractions_dir&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;Path to the output directory from the &lt;code&gt;extract&lt;/code&gt; command, (e.g. &lt;code&gt;03_extractions&lt;/code&gt; iy you used the default name). The &lt;code&gt;align&lt;/code&gt; command depends entirely on the output from the &lt;code&gt;extract&lt;/code&gt; step, in other words, you can&amp;rsquo;t provide your unaligned or aligned FASTA files for processing.&lt;/p&gt;
-&lt;p&gt;This argument is &lt;strong&gt;required&lt;/strong&gt; &lt;i class=&#34;fas fa-exclamation-triangle&#34;&gt;&lt;/i&gt;, the default is &lt;strong&gt;./03_extractions/&lt;/strong&gt;&lt;/p&gt;</description>
+      <description>align To show all available options and their default values you can type in your terminal:
+captus align --help Input -e, --captus_extractions_dir Path to the output directory from the extract command, (e.g. 03_extractions iy you used the default name). The align command depends entirely on the output from the extract step, in other words, you can&amp;rsquo;t provide your unaligned or aligned FASTA files for processing.
+This argument is required , the default is .</description>
     </item>
     <item>
       <title>Output Files</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/align/output/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/align/output/</guid>
-      <description>&lt;p&gt;For this example we will use the directory &lt;code&gt;03_extractions&lt;/code&gt; previously created with the &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/assembly/extract/output/&#34;&gt;&lt;code&gt;extract&lt;/code&gt; module&lt;/a&gt;. We run the following &lt;code&gt;Captus&lt;/code&gt; command to collect markers across samples and align them:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-console&#34; data-lang=&#34;console&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;captus align -e 03_extractions_CAP/ -o 04_alignments_CAP -m ALL -f ALL
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;After the run is finished we should see a new directory called &lt;code&gt;04_alignments&lt;/code&gt; with the following structure and files:&lt;/p&gt;
-&lt;p&gt;
-		
-&lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/captus.docs/images/alignments.png?width=640&amp;amp;classes=shadow&#34; data-featherlight=&#34;image&#34;&gt;
-&lt;img src=&#34;https://edgardomortiz.github.io/captus.docs/captus.docs/images/alignments.png?width=640&amp;amp;classes=shadow&#34; alt=&#34;Alignments&#34; class=&#34;shadow&#34; style=&#34;height: auto; width: 640;&#34; loading=&#34;lazy&#34;&gt;
-&lt;/a&gt;&lt;/p&gt;
-&lt;hr&gt;
-
-&lt;div class=&#34;expand&#34;&gt;
-    &lt;a class=&#34;expand-label&#34; onclick=&#34;$t=$(this); if($t.parent(&#39;.expand-expanded.expand-marked&#39;).length){ $t.next().css(&#39;display&#39;,&#39;none&#39;) }else if($t.parent(&#39;.expand-marked&#39;).length){ $t.next().css(&#39;display&#39;,&#39;block&#39;) }else{ $t.next(&#39;.expand-content&#39;).slideToggle(100); } $t.parent().toggleClass(&#39;expand-expanded&#39;);&#34;&gt;
-        &lt;i class=&#34;fas fa-chevron-down&#34;&gt;&lt;/i&gt;
-        &lt;i class=&#34;fas fa-chevron-left expand-rtl direction-ltr&#34;&gt;&lt;/i&gt;
-        &lt;i class=&#34;fas fa-chevron-right expand-ltr direction-ltr&#34;&gt;&lt;/i&gt;
-        Complete structure of the alignment output directory
-    &lt;/a&gt;
-    &lt;div class=&#34;expand-content&#34; style=&#34;display: none;&#34;&gt;
-&lt;p&gt;
-		
-&lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/captus.docs/images/alignment_stages.png?width=1200&amp;amp;classes=shadow&#34; data-featherlight=&#34;image&#34;&gt;
-&lt;img src=&#34;https://edgardomortiz.github.io/captus.docs/captus.docs/images/alignment_stages.png?width=1200&amp;amp;classes=shadow&#34; alt=&#34;Alignment directory&#34; class=&#34;shadow&#34; style=&#34;height: auto; width: 1200;&#34; loading=&#34;lazy&#34;&gt;
-&lt;/a&gt;&lt;/p&gt;</description>
+      <description>For this example we will use the directory 03_extractions previously created with the extract module. We run the following Captus command to collect markers across samples and align them:
+captus align -e 03_extractions_CAP/ -o 04_alignments_CAP -m ALL -f ALL After the run is finished we should see a new directory called 04_alignments with the following structure and files:
+Complete structure of the alignment output directory 1. 01_unaligned This directory contains the unaligned FASTA files corresponding to each marker that were gathered from the extractions directory.</description>
     </item>
     <item>
       <title>HTML Report</title>
       <link>https://edgardomortiz.github.io/captus.docs/assembly/align/report/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/assembly/align/report/</guid>
-      <description>&lt;h2 id=&#34;concept&#34;&gt;Concept&lt;/h2&gt;
-&lt;hr&gt;
-&lt;p&gt;This &lt;code&gt;align&lt;/code&gt; module generates several sets of alignments that are ready-to-use in popular phylogenetic tree inference programs (e.g., &lt;a href=&#34;http://www.iqtree.org&#34;&gt;&lt;code&gt;IQ-TREE&lt;/code&gt;&lt;/a&gt;, &lt;a href=&#34;https://cme.h-its.org/exelixis/web/software/raxml&#34;&gt;&lt;code&gt;RAxML&lt;/code&gt;&lt;/a&gt;, &lt;a href=&#34;https://github.com/smirarab/ASTRAL&#34;&gt;&lt;code&gt;ASTRAL&lt;/code&gt;&lt;/a&gt;).
-Each alignment set differs from one another in the following four respects: 1) whether they are trimmed, 2) which &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/captus.docs/assembly/align/options/#paralog-filtering&#34;&gt;paralog filter &lt;i class=&#34;fas fa-question-circle fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt; is applied, 3) whether they contain reference sequences, and 4) in which &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/captus.docs/assembly/align/options/#-f---formats&#34;&gt;formats &lt;i class=&#34;fas fa-question-circle fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt;.
-Thus, &lt;strong&gt;it is important to understand the differences between each alignment set and carefully evaluate their quality in order to decide which alignment set to use for subsequent analyses&lt;/strong&gt;.&lt;/p&gt;</description>
+      <description>Concept This align module generates several sets of alignments that are ready-to-use in popular phylogenetic tree inference programs (e.g., IQ-TREE, RAxML, ASTRAL). Each alignment set differs from one another in the following four respects: 1) whether they are trimmed, 2) which paralog filter is applied, 3) whether they contain reference sequences, and 4) in which formats . Thus, it is important to understand the differences between each alignment set and carefully evaluate their quality in order to decide which alignment set to use for subsequent analyses.</description>
     </item>
   </channel>
 </rss>

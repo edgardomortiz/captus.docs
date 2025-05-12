@@ -2,151 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Assembly on Captus documentation</title>
-    <link>https://edgardomortiz.github.io/captus.docs/tutorials/assembly/</link>
+    <link>http://localhost:1313/captus.docs/tutorials/assembly/</link>
     <description>Recent content in Assembly on Captus documentation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 25 Jul 2021 00:56:06 +0200</lastBuildDate><atom:link href="https://edgardomortiz.github.io/captus.docs/tutorials/assembly/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 00:56:06 +0200</lastBuildDate><atom:link href="http://localhost:1313/captus.docs/tutorials/assembly/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Basic Tutorial</title>
-      <link>https://edgardomortiz.github.io/captus.docs/tutorials/assembly/basic/</link>
+      <link>http://localhost:1313/captus.docs/tutorials/assembly/basic/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/tutorials/assembly/basic/</guid>
-      <description>&lt;p&gt;This basic tutorial takes you through &lt;strong&gt;the minimal but most general workflow&lt;/strong&gt; of the &lt;code&gt;captus_assembly&lt;/code&gt; pipeline.&lt;/p&gt;
-&lt;h2 id=&#34;0-preparation&#34;&gt;0. Preparation&lt;/h2&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;installation&#34;&gt;Installation&lt;/h3&gt;
-&lt;p&gt;To run this tutorial, you need to install the following programs on your system:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;Captus&lt;/code&gt; and its dependencies (see &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/basics/installation/&#34;&gt;&lt;i class=&#34;fab fa-readme&#34;&gt;&lt;/i&gt; Installation&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;IQ-TREE&lt;/code&gt; version 2.0 or higher (see &lt;a href=&#34;http://www.iqtree.org/doc/Quickstart#installation&#34;&gt;&lt;i class=&#34;fab fa-readme&#34;&gt;&lt;/i&gt; IQ-TREE documentation&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;If &lt;code&gt;conda&lt;/code&gt; &lt;a href=&#34;https://conda.io/en/latest/index.html#&#34;&gt;&lt;i class=&#34;fas fa-question-circle fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt; command is available, you can take the easiest way.&lt;br&gt;
-Simply run the two commands below to set up and activate an environment:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/captus.docs/tutorials/assembly/basic/</guid>
+      <description>This basic tutorial takes you through the minimal but most general workflow of the captus_assembly pipeline.
+0. Preparation Installation To run this tutorial, you need to install the following programs on your system:
+Captus and its dependencies (see Installation) IQ-TREE version 2.0 or higher (see IQ-TREE documentation) If conda command is available, you can take the easiest way.
+Simply run the two commands below to set up and activate an environment:</description>
     </item>
     <item>
       <title>Advanced Tutorial</title>
-      <link>https://edgardomortiz.github.io/captus.docs/tutorials/assembly/advanced/</link>
+      <link>http://localhost:1313/captus.docs/tutorials/assembly/advanced/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://edgardomortiz.github.io/captus.docs/tutorials/assembly/advanced/</guid>
-      <description>&lt;p&gt;Under construction&amp;hellip;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Handling different data types&lt;/li&gt;
-&lt;li&gt;Assembling reads cleaned outside Captus&lt;/li&gt;
-&lt;li&gt;Combining all assembled data types&lt;/li&gt;
-&lt;li&gt;Importing pre-assembled sample (e.g., GenBank ref genome)&lt;/li&gt;
-&lt;li&gt;Extracting all marker types simultaneously&lt;/li&gt;
-&lt;li&gt;Discovering new markers by clustering in capture data&lt;/li&gt;
-&lt;li&gt;Adding new markers by clustering unused contigs (capture data)&lt;/li&gt;
-&lt;li&gt;Phylogenetic tree reconstruction using palalogs - ASTRAL-Pro&lt;/li&gt;
-&lt;/ol&gt;
-&lt;!--### Preparation
-
----
-
-#### Installation
-
-Install `Captus` and dependencies on your system by following the [instruction](https://edgardomortiz.github.io/captus.docs/basics/installation/).
-
-#### Getting data
-
-Download the example data below, and place it in a directory where you want to run this tutorial.
-
-Run the following command to decompress the archive and then delete it.
-
-```shell
-cd {path/to/directory}
-tar -xf 00_raw_reads.tar.gz &amp;&amp; rm 00_raw_reads.tar.gz
-```
-
-Now you have a directory named `00_raw_reads` containing 16 gzip-compressed FASTQ files:
-
-```console
-00_raw_reads
-├── GenusA_speciesA_CAP_R1.fq.gz
-├── GenusA_speciesA_CAP_R2.fq.gz
-├── GenusA_speciesA_RNA_R1.fq.gz
-├── GenusA_speciesA_RNA_R2.fq.gz
-├── GenusB_speciesB_CAP_R1.fq.gz
-├── GenusB_speciesB_CAP_R2.fq.gz
-├── GenusC_speciesC_CAP_R1.fq.gz
-├── GenusC_speciesC_CAP_R2.fq.gz
-├── GenusC_speciesC_RNA_R1.fq.gz
-├── GenusC_speciesC_RNA_R2.fq.gz
-├── GenusD_speciesD_CAP_R1.fq.gz
-├── GenusD_speciesD_CAP_R2.fq.gz
-├── GenusD_speciesD_RNA_R1.fq.gz
-├── GenusD_speciesD_RNA_R2.fq.gz
-├── GenusH_speciesH_RNA_R1.fq.gz
-└── GenusH_speciesH_RNA_R2.fq.gz
-```
-
-CAP: Illumina universal coding sequences for angiosperms are enriched using [Angiosperms353](https://github.com/mossmatters/Angiosperms353) probe set.
-RNA: mRNA library enriched with poly-T probe
-paired-end
-They are named following the [naming convention](https://edgardomortiz.github.io/captus.docs/assembly/clean/preparation/).
-
-### Clean
-
----
-
-Run the following commands to clean.
-`--rna` flag enable to trim poly-A tails as well as Illumina adapters.
-
-```shell
-captus_assembly clean -r 00_raw_reads/*CAP_R?.fq.gz -o 01_clean_reads_CAP
-captus_assembly clean -r 00_raw_reads/*RNA_R?.fq.gz -o 01_clean_reads_RNA --rna
-```
-
-For descriptions of the other output files, see [here](https://edgardomortiz.github.io/captus.docs/assembly/clean/output/).
-
-### Assemble
-
----
-you can easily integrate samples assembled with another tool.
-
-```shell
-captus_assembly assemble -r 01_clean_reads_CAP -o 02_assemblies_CAP
-captus_assembly assemble -r 01_clean_reads_RNA -o 02_assemblies_RNA --preset RNA
-captus_assembly assemble -r 01_clean_reads_WGS -o 02_assemblies_WGS --preset WGS
-```
-
-For descriptions of the other output files, see [here](https://edgardomortiz.github.io/captus.docs/assembly/assemble/output/).
-
-### Extract
-
----
-Download the example data below, and place it in a directory where you want to run this tutorial.
-
-Run the following command to extract targets from the contigs.
-built-in reference dataset
-
-```shell
-captus_assembly extract -a 02_assemblies_CAP -f 02_assemblies_WGS -n Angiosperms353 -p SeedPlantsPTD -m SeedPlantsMIT -c
-```
-
-For descriptions of the other output files, see [here](https://edgardomortiz.github.io/captus.docs/assembly/extract/output/).
-
-### Align
-
----
-
-```shell
-captus_assembly align
-```
-
-For descriptions of the other output files, see [here](https://edgardomortiz.github.io/captus.docs/assembly/align/output/).
-
-### Phylogenetic inference
-
----
-
-```shell
-iqtree
-``` --&gt;
-&lt;hr&gt;
-&lt;p&gt;Created by &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/more/credits/#gentaro-shigita&#34;&gt;Gentaro Shigita&lt;/a&gt; (01.10.2021)&lt;br&gt;
-Last modified by &lt;a href=&#34;https://edgardomortiz.github.io/captus.docs/more/credits/#gentaro-shigita&#34;&gt;Gentaro Shigita&lt;/a&gt; (31.10.2022)&lt;/p&gt;</description>
+      <guid>http://localhost:1313/captus.docs/tutorials/assembly/advanced/</guid>
+      <description>Under construction&amp;hellip;
+Handling different data types Assembling reads cleaned outside Captus Combining all assembled data types Importing pre-assembled sample (e.g., GenBank ref genome) Extracting all marker types simultaneously Discovering new markers by clustering in capture data Adding new markers by clustering unused contigs (capture data) Phylogenetic tree reconstruction using palalogs - ASTRAL-Pro Created by Gentaro Shigita (01.10.2021)
+Last modified by Gentaro Shigita (31.10.2022)</description>
     </item>
   </channel>
 </rss>

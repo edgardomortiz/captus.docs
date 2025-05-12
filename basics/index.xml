@@ -11,33 +11,24 @@
       <link>https://edgardomortiz.github.io/captus.docs/basics/overview/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/basics/overview/</guid>
-      <description>&lt;p&gt;Welcome to &lt;code&gt;Captus&lt;/code&gt;, a toolkit for the assembly of phylogenomic datasets (many samples and loci) from High-Throughput Sequencing (a.k.a. Next Generation Sequencing) data. &lt;code&gt;Captus&lt;/code&gt; was initially designed specifically for the assembly of target-enriched (e.g. via hybridization of RNA or DNA probes) sequencing data, but has since been expanded to accomodate other common types of HTS data such as Genome Skimming, Hyb-Seq (Target Enrichment + Genome Skimming), RNA-seq, and Whole Genome Sequencing. The toolkit will also include a module for the design of probes for target enrichment experiments.&lt;/p&gt;</description>
+      <description>Welcome to Captus, a toolkit for the assembly of phylogenomic datasets (many samples and loci) from High-Throughput Sequencing (a.k.a. Next Generation Sequencing) data. Captus was initially designed specifically for the assembly of target-enriched (e.g. via hybridization of RNA or DNA probes) sequencing data, but has since been expanded to accomodate other common types of HTS data such as Genome Skimming, Hyb-Seq (Target Enrichment + Genome Skimming), RNA-seq, and Whole Genome Sequencing.</description>
     </item>
     <item>
       <title>Installation</title>
       <link>https://edgardomortiz.github.io/captus.docs/basics/installation/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/basics/installation/</guid>
-      <description>&lt;h3 id=&#34;using-condamamba-recommended&#34;&gt;Using conda/mamba (recommended)&lt;/h3&gt;
-&lt;p&gt;&lt;code&gt;Captus&lt;/code&gt; is available as a &lt;a href=&#34;https://anaconda.org/bioconda/captus&#34;&gt;conda package&lt;/a&gt;. If you have &lt;code&gt;conda&lt;/code&gt; &lt;a href=&#34;https://docs.conda.io/projects/conda/en/latest/index.html&#34;&gt;&lt;i class=&#34;fas fa-question-circle fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt; or &lt;code&gt;mamba&lt;/code&gt; &lt;a href=&#34;https://mamba.readthedocs.io/en/latest/index.html&#34;&gt;&lt;i class=&#34;fas fa-question-circle fa-sm&#34;&gt;&lt;/i&gt;&lt;/a&gt; installed, you can easily create a new environment and install &lt;code&gt;Captus&lt;/code&gt; with all dependencies using the following command:&lt;/p&gt;
-&lt;h5 id=&#34;linux&#34;&gt;Linux:&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conda create -n captus -c bioconda -c conda-forge captus
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mamba create -n captus -c bioconda -c conda-forge captus
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;mac-computers-with-intel-processors&#34;&gt;Mac computers with Intel processors:&lt;/h5&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;conda create -n captus -c bioconda -c conda-forge captus megahit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1.2.9&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;hfbae3c0_0
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;or&lt;/p&gt;</description>
+      <description>Using conda/mamba (recommended) Captus is available as a conda package. If you have conda or mamba installed, you can easily create a new environment and install Captus with all dependencies using the following command:
+Linux: conda create -n captus -c bioconda -c conda-forge captus or
+mamba create -n captus -c bioconda -c conda-forge captus Mac computers with Intel processors: conda create -n captus -c bioconda -c conda-forge captus megahit=1.2.9=hfbae3c0_0 or</description>
     </item>
     <item>
       <title>Parallelization</title>
       <link>https://edgardomortiz.github.io/captus.docs/basics/parallelization/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://edgardomortiz.github.io/captus.docs/basics/parallelization/</guid>
-      <description>&lt;h1 id=&#34;and-other-common-options&#34;&gt;(and other common options)&lt;/h1&gt;
-&lt;hr&gt;
-&lt;p&gt;Throughout Captus&amp;rsquo; modules we provide common options that allow you limit the computer&amp;rsquo;s resources available to &lt;code&gt;Captus&lt;/code&gt;, change the way of running parallel tasks, and control the amount of text shown during a run:&lt;/p&gt;
-&lt;h3 id=&#34;--ram&#34;&gt;&lt;strong&gt;&lt;code&gt;--ram&lt;/code&gt;&lt;/strong&gt;&lt;/h3&gt;
-&lt;p&gt;With this option you can specify the maximum RAM in GB that &lt;code&gt;Captus&lt;/code&gt; is allowed to use. For example, if your system has 64 GB of RAM and you want to limit the use to 32.5 GB you would set the argument &lt;code&gt;--ram 32.5&lt;/code&gt;.&lt;/p&gt;</description>
+      <description>(and other common options) Throughout Captus&amp;rsquo; modules we provide common options that allow you limit the computer&amp;rsquo;s resources available to Captus, change the way of running parallel tasks, and control the amount of text shown during a run:
+--ram With this option you can specify the maximum RAM in GB that Captus is allowed to use. For example, if your system has 64 GB of RAM and you want to limit the use to 32.</description>
     </item>
   </channel>
 </rss>
